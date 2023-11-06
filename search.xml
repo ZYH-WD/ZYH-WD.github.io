@@ -43,6 +43,65 @@
       </tags>
   </entry>
   <entry>
+    <title>剑指offer</title>
+    <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
+    <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
+<p>个人刷题记录（某种程度上也可以算作笔记），刷题顺序参考自<a href="https://github.com/Jack-Cherish/LeetCode">Jack-Cherish/LeetCode: :monkey:LeetCode、剑指Offer刷题笔记（C/C++、Python3实现） (github.com)</a></p>
+<h2 id="题目清单">题目清单</h2>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Difficulty</th>
+<th>Categories</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Easy</td>
+<td>Array</td>
+<td>Two sum</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Medium</td>
+<td>Array</td>
+<td>盛水最多的容器</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="数组">数组</h2>
+<h3 id="两数之和">两数之和</h3>
+<p><a href="https://leetcode.cn/problems/two-sum/">1. 两数之和 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：如果数组nums的元素a小于target，那么就在数组中寻找另一个b，使a+b=target。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums, target</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 利用哈希表</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> [buff_dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                buff_dict[target - nums[i]] = i</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="盛水最多的容器">盛水最多的容器</h3>
+<ul>
+<li><p>解题思路：双指针代表容器的两边，如果左指针对应数字较小，就向右移，直到两个指针重合。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxArea</span>(<span class="params">self, height: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="comment"># 双指针</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">len</span>(height)-<span class="number">1</span></span><br><span class="line">        max_area = <span class="number">0</span></span><br><span class="line">        tmp_area = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(left &lt; right):</span><br><span class="line">            l_min = <span class="built_in">min</span>(height[left],height[right])</span><br><span class="line">            max_area = <span class="built_in">max</span>(max_area, l_min * (right - left))</span><br><span class="line">            <span class="keyword">if</span> height[left] &lt; height[right]:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_area</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>（乏了，今天的水就划到这里吧，干的别的去）</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>强化学习基础-马尔可夫决策过程</title>
     <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="马尔可夫决策过程">马尔可夫决策过程</h2>
@@ -144,7 +203,7 @@
 <li><span class="math inline">\(\mathcal{R_s}\)</span>是奖励函数，<span class="math inline">\(\mathcal{R_s}=\mathbb{E}[R_{t+1}|S_t=s]\)</span></li>
 <li><span class="math inline">\(\gamma\)</span>是折扣因子，<span class="math inline">\(\gamma∈[0,1]\)</span></li>
 </ul>
-<h2 id="回报return">3.2 回报（Return）</h2>
+<h3 id="回报return">3.2 回报（Return）</h3>
 <p>定义：在一个马尔可夫奖励过程中，从<span class="math inline">\(t\)</span>时刻的状态<span class="math inline">\(S_t\)</span>开始，直至终止状态时，所有奖励的衰减之和<span class="math inline">\(G_t\)</span>称为回报（Return）。</p>
 <p><span class="math display">\[G_t=R_{t+1}+\gamma R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
 <p>上式中引入折扣率或衰减率<span class="math inline">\(\gamma\)</span>的作用：</p>
