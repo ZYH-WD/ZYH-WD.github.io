@@ -64,7 +64,7 @@
 </ul>
 <p><strong>所有问题的目标都可以被描述成最大化期望的累计奖励</strong></p>
 <figure>
-<img src="image-1.png" alt="Alt text" /><figcaption aria-hidden="true">Alt text</figcaption>
+<img src="image-1.png" alt="image-1" /><figcaption aria-hidden="true">image-1</figcaption>
 </figure>
 <p>智能体在每个时间步t： + 接收观测(observation) <span class="math inline">\(O_t\)</span> + 接受标量奖励信号 <span class="math inline">\(R_t\)</span> + 执行动作(action) <span class="math inline">\(A_t\)</span></p>
 <p>环境： + 接收动作 <span class="math inline">\(A_t\)</span> + 产生观测 <span class="math inline">\(O_{t+1}\)</span> + 产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span></p>
@@ -97,16 +97,12 @@
 <p>"未来只与现在有关，与过去无关" + 给定当前时刻的状态，将来与历史无关 + 状态是对过去的充分统计</p>
 <h3 id="状态转移矩阵">2.2 状态转移矩阵</h3>
 <ul>
-<li>对于马尔可夫状态 <span class="math inline">\(s\)</span> 与其后继状态 <span class="math inline">\(s&#39;\)</span>，它们的状态转移概率定义为：</li>
-</ul>
-<p><span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span> （当前状态是<span class="math inline">\(s\)</span>的情况下，下一个状态是<span class="math inline">\(s&#39;\)</span>的概率）</p>
-<ul>
-<li>状态转移矩阵P定义了马尔可夫状态s到其所有后继状态s'的转移概率</li>
-</ul>
-<p><span class="math inline">\(p=from \begin{bmatrix}  p_{11} &amp; ... &amp; p_{1n} \\  : &amp; &amp; : \\  p_{n1} &amp; ... &amp; p_{nn} \end{bmatrix}\)</span></p>
-<p>上式中<span class="math inline">\(p_{1n}\)</span>可以理解为<span class="math inline">\(s_1\)</span>到<span class="math inline">\(s_n\)</span>的概率</p>
-<ul>
-<li>矩阵的每一行总和为1</li>
+<li><p>对于马尔可夫状态 <span class="math inline">\(s\)</span> 与其后继状态 <span class="math inline">\(s&#39;\)</span>，它们的状态转移概率定义为：</p>
+<p><span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span> （当前状态是<span class="math inline">\(s\)</span>的情况下，下一个状态是<span class="math inline">\(s&#39;\)</span>的概率）</p></li>
+<li><p>状态转移矩阵P定义了马尔可夫状态s到其所有后继状态s'的转移概率</p>
+<p><span class="math inline">\(p=from  \begin{bmatrix}  p_{11} &amp; ... &amp; p_{1n} \\  : &amp; &amp; : \\  p_{n1} &amp; ... &amp; p_{nn}  \end{bmatrix}\)</span></p>
+<p>上式中<span class="math inline">\(p_{1n}\)</span>可以理解为<span class="math inline">\(s_1\)</span>到<span class="math inline">\(s_n\)</span>的概率</p></li>
+<li><p>矩阵的每一行总和为1</p></li>
 </ul>
 <h3 id="马尔可夫过程">2.3 马尔可夫过程</h3>
 <ul>
@@ -118,6 +114,14 @@
 <li>时间、状态都连续的马尔可夫过程</li>
 </ul></li>
 </ul>
+<p>学生的马尔可夫链 <img src="image.png" alt="image" /></p>
+<p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
+<ul>
+<li>C1 C2 C3 Pass Sleep</li>
+<li>C1 FB FB C1 C2 Sleep</li>
+<li>C1 C2 C3 Pub C2 C3 Pass Sleep</li>
+</ul>
+<h2 id="马尔可夫奖励过程">马尔可夫奖励过程</h2>
 ]]></content>
       <categories>
         <category>RL</category>
