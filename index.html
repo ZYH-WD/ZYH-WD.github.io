@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-06 15:23:22" itemprop="dateModified" datetime="2023-11-06T15:23:22+08:00">2023-11-06</time>
+                <time title="修改时间：2023-11-06 15:49:14" itemprop="dateModified" datetime="2023-11-06T15:49:14+08:00">2023-11-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -333,6 +333,27 @@
 <li>C1 C2 C3 Pub C2 C3 Pass Sleep</li>
 </ul>
 <h2 id="马尔可夫奖励过程">马尔可夫奖励过程</h2>
+<ul>
+<li>马尔可夫奖励过程是具有价值的马尔可夫链</li>
+</ul>
+<p>定义：马尔可夫奖励过程（Markov Reward Process，MRP）由元组<span class="math inline">\((\mathcal{S},\mathcal{P},\mathcal{R},\gamma)\)</span></p>
+<ul>
+<li><span class="math inline">\(\mathcal{S}\)</span>是有限状态的集合</li>
+<li><span class="math inline">\(\mathcal{P}\)</span>是状态转移矩阵，<span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span></li>
+<li><span class="math inline">\(\mathcal{R_s}\)</span>是奖励函数，<span class="math inline">\(\mathcal{R_s}=\mathbb{E}[R_{t+1}|S_t=s]\)</span></li>
+<li><span class="math inline">\(\gamma\)</span>是折扣因子，<span class="math inline">\(\gamma∈[0,1]\)</span></li>
+</ul>
+<h2 id="回报return">3.2 回报（Return）</h2>
+<p>定义：在一个马尔可夫奖励过程中，从<span class="math inline">\(t\)</span>时刻的状态<span class="math inline">\(S_t\)</span>开始，直至终止状态时，所有奖励的衰减之和<span class="math inline">\(G_t\)</span>称为回报（Return）。</p>
+<p><span class="math display">\[G_t=R_{t+1}+\gamma R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
+<p>上式中引入折扣率或衰减率<span class="math inline">\(\gamma\)</span>的作用：</p>
+<ul>
+<li>避免有环的马尔可夫过程计算收益时出现无限循环</li>
+<li>从金融投资回报的角度讲，即时奖励比延时奖励更吸引人</li>
+<li>动物/人类行为中都表现出对即时奖励的偏好</li>
+<li>可以表达未来的不确定性</li>
+<li><span class="math inline">\(\gamma∈[0,1],\gamma=0\)</span>只看眼前受益</li>
+</ul>
 
       
     </div>
@@ -610,7 +631,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.2k字</span>
+  <span class="post-count">博客全站共1.5k字</span>
 </div>
         
 <div class="busuanzi-count">
