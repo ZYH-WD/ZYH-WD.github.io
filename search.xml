@@ -114,7 +114,10 @@
 <li>时间、状态都连续的马尔可夫过程</li>
 </ul></li>
 </ul>
-<p>学生的马尔可夫链 <img src="image.png" alt="image"></p>
+<p>学生的马尔可夫链</p>
+<figure>
+<img src="image.png" alt="Alt text"><figcaption aria-hidden="true">Alt text</figcaption>
+</figure>
 <p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
 <ul>
 <li>C1 C2 C3 Pass Sleep</li>
