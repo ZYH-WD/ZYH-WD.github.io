@@ -70,8 +70,11 @@
 <li><p>接受标量奖励信号 <span class="math inline">\(R_t\)</span></p></li>
 <li><p>执行动作(action) <span class="math inline">\(A_t\)</span></p></li>
 </ul>
-<p>环境： + 接收动作 <span class="math inline">\(A_t\)</span> + 产生观测 <span class="math inline">\(O_{t+1}\)</span> + 产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span></p>
+<p>环境：</p>
 <ul>
+<li>接收动作 <span class="math inline">\(A_t\)</span>;</li>
+<li>产生观测 <span class="math inline">\(O_{t+1}\)</span>;</li>
+<li>产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span>;</li>
 <li>历史(History)是观测、行动和奖励的序列
 <ul>
 <li><span class="math display">\[H_t=O_1,R_1,A_1,O_2,R_2,A_2,...,O_{t-1},R_{t-1}\]</span></li>
