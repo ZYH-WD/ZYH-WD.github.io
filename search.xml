@@ -48,7 +48,39 @@
     <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
 <p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
 <p>基本流程参考自”五十度GRE“</p>
-<p>DAY1</p>
+<ul>
+<li><p>DAY1</p>
+<ul class="task-list">
+<li><p><input type="checkbox" disabled>
+背词：S1/2</p></li>
+<li><p><input type="checkbox" disabled>
+方法论：阅读方法论1</p></li>
+<li><p><input type="checkbox" disabled>
+录播：阅读录播1</p></li>
+</ul></li>
+<li><p>DAY2</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S3/4</li>
+<li><input type="checkbox" disabled>
+方法论：填空方法论1</li>
+<li><input type="checkbox" disabled>
+填空录播1：</li>
+</ul></li>
+<li><p>DAY3</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S5/6</li>
+<li><input type="checkbox" disabled>
+阅读方法论2</li>
+<li><input type="checkbox" disabled>
+阅读录播2</li>
+</ul></li>
+<li><p>DAY4</p>
+<ul>
+<li>[ ]</li>
+</ul></li>
+</ul>
 ]]></content>
       <categories>
         <category>GRE</category>
