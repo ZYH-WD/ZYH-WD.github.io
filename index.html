@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-09 10:57:31" itemprop="dateModified" datetime="2023-11-09T10:57:31+08:00">2023-11-09</time>
+                <time title="修改时间：2023-11-09 11:05:49" itemprop="dateModified" datetime="2023-11-09T11:05:49+08:00">2023-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,40 +247,15 @@
           <h1 id="gre备考">GRE备考</h1>
 <p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
 <p>基本流程参考自”五十度GRE“</p>
-<ul>
-<li><p>DAY1</p>
-<ul class="task-list">
-<li><p><input type="checkbox" disabled>
-背词：S1/2</p></li>
-<li><p><input type="checkbox" disabled>
-方法论：阅读方法论1</p></li>
-<li><p><input type="checkbox" disabled>
-录播：阅读录播1</p></li>
-</ul></li>
-<li><p>DAY2</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled>
-背词：S3/4</li>
-<li><input type="checkbox" disabled>
-方法论：填空方法论1</li>
-<li><input type="checkbox" disabled>
-填空录播1：</li>
-</ul></li>
-<li><p>DAY3</p>
-<ul class="task-list">
-<li><input type="checkbox" disabled>
-背词：S5/6</li>
-<li><input type="checkbox" disabled>
-阅读方法论2</li>
-<li><input type="checkbox" disabled>
-阅读录播2</li>
-</ul></li>
-<li><p>DAY4</p>
-<ul>
-<li>[ ]</li>
-</ul></li>
-</ul>
-
+<p>（为什么是30天记录，因为还剩30天考试）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -508,7 +483,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-09 10:58:42" itemprop="dateModified" datetime="2023-11-09T10:58:42+08:00">2023-11-09</time>
+                <time title="修改时间：2023-11-09 11:05:08" itemprop="dateModified" datetime="2023-11-09T11:05:08+08:00">2023-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -548,116 +523,14 @@
 <li>宁愿牺牲即时（短期）奖励以获取更多的长期奖励</li>
 </ul></li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br></pre></td></tr></table></figure>
-<p><strong>所有问题的目标都可以被描述成最大化期望的累计奖励</strong></p>
-<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image-1.png"></p>
-<p>智能体在每个时间步<span class="math inline">\(t\)</span>：</p>
-<ul>
-<li>接收观测(observation) <span class="math inline">\(O_t\)</span></li>
-<li>接受标量奖励信号 <span class="math inline">\(R_t\)</span></li>
-<li>执行动作(action) <span class="math inline">\(A_t\)</span></li>
-</ul>
-<p>环境：</p>
-<ul>
-<li>接收动作 <span class="math inline">\(A_t\)</span>;</li>
-<li>产生观测 <span class="math inline">\(O_{t+1}\)</span>;</li>
-<li>产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span>;</li>
-<li>历史(History)是观测、行动和奖励的序列
-<ul>
-<li><span class="math display">\[H_t=O_1,R_1,A_1,O_2,R_2,A_2,...,O_{t-1},R_{t-1}\]</span></li>
-</ul></li>
-<li>状态(State)是一种用于确定接下来会发生的事情（行动、观察、奖励）的信息
-<ul>
-<li>状态是关于历史的函数 <span class="math inline">\(S_t=f(H_t)\)</span></li>
-</ul></li>
-<li>环境的可观测性：
-<ul>
-<li>完全可观测：智能体可以直接观察到全部环境状态</li>
-<li>部分可观测：智能体只能部分的观测到环境</li>
-</ul></li>
-<li>智能体的组成：
-<ul>
-<li>策略（Policy）：智能体的行为函数。输入为状态，输出为行动决策</li>
-<li>价值函数（Value function）：评估每个状态或行动有多好</li>
-<li>模型 （Model）：智能体对环境的表示，是智能体眼里的环境</li>
-</ul></li>
-</ul>
-<h2 id="马尔可夫决策过程markov-decision-processes-mdp">马尔可夫决策过程（Markov decision processes, MDP）</h2>
-<h3 id="马尔可夫性质">2.1 马尔可夫性质</h3>
-<ul>
-<li>定义：状态 <span class="math inline">\(S_t\)</span> 具有马尔可夫性，当且仅当 <span class="math display">\[\mathbb{P}[S_{t+1}|S_t]=\mathbb{P}[S_{t+1}|S_1,...,S_t]\]</span>
-<ul>
-<li>"未来只与现在有关，与过去无关"</li>
-</ul></li>
-<li>给定当前时刻的状态，将来与历史无关</li>
-<li>状态是对过去的充分统计</li>
-</ul>
-<h3 id="状态转移矩阵">2.2 状态转移矩阵</h3>
-<ul>
-<li><p>对于马尔可夫状态 <span class="math inline">\(s\)</span> 与其后继状态 <span class="math inline">\(s&#39;\)</span>，它们的状态转移概率定义为：</p>
-<p><span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span> （当前状态是<span class="math inline">\(s\)</span>的情况下，下一个状态是<span class="math inline">\(s&#39;\)</span>的概率）</p></li>
-<li><p>状态转移矩阵P定义了马尔可夫状态s到其所有后继状态s'的转移概率</p>
-<p><span class="math display">\[p=from
-  \begin{bmatrix}
-  p_{11} &amp; ... &amp; p_{1n} \\
-  : &amp;  &amp; : \\
-  p_{n1} &amp; ... &amp; p_{nn}
-  \end{bmatrix}\]</span></p>
-<p>上式中<span class="math inline">\(p_{1n}\)</span>可以理解为<span class="math inline">\(s_1\)</span>到<span class="math inline">\(s_n\)</span>的概率</p></li>
-<li><p>矩阵的每一行总和为1</p></li>
-</ul>
-<h3 id="马尔可夫过程">2.3 马尔可夫过程</h3>
-<ul>
-<li>马尔可夫过程是一种无记忆的随机过程。</li>
-<li>马尔可夫过程可以分为三类:
-<ul>
-<li>时间、状态都离散的马尔可夫过程（<strong>马尔科夫链</strong>）</li>
-<li>时间连续、状态离散的马尔可夫过程（<strong>连续时间的马尔科夫链</strong>）</li>
-<li>时间、状态都连续的马尔可夫过程</li>
-</ul></li>
-</ul>
-<p>学生的马尔可夫链</p>
-<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image.png"></p>
-<p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
-<ul>
-<li>C1 C2 C3 Pass Sleep</li>
-<li>C1 FB FB C1 C2 Sleep</li>
-<li>C1 C2 C3 Pub C2 C3 Pass Sleep</li>
-</ul>
-<h2 id="马尔可夫奖励过程">马尔可夫奖励过程</h2>
-<ul>
-<li>马尔可夫奖励过程是具有价值的马尔可夫链</li>
-</ul>
-<p>定义：马尔可夫奖励过程（Markov Reward Process，MRP）由元组<span class="math inline">\((\mathcal{S},\mathcal{P},\mathcal{R},\gamma)\)</span></p>
-<ul>
-<li><span class="math inline">\(\mathcal{S}\)</span>是有限状态的集合</li>
-<li><span class="math inline">\(\mathcal{P}\)</span>是状态转移矩阵，<span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span></li>
-<li><span class="math inline">\(\mathcal{R_s}\)</span>是奖励函数，<span class="math inline">\(\mathcal{R_s}=\mathbb{E}[R_{t+1}|S_t=s]\)</span></li>
-<li><span class="math inline">\(\gamma\)</span>是折扣因子，<span class="math inline">\(\gamma∈[0,1]\)</span></li>
-</ul>
-<h3 id="回报return">3.2 回报（Return）</h3>
-<p>定义：在一个马尔可夫奖励过程中，从<span class="math inline">\(t\)</span>时刻的状态<span class="math inline">\(S_t\)</span>开始，直至终止状态时，所有奖励的衰减之和<span class="math inline">\(G_t\)</span>称为回报（Return）。</p>
-<p><span class="math display">\[G_t=R_{t+1}+\gamma R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
-<p>上式中引入折扣率或衰减率<span class="math inline">\(\gamma\)</span>的作用：</p>
-<ul>
-<li>避免有环的马尔可夫过程计算收益时出现无限循环</li>
-<li>从金融投资回报的角度讲，即时奖励比延时奖励更吸引人</li>
-<li>动物/人类行为中都表现出对即时奖励的偏好</li>
-<li>可以表达未来的不确定性</li>
-<li><span class="math inline">\(\gamma∈[0,1],\gamma=0\)</span>只看眼前受益</li>
-</ul>
-<figure>
-<img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image2.png" alt="image2"><figcaption aria-hidden="true">image2</figcaption>
-</figure>
-<h3 id="价值函数value-function">3.3 价值函数（Value Function）</h3>
-<ul>
-<li>价值函数<span class="math inline">\(v(s)\)</span>给出状态s的长期价值</li>
-<li>价值函数输入为某个状态，输出为这个状态的价值</li>
-</ul>
-<p>定义：在马尔可夫奖励过程中，一个状态的期望回报被称为这个状态的价值函数 <span class="math display">\[
-v(s)=\mathbb{E}[G_t|S_t=s]
-\]</span></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
