@@ -53,9 +53,9 @@
 <ul>
 <li><p>DAY1</p>
 <ul class="task-list">
-<li><p><input type="checkbox" disabled>
+<li><p><input type="checkbox" disabled checked>
 背词：S1/2</p></li>
-<li><p><input type="checkbox" disabled>
+<li><p><input type="checkbox" disabled checked>
 方法论：阅读方法论1</p></li>
 <li><p><input type="checkbox" disabled>
 录播：阅读录播1</p></li>
@@ -151,9 +151,33 @@
 <td>移除链表元素</td>
 </tr>
 <tr class="even">
+<td>206</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>反转链表</td>
+</tr>
+<tr class="odd">
+<td>234</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>回文链表</td>
+</tr>
+<tr class="even">
+<td>237</td>
+<td>Medium</td>
+<td>Linked List</td>
+<td>删除链表中的节点</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Medium</td>
+<td>Linked List</td>
 <td></td>
-<td></td>
-<td></td>
+</tr>
+<tr class="even">
+<td>61</td>
+<td>Medium</td>
+<td>Linked List</td>
 <td></td>
 </tr>
 </tbody>
@@ -229,6 +253,25 @@
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># python 迭代 </span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reverseList</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur, pre = head, <span class="literal">None</span></span><br><span class="line">        <span class="keyword">while</span> cur:</span><br><span class="line">            tmp = cur.<span class="built_in">next</span> <span class="comment"># 暂存后继节点 cur.next</span></span><br><span class="line">            cur.<span class="built_in">next</span> = pre <span class="comment"># 修改 next 引用指向</span></span><br><span class="line">            pre = cur      <span class="comment"># pre 暂存 cur</span></span><br><span class="line">            cur = tmp      <span class="comment"># cur 访问下一节点</span></span><br><span class="line">        <span class="keyword">return</span> pre</span><br></pre></td></tr></table></figure></li>
 <li><p>参考代码（Java，递归）：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 以链表1-&gt;2-&gt;3-&gt;4-&gt;5举例</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            直到当前节点的下一个节点为空时返回当前节点</span></span><br><span class="line"><span class="comment">            由于5没有下一个节点了，所以此处返回节点5</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//递归传入下一个节点，目的是为了到达最后一个节点</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">        第一轮出栈，head为5，head.next为空，返回5</span></span><br><span class="line"><span class="comment">        第二轮出栈，head为4，head.next为5，执行head.next.next=head也就是5.next=4，</span></span><br><span class="line"><span class="comment">                  把当前节点的子节点的子节点指向当前节点</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-&gt;5，由于4与5互相指向，所以此处要断开4.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第三轮出栈，head为3，head.next为4，执行head.next.next=head也就是4.next=3，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-&gt;4&lt;-5，由于3与4互相指向，所以此处要断开3.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第四轮出栈，head为2，head.next为3，执行head.next.next=head也就是3.next=2，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-&gt;3&lt;-4&lt;-5，由于2与3互相指向，所以此处要断开2.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第五轮出栈，head为1，head.next为2，执行head.next.next=head也就是2.next=1，</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-&gt;2&lt;-3&lt;-4&lt;-5，由于1与2互相指向，所以此处要断开1.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        出栈完成，最终头节点5-&gt;4-&gt;3-&gt;2-&gt;1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    head.next.next = head;</span><br><span class="line">    head.next = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="回文链表">回文链表</h3>
+<p><a href="https://leetcode.cn/problems/palindrome-linked-list/solutions/457059/hui-wen-lian-biao-by-leetcode-solution/">234. 回文链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：</p>
+<ul>
+<li>将值复制到数组中后用双指针法</li>
+<li>递归</li>
+<li>快慢指针</li>
+</ul></li>
+<li><p>代码（只放了python的复制到数组代码）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isPalindrome</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="comment"># 将链表复制到数组里，然后用</span></span><br><span class="line">        vals = []</span><br><span class="line">        current_node = head</span><br><span class="line">        <span class="keyword">while</span> current_node <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            vals.append(current_node.val)</span><br><span class="line">            current_node = current_node.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> vals == vals[::-<span class="number">1</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="删除链表中的节点">删除链表中的节点</h3>
+<p><a href="https://leetcode.cn/problems/delete-node-in-a-linked-list/description/">237. 删除链表中的节点 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：这题很搞笑，看似不给头结点很奇怪，其实复制下一个节点然后删下一个做行</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteNode</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type node: ListNode</span></span><br><span class="line"><span class="string">        :rtype: void Do not return anything, modify node in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        node.val = node.<span class="built_in">next</span>.val</span><br><span class="line">        node.<span class="built_in">next</span> = node.<span class="built_in">next</span>.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
