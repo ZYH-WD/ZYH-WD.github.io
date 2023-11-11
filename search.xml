@@ -92,6 +92,225 @@
       </tags>
   </entry>
   <entry>
+    <title>剑指offer</title>
+    <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
+    <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
+<p>个人刷题记录（某种程度上也可以算作笔记），刷题顺序参考自<a href="https://github.com/Jack-Cherish/LeetCode">Jack-Cherish/LeetCode: :monkey:LeetCode、剑指Offer刷题笔记（C/C++、Python3实现） (github.com)</a></p>
+<span id="more"></span>
+<h2 id="题目清单">题目清单</h2>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Difficulty</th>
+<th>Categories</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Easy</td>
+<td>Array</td>
+<td>Two sum</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Medium</td>
+<td>Array</td>
+<td>盛水最多的容器</td>
+</tr>
+<tr class="odd">
+<td>21</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>合并两个有序链表</td>
+</tr>
+<tr class="even">
+<td>83</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>删除排序链表中的重复元素</td>
+</tr>
+<tr class="odd">
+<td>141</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>环形链表</td>
+</tr>
+<tr class="even">
+<td>160</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>相交链表</td>
+</tr>
+<tr class="odd">
+<td>203</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>移除链表元素</td>
+</tr>
+<tr class="even">
+<td>206</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>反转链表</td>
+</tr>
+<tr class="odd">
+<td>234</td>
+<td>Easy</td>
+<td>Linked List</td>
+<td>回文链表</td>
+</tr>
+<tr class="even">
+<td>237</td>
+<td>Medium</td>
+<td>Linked List</td>
+<td>删除链表中的节点</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Medium</td>
+<td>Linked List</td>
+<td>两数相加</td>
+</tr>
+<tr class="even">
+<td>61</td>
+<td>Medium</td>
+<td>Linked List</td>
+<td>旋转链表</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="数组">数组</h2>
+<h3 id="两数之和">两数之和</h3>
+<p><a href="https://leetcode.cn/problems/two-sum/">1. 两数之和 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：如果数组nums的元素a小于target，那么就在数组中寻找另一个b，使a+b=target。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums, target</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 利用哈希表</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> [buff_dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                buff_dict[target - nums[i]] = i</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="盛水最多的容器">盛水最多的容器</h3>
+<p><a href="https://leetcode.cn/problems/container-with-most-water/description/">11. 盛最多水的容器 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：双指针代表容器的两边，如果左指针对应数字较小，就向右移，直到两个指针重合。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxArea</span>(<span class="params">self, height: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="comment"># 双指针</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">len</span>(height)-<span class="number">1</span></span><br><span class="line">        max_area = <span class="number">0</span></span><br><span class="line">        tmp_area = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(left &lt; right):</span><br><span class="line">            l_min = <span class="built_in">min</span>(height[left],height[right])</span><br><span class="line">            max_area = <span class="built_in">max</span>(max_area, l_min * (right - left))</span><br><span class="line">            <span class="keyword">if</span> height[left] &lt; height[right]:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_area</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="链表">链表</h2>
+<h3 id="合并两个有序链表">合并两个有序链表</h3>
+<p><a href="https://leetcode.cn/problems/merge-two-sorted-lists/description/">21. 合并两个有序链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：创建两个链表，一个负责保存头节点，一个负责记录比较后的结果。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">mergeTwoLists</span>(<span class="params">self, list1: <span class="type">Optional</span>[ListNode], list2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur = res = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> list1 <span class="keyword">and</span> list2:</span><br><span class="line">            <span class="keyword">if</span> list1.val &lt; list2.val:</span><br><span class="line">                cur.<span class="built_in">next</span> = list1</span><br><span class="line">                list1 = list1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cur.<span class="built_in">next</span> = list2</span><br><span class="line">                list2 = list2.<span class="built_in">next</span></span><br><span class="line">            cur = cur.<span class="built_in">next</span></span><br><span class="line">        cur.<span class="built_in">next</span> = list1 <span class="keyword">or</span> list2   <span class="comment"># 这个运算符注意一下</span></span><br><span class="line">        <span class="keyword">return</span> res.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="删除排序链表中的重复元素">删除排序链表中的重复元素</h3>
+<p><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：当元素和下一个元素比对，如果相同，当前元素的next指针指向下一个元素的next指针。</p></li>
+<li><p>自己的：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteDuplicates</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        <span class="keyword">if</span> head == <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        tmp = head.val</span><br><span class="line">        last = head</span><br><span class="line">        res = head</span><br><span class="line">        head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> head.val == tmp:</span><br><span class="line">                last.<span class="built_in">next</span> = head.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tmp = head.val</span><br><span class="line">                last = head</span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure></li>
+<li><p>参考答案：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteDuplicates</span>(<span class="params">self, head</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span> </span><br><span class="line">        now = head</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">while</span> head.<span class="built_in">next</span> <span class="keyword">and</span> head.val == head.<span class="built_in">next</span>.val:</span><br><span class="line">                head.<span class="built_in">next</span> = head.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            </span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> now</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="环形链表">环形链表</h3>
+<p><a href="https://leetcode.cn/problems/linked-list-cycle/description/">141. 环形链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解决思路：使用快慢指针判断链表是否有环</p></li>
+<li><p>我的答案：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hasCycle</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> fast:</span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span> == <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span>.<span class="built_in">next</span> == slow.<span class="built_in">next</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">                slow = slow.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+<li><p>参考答案：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># class ListNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 答案写的很巧妙但是我的那个更快？</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hasCycle</span>(<span class="params">self, head</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            slow = head</span><br><span class="line">            fast = head.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">while</span> slow <span class="keyword">is</span> <span class="keyword">not</span> fast:</span><br><span class="line">                slow = slow.<span class="built_in">next</span></span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="相交链表">相交链表</h3>
+<p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/description/">160. 相交链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：判断链表相交可以使用：</p>
+<ul>
+<li>哈希表存储链表节点</li>
+<li>双指针可以将空间复杂度降至O(1)</li>
+</ul></li>
+<li><p>我的代码（哈希表）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params">self, headA: ListNode, headB: ListNode</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        a = b = <span class="number">0</span></span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> headA:</span><br><span class="line">            buff_dict[headA] = headA</span><br><span class="line">            headA = headA.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">while</span> headB:</span><br><span class="line">            <span class="keyword">if</span> headB <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> headB</span><br><span class="line">            headB = headB.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></li>
+<li><p>参考答案（双指针）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params">self, headA, headB</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head1, head1: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> headA <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> headB <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        pa = headA <span class="comment"># 2 pointers</span></span><br><span class="line">        pb = headB</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> pa <span class="keyword">is</span> <span class="keyword">not</span> pb:</span><br><span class="line">            <span class="comment"># pa先遍历headA，然后再遍历headB</span></span><br><span class="line">            <span class="comment"># pb先遍历headB，然后再遍历headA</span></span><br><span class="line">            pa = headB <span class="keyword">if</span> pa <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">else</span> pa.<span class="built_in">next</span></span><br><span class="line">            pb = headA <span class="keyword">if</span> pb <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">else</span> pb.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> pa <span class="comment"># 只有两种方式结束循环，一种是pa和pb所指相同，另一种是headA和headB都已经遍历完仍然没有找到。</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="移除链表元素">移除链表元素</h3>
+<p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：简单题我重拳出击，中等题我溜之大吉（不是），链表没有头结点就设一个虚拟头结点方便删除，也可以使用C++指针操作地址</p></li>
+<li><p>我的代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeElements</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode], val: <span class="built_in">int</span></span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        first_node = ListNode(<span class="number">0</span>,head) <span class="comment">#(填一个头结点)</span></span><br><span class="line">        tmp = first_node</span><br><span class="line">        <span class="keyword">while</span> tmp.<span class="built_in">next</span> != <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> tmp.<span class="built_in">next</span>.val == val:</span><br><span class="line">                tmp.<span class="built_in">next</span> = tmp.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tmp = tmp.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> first_node.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+<li><p>参考答案：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">removeElements</span><span class="params">(ListNode* head, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        ListNode **list = &amp;head;</span><br><span class="line">        <span class="keyword">while</span> (*list != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> ((*list)-&gt;val == val)&#123;</span><br><span class="line">                *list = (*list)-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                list = &amp;(*list)-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="反转链表">反转链表</h3>
+<p><a href="https://leetcode.cn/problems/reverse-linked-list/description/">206. 反转链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：</p></li>
+<li><p>参考代码（迭代）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># python 迭代 </span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reverseList</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur, pre = head, <span class="literal">None</span></span><br><span class="line">        <span class="keyword">while</span> cur:</span><br><span class="line">            tmp = cur.<span class="built_in">next</span> <span class="comment"># 暂存后继节点 cur.next</span></span><br><span class="line">            cur.<span class="built_in">next</span> = pre <span class="comment"># 修改 next 引用指向</span></span><br><span class="line">            pre = cur      <span class="comment"># pre 暂存 cur</span></span><br><span class="line">            cur = tmp      <span class="comment"># cur 访问下一节点</span></span><br><span class="line">        <span class="keyword">return</span> pre</span><br></pre></td></tr></table></figure></li>
+<li><p>参考代码（Java，递归）：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 以链表1-&gt;2-&gt;3-&gt;4-&gt;5举例</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            直到当前节点的下一个节点为空时返回当前节点</span></span><br><span class="line"><span class="comment">            由于5没有下一个节点了，所以此处返回节点5</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//递归传入下一个节点，目的是为了到达最后一个节点</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">        第一轮出栈，head为5，head.next为空，返回5</span></span><br><span class="line"><span class="comment">        第二轮出栈，head为4，head.next为5，执行head.next.next=head也就是5.next=4，</span></span><br><span class="line"><span class="comment">                  把当前节点的子节点的子节点指向当前节点</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-&gt;5，由于4与5互相指向，所以此处要断开4.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第三轮出栈，head为3，head.next为4，执行head.next.next=head也就是4.next=3，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-&gt;4&lt;-5，由于3与4互相指向，所以此处要断开3.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第四轮出栈，head为2，head.next为3，执行head.next.next=head也就是3.next=2，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-&gt;3&lt;-4&lt;-5，由于2与3互相指向，所以此处要断开2.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第五轮出栈，head为1，head.next为2，执行head.next.next=head也就是2.next=1，</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-&gt;2&lt;-3&lt;-4&lt;-5，由于1与2互相指向，所以此处要断开1.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        出栈完成，最终头节点5-&gt;4-&gt;3-&gt;2-&gt;1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    head.next.next = head;</span><br><span class="line">    head.next = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="回文链表">回文链表</h3>
+<p><a href="https://leetcode.cn/problems/palindrome-linked-list/solutions/457059/hui-wen-lian-biao-by-leetcode-solution/">234. 回文链表 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：</p>
+<ul>
+<li>将值复制到数组中后用双指针法</li>
+<li>递归</li>
+<li>快慢指针</li>
+</ul></li>
+<li><p>代码（只放了python的复制到数组代码）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isPalindrome</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="comment"># 将链表复制到数组里，然后用</span></span><br><span class="line">        vals = []</span><br><span class="line">        current_node = head</span><br><span class="line">        <span class="keyword">while</span> current_node <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            vals.append(current_node.val)</span><br><span class="line">            current_node = current_node.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> vals == vals[::-<span class="number">1</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="删除链表中的节点">删除链表中的节点</h3>
+<p><a href="https://leetcode.cn/problems/delete-node-in-a-linked-list/description/">237. 删除链表中的节点 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：这题很搞笑，看似不给头结点很奇怪，其实复制下一个节点然后删下一个做行</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteNode</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type node: ListNode</span></span><br><span class="line"><span class="string">        :rtype: void Do not return anything, modify node in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        node.val = node.<span class="built_in">next</span>.val</span><br><span class="line">        node.<span class="built_in">next</span> = node.<span class="built_in">next</span>.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="两数相加">两数相加</h3>
+<p><a href="https://leetcode.cn/problems/add-two-numbers/description/">2. 两数相加 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：迭代思路，也能写递归（但现在看递归脑袋疼）</p></li>
+<li><p>我的代码（很慢）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">while</span> l1 != <span class="literal">None</span> <span class="keyword">or</span> l2 != <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>: </span><br><span class="line">                res.append(l1.val + l2.val)</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                res.append(l1.val)</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                res.append(l2.val)</span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">        jw = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(res)):</span><br><span class="line">            res[i] = res[i] + jw</span><br><span class="line">            <span class="keyword">if</span> res[i] &gt;= <span class="number">10</span>:</span><br><span class="line">                jw = <span class="number">1</span></span><br><span class="line">                res[i] = res[i] % <span class="number">10</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                jw = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> jw == <span class="number">1</span>:</span><br><span class="line">            res.append(<span class="number">1</span>)</span><br><span class="line">            res[-<span class="number">1</span>] = res[-<span class="number">1</span>] % <span class="number">10</span></span><br><span class="line">        </span><br><span class="line">        res_node = ListNode(<span class="number">0</span>)</span><br><span class="line">        tmp = res_node</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            tmp_node = ListNode(i)</span><br><span class="line">            tmp.<span class="built_in">next</span> = tmp_node</span><br><span class="line">            tmp = tmp_node</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res_node.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
+<li><p>参考代码（一种非常优雅的写法）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur = dummy = ListNode()  <span class="comment"># 哨兵节点</span></span><br><span class="line">        carry = <span class="number">0</span>  <span class="comment"># 进位</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2 <span class="keyword">or</span> carry:  <span class="comment"># 有一个不是空节点，或者还有进位，就继续迭代</span></span><br><span class="line">            carry += (l1.val <span class="keyword">if</span> l1 <span class="keyword">else</span> <span class="number">0</span>) + (l2.val <span class="keyword">if</span> l2 <span class="keyword">else</span> <span class="number">0</span>)  <span class="comment"># 节点值和进位加在一起</span></span><br><span class="line">            cur.<span class="built_in">next</span> = ListNode(carry % <span class="number">10</span>)  <span class="comment"># 每个节点保存一个数位</span></span><br><span class="line">            carry //= <span class="number">10</span>  <span class="comment"># 新的进位</span></span><br><span class="line">            cur = cur.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">            <span class="keyword">if</span> l1: l1 = l1.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">            <span class="keyword">if</span> l2: l2 = l2.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">        <span class="keyword">return</span> dummy.<span class="built_in">next</span>  <span class="comment"># 哨兵节点的下一个节点就是头节点</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="旋转链表">旋转链表</h3>
+<ul>
+<li><p>解题思路：闭合为环，新链表的最后一个节点为原链表的第<span class="math inline">\((n-1)-(k\ mod\ n)\)</span>个节点（从<span class="math inline">\(\ 0\ \)</span>开始计数），然后将指定位置断开即可。</p></li>
+<li><p>我的代码（写的时候没想到成环再断，但本质一样）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">rotateRight</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode], k: <span class="built_in">int</span></span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        <span class="keyword">if</span> head == <span class="literal">None</span> <span class="keyword">or</span> k == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        l = <span class="number">0</span></span><br><span class="line">        tmp = head</span><br><span class="line">        begin = mid = last = head</span><br><span class="line">        <span class="keyword">while</span> tmp != <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> tmp.<span class="built_in">next</span> == <span class="literal">None</span>:</span><br><span class="line">                last = tmp</span><br><span class="line">            tmp = tmp.<span class="built_in">next</span></span><br><span class="line">            l += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        move = l - k % l - <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,move):</span><br><span class="line">            mid = mid.<span class="built_in">next</span></span><br><span class="line">        last.<span class="built_in">next</span> = begin</span><br><span class="line">        res = mid.<span class="built_in">next</span></span><br><span class="line">        mid.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure></li>
+<li><p>参考代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">rotateRight</span>(<span class="params">self, head: ListNode, k: <span class="built_in">int</span></span>) -&gt; ListNode:</span><br><span class="line">        <span class="keyword">if</span> k == <span class="number">0</span> <span class="keyword">or</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.<span class="built_in">next</span>:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        </span><br><span class="line">        n = <span class="number">1</span></span><br><span class="line">        cur = head</span><br><span class="line">        <span class="keyword">while</span> cur.<span class="built_in">next</span>:</span><br><span class="line">            cur = cur.<span class="built_in">next</span></span><br><span class="line">            n += <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (add := n - k % n) == n:</span><br><span class="line">            <span class="keyword">return</span> head</span><br><span class="line">        </span><br><span class="line">        cur.<span class="built_in">next</span> = head</span><br><span class="line">        <span class="keyword">while</span> add:</span><br><span class="line">            cur = cur.<span class="built_in">next</span></span><br><span class="line">            add -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        ret = cur.<span class="built_in">next</span></span><br><span class="line">        cur.<span class="built_in">next</span> = <span class="literal">None</span></span><br><span class="line">        <span class="keyword">return</span> ret</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>强化学习基础-马尔可夫决策过程</title>
     <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="马尔可夫决策过程">马尔可夫决策过程</h2>
@@ -226,205 +445,6 @@ v(s)=\mathbb{E}[G_t|S_t=s]
       </categories>
       <tags>
         <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>剑指offer</title>
-    <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
-    <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
-<p>个人刷题记录（某种程度上也可以算作笔记），刷题顺序参考自<a href="https://github.com/Jack-Cherish/LeetCode">Jack-Cherish/LeetCode: :monkey:LeetCode、剑指Offer刷题笔记（C/C++、Python3实现） (github.com)</a></p>
-<span id="more"></span>
-<h2 id="题目清单">题目清单</h2>
-<table>
-<thead>
-<tr class="header">
-<th>ID</th>
-<th>Difficulty</th>
-<th>Categories</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Easy</td>
-<td>Array</td>
-<td>Two sum</td>
-</tr>
-<tr class="even">
-<td>11</td>
-<td>Medium</td>
-<td>Array</td>
-<td>盛水最多的容器</td>
-</tr>
-<tr class="odd">
-<td>21</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>合并两个有序链表</td>
-</tr>
-<tr class="even">
-<td>83</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>删除排序链表中的重复元素</td>
-</tr>
-<tr class="odd">
-<td>141</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>环形链表</td>
-</tr>
-<tr class="even">
-<td>160</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>相交链表</td>
-</tr>
-<tr class="odd">
-<td>203</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>移除链表元素</td>
-</tr>
-<tr class="even">
-<td>206</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>反转链表</td>
-</tr>
-<tr class="odd">
-<td>234</td>
-<td>Easy</td>
-<td>Linked List</td>
-<td>回文链表</td>
-</tr>
-<tr class="even">
-<td>237</td>
-<td>Medium</td>
-<td>Linked List</td>
-<td>删除链表中的节点</td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>Medium</td>
-<td>Linked List</td>
-<td>两数相加</td>
-</tr>
-<tr class="even">
-<td>61</td>
-<td>Medium</td>
-<td>Linked List</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="数组">数组</h2>
-<h3 id="两数之和">两数之和</h3>
-<p><a href="https://leetcode.cn/problems/two-sum/">1. 两数之和 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：如果数组nums的元素a小于target，那么就在数组中寻找另一个b，使a+b=target。</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums, target</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 利用哈希表</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> [buff_dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                buff_dict[target - nums[i]] = i</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="盛水最多的容器">盛水最多的容器</h3>
-<p><a href="https://leetcode.cn/problems/container-with-most-water/description/">11. 盛最多水的容器 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：双指针代表容器的两边，如果左指针对应数字较小，就向右移，直到两个指针重合。</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">maxArea</span>(<span class="params">self, height: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="comment"># 双指针</span></span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        right = <span class="built_in">len</span>(height)-<span class="number">1</span></span><br><span class="line">        max_area = <span class="number">0</span></span><br><span class="line">        tmp_area = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(left &lt; right):</span><br><span class="line">            l_min = <span class="built_in">min</span>(height[left],height[right])</span><br><span class="line">            max_area = <span class="built_in">max</span>(max_area, l_min * (right - left))</span><br><span class="line">            <span class="keyword">if</span> height[left] &lt; height[right]:</span><br><span class="line">                left += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                right -= <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> max_area</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="链表">链表</h2>
-<h3 id="合并两个有序链表">合并两个有序链表</h3>
-<p><a href="https://leetcode.cn/problems/merge-two-sorted-lists/description/">21. 合并两个有序链表 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：创建两个链表，一个负责保存头节点，一个负责记录比较后的结果。</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">mergeTwoLists</span>(<span class="params">self, list1: <span class="type">Optional</span>[ListNode], list2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur = res = ListNode(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">while</span> list1 <span class="keyword">and</span> list2:</span><br><span class="line">            <span class="keyword">if</span> list1.val &lt; list2.val:</span><br><span class="line">                cur.<span class="built_in">next</span> = list1</span><br><span class="line">                list1 = list1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                cur.<span class="built_in">next</span> = list2</span><br><span class="line">                list2 = list2.<span class="built_in">next</span></span><br><span class="line">            cur = cur.<span class="built_in">next</span></span><br><span class="line">        cur.<span class="built_in">next</span> = list1 <span class="keyword">or</span> list2   <span class="comment"># 这个运算符注意一下</span></span><br><span class="line">        <span class="keyword">return</span> res.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="删除排序链表中的重复元素">删除排序链表中的重复元素</h3>
-<p><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：当元素和下一个元素比对，如果相同，当前元素的next指针指向下一个元素的next指针。</p></li>
-<li><p>自己的：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteDuplicates</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        <span class="keyword">if</span> head == <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        tmp = head.val</span><br><span class="line">        last = head</span><br><span class="line">        res = head</span><br><span class="line">        head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">if</span> head.val == tmp:</span><br><span class="line">                last.<span class="built_in">next</span> = head.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tmp = head.val</span><br><span class="line">                last = head</span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure></li>
-<li><p>参考答案：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteDuplicates</span>(<span class="params">self, head</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span> </span><br><span class="line">        now = head</span><br><span class="line">        <span class="keyword">while</span> head:</span><br><span class="line">            <span class="keyword">while</span> head.<span class="built_in">next</span> <span class="keyword">and</span> head.val == head.<span class="built_in">next</span>.val:</span><br><span class="line">                head.<span class="built_in">next</span> = head.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            </span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> now</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="环形链表">环形链表</h3>
-<p><a href="https://leetcode.cn/problems/linked-list-cycle/description/">141. 环形链表 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解决思路：使用快慢指针判断链表是否有环</p></li>
-<li><p>我的答案：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hasCycle</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        fast = slow = head</span><br><span class="line">        <span class="keyword">while</span> fast:</span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span> == <span class="literal">None</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            <span class="keyword">if</span> fast.<span class="built_in">next</span>.<span class="built_in">next</span> == slow.<span class="built_in">next</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">                slow = slow.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
-<li><p>参考答案：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># class ListNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 答案写的很巧妙但是我的那个更快？</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">hasCycle</span>(<span class="params">self, head</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head: ListNode</span></span><br><span class="line"><span class="string">        :rtype: bool</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            slow = head</span><br><span class="line">            fast = head.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">while</span> slow <span class="keyword">is</span> <span class="keyword">not</span> fast:</span><br><span class="line">                slow = slow.<span class="built_in">next</span></span><br><span class="line">                fast = fast.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="相交链表">相交链表</h3>
-<p><a href="https://leetcode.cn/problems/intersection-of-two-linked-lists/description/">160. 相交链表 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：判断链表相交可以使用：</p>
-<ul>
-<li>哈希表存储链表节点</li>
-<li>双指针可以将空间复杂度降至O(1)</li>
-</ul></li>
-<li><p>我的代码（哈希表）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params">self, headA: ListNode, headB: ListNode</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        a = b = <span class="number">0</span></span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">while</span> headA:</span><br><span class="line">            buff_dict[headA] = headA</span><br><span class="line">            headA = headA.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">while</span> headB:</span><br><span class="line">            <span class="keyword">if</span> headB <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> headB</span><br><span class="line">            headB = headB.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure></li>
-<li><p>参考答案（双指针）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">getIntersectionNode</span>(<span class="params">self, headA, headB</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type head1, head1: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> headA <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> headB <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        pa = headA <span class="comment"># 2 pointers</span></span><br><span class="line">        pb = headB</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> pa <span class="keyword">is</span> <span class="keyword">not</span> pb:</span><br><span class="line">            <span class="comment"># pa先遍历headA，然后再遍历headB</span></span><br><span class="line">            <span class="comment"># pb先遍历headB，然后再遍历headA</span></span><br><span class="line">            pa = headB <span class="keyword">if</span> pa <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">else</span> pa.<span class="built_in">next</span></span><br><span class="line">            pb = headA <span class="keyword">if</span> pb <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">else</span> pb.<span class="built_in">next</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> pa <span class="comment"># 只有两种方式结束循环，一种是pa和pb所指相同，另一种是headA和headB都已经遍历完仍然没有找到。</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="移除链表元素">移除链表元素</h3>
-<p><a href="https://leetcode.cn/problems/remove-linked-list-elements/">203. 移除链表元素 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：简单题我重拳出击，中等题我溜之大吉（不是），链表没有头结点就设一个虚拟头结点方便删除，也可以使用C++指针操作地址</p></li>
-<li><p>我的代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeElements</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode], val: <span class="built_in">int</span></span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        first_node = ListNode(<span class="number">0</span>,head) <span class="comment">#(填一个头结点)</span></span><br><span class="line">        tmp = first_node</span><br><span class="line">        <span class="keyword">while</span> tmp.<span class="built_in">next</span> != <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> tmp.<span class="built_in">next</span>.val == val:</span><br><span class="line">                tmp.<span class="built_in">next</span> = tmp.<span class="built_in">next</span>.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                tmp = tmp.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> first_node.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
-<li><p>参考答案：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode *next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) : val(x), next(NULL) &#123;&#125;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">ListNode* <span class="title">removeElements</span><span class="params">(ListNode* head, <span class="type">int</span> val)</span> </span>&#123;</span><br><span class="line">        ListNode **list = &amp;head;</span><br><span class="line">        <span class="keyword">while</span> (*list != <span class="literal">nullptr</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span> ((*list)-&gt;val == val)&#123;</span><br><span class="line">                *list = (*list)-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                list = &amp;(*list)-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="反转链表">反转链表</h3>
-<p><a href="https://leetcode.cn/problems/reverse-linked-list/description/">206. 反转链表 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：</p></li>
-<li><p>参考代码（迭代）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, val=0, next=None):</span></span><br><span class="line"><span class="comment">#         self.val = val</span></span><br><span class="line"><span class="comment">#         self.next = next</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># python 迭代 </span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reverseList</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur, pre = head, <span class="literal">None</span></span><br><span class="line">        <span class="keyword">while</span> cur:</span><br><span class="line">            tmp = cur.<span class="built_in">next</span> <span class="comment"># 暂存后继节点 cur.next</span></span><br><span class="line">            cur.<span class="built_in">next</span> = pre <span class="comment"># 修改 next 引用指向</span></span><br><span class="line">            pre = cur      <span class="comment"># pre 暂存 cur</span></span><br><span class="line">            cur = tmp      <span class="comment"># cur 访问下一节点</span></span><br><span class="line">        <span class="keyword">return</span> pre</span><br></pre></td></tr></table></figure></li>
-<li><p>参考代码（Java，递归）：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> head;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">        head.next.next = head;</span><br><span class="line">        head.next = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 以链表1-&gt;2-&gt;3-&gt;4-&gt;5举例</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> head</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span> || head.next == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            直到当前节点的下一个节点为空时返回当前节点</span></span><br><span class="line"><span class="comment">            由于5没有下一个节点了，所以此处返回节点5</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//递归传入下一个节点，目的是为了到达最后一个节点</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverseList(head.next);</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">        第一轮出栈，head为5，head.next为空，返回5</span></span><br><span class="line"><span class="comment">        第二轮出栈，head为4，head.next为5，执行head.next.next=head也就是5.next=4，</span></span><br><span class="line"><span class="comment">                  把当前节点的子节点的子节点指向当前节点</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-&gt;5，由于4与5互相指向，所以此处要断开4.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3-&gt;4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第三轮出栈，head为3，head.next为4，执行head.next.next=head也就是4.next=3，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-&gt;4&lt;-5，由于3与4互相指向，所以此处要断开3.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2-&gt;3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第四轮出栈，head为2，head.next为3，执行head.next.next=head也就是3.next=2，</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-&gt;3&lt;-4&lt;-5，由于2与3互相指向，所以此处要断开2.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1-&gt;2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        第五轮出栈，head为1，head.next为2，执行head.next.next=head也就是2.next=1，</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-&gt;2&lt;-3&lt;-4&lt;-5，由于1与2互相指向，所以此处要断开1.next=null</span></span><br><span class="line"><span class="comment">                  此时链表为1&lt;-2&lt;-3&lt;-4&lt;-5</span></span><br><span class="line"><span class="comment">                  返回节点5</span></span><br><span class="line"><span class="comment">        出栈完成，最终头节点5-&gt;4-&gt;3-&gt;2-&gt;1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    head.next.next = head;</span><br><span class="line">    head.next = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="回文链表">回文链表</h3>
-<p><a href="https://leetcode.cn/problems/palindrome-linked-list/solutions/457059/hui-wen-lian-biao-by-leetcode-solution/">234. 回文链表 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：</p>
-<ul>
-<li>将值复制到数组中后用双指针法</li>
-<li>递归</li>
-<li>快慢指针</li>
-</ul></li>
-<li><p>代码（只放了python的复制到数组代码）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">isPalindrome</span>(<span class="params">self, head: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="comment"># 将链表复制到数组里，然后用</span></span><br><span class="line">        vals = []</span><br><span class="line">        current_node = head</span><br><span class="line">        <span class="keyword">while</span> current_node <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            vals.append(current_node.val)</span><br><span class="line">            current_node = current_node.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> vals == vals[::-<span class="number">1</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="删除链表中的节点">删除链表中的节点</h3>
-<p><a href="https://leetcode.cn/problems/delete-node-in-a-linked-list/description/">237. 删除链表中的节点 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：这题很搞笑，看似不给头结点很奇怪，其实复制下一个节点然后删下一个做行</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deleteNode</span>(<span class="params">self, node</span>):</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type node: ListNode</span></span><br><span class="line"><span class="string">        :rtype: void Do not return anything, modify node in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        node.val = node.<span class="built_in">next</span>.val</span><br><span class="line">        node.<span class="built_in">next</span> = node.<span class="built_in">next</span>.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="两数相加">两数相加</h3>
-<p><a href="https://leetcode.cn/problems/add-two-numbers/description/">2. 两数相加 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：迭代思路，也能写递归（但现在看递归脑袋疼）</p></li>
-<li><p>我的代码（很慢）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">while</span> l1 != <span class="literal">None</span> <span class="keyword">or</span> l2 != <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>: </span><br><span class="line">                res.append(l1.val + l2.val)</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">                res.append(l1.val)</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">and</span> l2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">                res.append(l2.val)</span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">        </span><br><span class="line">        jw = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(res)):</span><br><span class="line">            res[i] = res[i] + jw</span><br><span class="line">            <span class="keyword">if</span> res[i] &gt;= <span class="number">10</span>:</span><br><span class="line">                jw = <span class="number">1</span></span><br><span class="line">                res[i] = res[i] % <span class="number">10</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                jw = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> jw == <span class="number">1</span>:</span><br><span class="line">            res.append(<span class="number">1</span>)</span><br><span class="line">            res[-<span class="number">1</span>] = res[-<span class="number">1</span>] % <span class="number">10</span></span><br><span class="line">        </span><br><span class="line">        res_node = ListNode(<span class="number">0</span>)</span><br><span class="line">        tmp = res_node</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> res:</span><br><span class="line">            tmp_node = ListNode(i)</span><br><span class="line">            tmp.<span class="built_in">next</span> = tmp_node</span><br><span class="line">            tmp = tmp_node</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res_node.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></li>
-<li><p>参考代码（一种非常优雅的写法）：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">addTwoNumbers</span>(<span class="params">self, l1: <span class="type">Optional</span>[ListNode], l2: <span class="type">Optional</span>[ListNode]</span>) -&gt; <span class="type">Optional</span>[ListNode]:</span><br><span class="line">        cur = dummy = ListNode()  <span class="comment"># 哨兵节点</span></span><br><span class="line">        carry = <span class="number">0</span>  <span class="comment"># 进位</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2 <span class="keyword">or</span> carry:  <span class="comment"># 有一个不是空节点，或者还有进位，就继续迭代</span></span><br><span class="line">            carry += (l1.val <span class="keyword">if</span> l1 <span class="keyword">else</span> <span class="number">0</span>) + (l2.val <span class="keyword">if</span> l2 <span class="keyword">else</span> <span class="number">0</span>)  <span class="comment"># 节点值和进位加在一起</span></span><br><span class="line">            cur.<span class="built_in">next</span> = ListNode(carry % <span class="number">10</span>)  <span class="comment"># 每个节点保存一个数位</span></span><br><span class="line">            carry //= <span class="number">10</span>  <span class="comment"># 新的进位</span></span><br><span class="line">            cur = cur.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">            <span class="keyword">if</span> l1: l1 = l1.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">            <span class="keyword">if</span> l2: l2 = l2.<span class="built_in">next</span>  <span class="comment"># 下一个节点</span></span><br><span class="line">        <span class="keyword">return</span> dummy.<span class="built_in">next</span>  <span class="comment"># 哨兵节点的下一个节点就是头节点</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>
