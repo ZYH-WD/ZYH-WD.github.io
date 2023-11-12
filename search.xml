@@ -95,7 +95,8 @@
     <title>剑指offer</title>
     <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
     <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
-<p>个人刷题记录（某种程度上也可以算作笔记），刷题顺序参考自<a href="https://github.com/Jack-Cherish/LeetCode">Jack-Cherish/LeetCode: :monkey:LeetCode、剑指Offer刷题笔记（C/C++、Python3实现） (github.com)</a></p>
+<p>个人刷题记录（某种程度上也可以算作笔记），刷题顺序参考自：<a href="https://github.com/Jack-Cherish/LeetCode">Jack-Cherish/LeetCode: :monkey:LeetCode、剑指Offer刷题笔记（C/C++、Python3实现） (github.com)</a></p>
+<p>（该帖子预计24年前完结，只刷链接中的题目应该可以做完，之后应该会专注于刷leetcode中的面试150题）</p>
 <span id="more"></span>
 <h2 id="题目清单">题目清单</h2>
 <table>
@@ -340,6 +341,7 @@
       </categories>
       <tags>
         <tag>算法</tag>
+        <tag>leetcode</tag>
       </tags>
   </entry>
   <entry>
@@ -482,7 +484,20 @@ v(s)=\mathbb{E}[G_t|S_t=s]
   <entry>
     <title>算法笔记</title>
     <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[
+    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
+<ul>
+<li>开个新坑，缓慢施工中...</li>
+<li>整理一些在做算法题中遇到的算法</li>
+</ul>
+<span id="more"></span>
+<h2 id="kmp算法">KMP算法</h2>
+<p>（学一次忘一次的典范）</p>
 ]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
   </entry>
 </search>
