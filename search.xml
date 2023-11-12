@@ -57,17 +57,17 @@
 背词：S1/2</p></li>
 <li><p><input type="checkbox" disabled checked>
 方法论：阅读方法论1</p></li>
-<li><p><input type="checkbox" disabled>
+<li><p><input type="checkbox" disabled checked>
 录播：阅读录播1</p></li>
 </ul></li>
 <li><p>DAY2</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled>
 背词：S3/4</li>
-<li><input type="checkbox" disabled>
+<li><input type="checkbox" disabled checked>
 方法论：填空方法论1</li>
 <li><input type="checkbox" disabled>
-填空录播1：</li>
+填空录播1</li>
 </ul></li>
 <li><p>DAY3</p>
 <ul class="task-list">
@@ -79,8 +79,52 @@
 阅读录播2</li>
 </ul></li>
 <li><p>DAY4</p>
-<ul>
-<li>[ ]</li>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+复习：S1-S6</li>
+<li><input type="checkbox" disabled>
+填空方法论2</li>
+<li><input type="checkbox" disabled>
+填空录播2</li>
+</ul></li>
+<li><p>DAY5</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S7、S8、S9</li>
+<li><input type="checkbox" disabled>
+作文方法论1</li>
+<li><input type="checkbox" disabled>
+作文录播1（上）</li>
+</ul></li>
+<li><p>DAY6</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S10/S11/S12/S13</li>
+<li><input type="checkbox" disabled>
+作文方法论2</li>
+<li><input type="checkbox" disabled>
+作文录播1（下）</li>
+</ul></li>
+<li><p>DAY7</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S14/S15/S16/S17</li>
+<li><input type="checkbox" disabled checked>
+数学方法论（算术、代数）</li>
+</ul></li>
+<li><p>DAY8</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+复习：S7-S17</li>
+</ul></li>
+<li><p>DAY9</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled>
+背词：S18/19/20/21</li>
+<li><input type="checkbox" disabled>
+阅读方法论3</li>
+<li><input type="checkbox" disabled>
+阅读录播3</li>
 </ul></li>
 </ul>
 ]]></content>
@@ -345,6 +389,25 @@
       </tags>
   </entry>
   <entry>
+    <title>算法笔记</title>
+    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
+<ul>
+<li>开个新坑，缓慢施工中...</li>
+<li>整理一些在做算法题中遇到的算法</li>
+</ul>
+<span id="more"></span>
+<h2 id="kmp算法">KMP算法</h2>
+<p>（学一次忘一次的典范）</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>强化学习基础-马尔可夫决策过程</title>
     <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="马尔可夫决策过程">马尔可夫决策过程</h2>
@@ -479,25 +542,6 @@ v(s)=\mathbb{E}[G_t|S_t=s]
       </categories>
       <tags>
         <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记</title>
-    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
-<ul>
-<li>开个新坑，缓慢施工中...</li>
-<li>整理一些在做算法题中遇到的算法</li>
-</ul>
-<span id="more"></span>
-<h2 id="kmp算法">KMP算法</h2>
-<p>（学一次忘一次的典范）</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>
