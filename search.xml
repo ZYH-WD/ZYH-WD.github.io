@@ -779,17 +779,48 @@
 <th>词汇</th>
 <th>释义</th>
 <th>记忆</th>
-<th></th>
+<th>衍生</th>
+<th>同/反义词</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td></td>
+<td>alacrity</td>
+<td>n，敏捷，欣然</td>
+<td>词源allegro，快板；谐音ala，很轻快</td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
+<td>arcane</td>
+<td>adj，神秘的，难懂的</td>
+<td>ark=方舟，神秘的</td>
+<td></td>
+<td>同：clandestine，obscure，opaque</td>
+</tr>
+<tr class="odd">
+<td>baffle</td>
+<td>vt，使....困惑</td>
+<td>谐音拜佛</td>
+<td>baffling，adj，令人困惑的</td>
+<td>同：puzzle，confound，confuse</td>
+</tr>
+<tr class="even">
+<td>banal</td>
+<td>adj，陈腐的，平庸乏味的</td>
+<td>用ban来记，太老了不要再说了</td>
+<td>banality，n，平凡，陈腐</td>
+<td>cliche</td>
+</tr>
+<tr class="odd">
+<td>beguile</td>
+<td>vt，欺骗，使着迷</td>
+<td></td>
+<td>beguiling，adj，迷人的；guile，n，诡计</td>
+<td>inviting（诱人的）</td>
+</tr>
+<tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -800,8 +831,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -812,8 +845,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -824,8 +859,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -836,8 +873,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -848,8 +887,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -860,8 +901,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -872,8 +915,10 @@
 <td></td>
 <td></td>
 <td></td>
+<td></td>
 </tr>
 <tr class="even">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -884,32 +929,10 @@
 <td></td>
 <td></td>
 <td></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
 <td></td>
 </tr>
 <tr class="even">
 <td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
 <td></td>
 <td></td>
 <td></td>
@@ -923,6 +946,25 @@
       </categories>
       <tags>
         <tag>GRE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记</title>
+    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
+<ul>
+<li>开个新坑，缓慢施工中...</li>
+<li>整理一些在做算法题中遇到的算法</li>
+</ul>
+<span id="more"></span>
+<h2 id="kmp算法">KMP算法</h2>
+<p>（学一次忘一次的典范）</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -1032,6 +1074,24 @@
 <td>Easy</td>
 <td>String</td>
 <td>找出字符串中第一个匹配项的下标</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>Easy</td>
+<td>DP</td>
+<td>爬楼梯</td>
+</tr>
+<tr class="odd">
+<td>509</td>
+<td>Easy</td>
+<td>DP</td>
+<td>斐波那契数</td>
+</tr>
+<tr class="even">
+<td>1780</td>
+<td>Medium</td>
+<td>Math</td>
+<td>判断一个数字是否可以表示成三的幂的和</td>
 </tr>
 </tbody>
 </table>
@@ -1168,6 +1228,29 @@
 <ul>
 <li><p>解题思路：这题用python做就很搞笑，一个find函数就可以解决了，但这实际是KMP算法的问题。</p></li>
 <li><p>代码：</p></li>
+</ul>
+<h2 id="数学">数学</h2>
+<h3 id="判断一个数字是否可以表示成三的幂的和">判断一个数字是否可以表示成三的幂的和</h3>
+<ul>
+<li><p>解题思路：将数字转化为3进制，如果转化后的数里有2，则返回<span class="math inline">\(False\)</span>，否则返回<span class="math inline">\(True\)</span></p></li>
+<li><p>自己的写法是算出一个较大的幂值后回溯：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">checkPowersOfThree</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        t = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">pow</span>(<span class="number">3</span>, t) == n:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">pow</span>(<span class="number">3</span>, t) &gt; n: </span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            t += <span class="number">1</span></span><br><span class="line">        t -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> t &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> n - <span class="built_in">pow</span>(<span class="number">3</span>, t) &gt;= <span class="number">0</span>:</span><br><span class="line">                n -= <span class="built_in">pow</span>(<span class="number">3</span>, t)</span><br><span class="line">            t -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure></li>
+<li><p>题解（进制写法）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">checkPowersOfThree</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">bool</span>:</span><br><span class="line">        <span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> n % <span class="number">3</span> == <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            n //= <span class="number">3</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="动态规划">动态规划</h2>
+<h3 id="斐波那契类型">斐波那契类型</h3>
+<h4 id="爬楼梯">爬楼梯</h4>
+<ul>
+<li><p>解题思路：每次只爬1或2，那么递归写成：<span class="math inline">\(f(n+1)=f(n)+f(n-1)\)</span></p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a, b = <span class="number">1</span>, <span class="number">1</span></span><br><span class="line"><span class="comment"># 不需要存一个很长的数组，可以用两个值来代替f(n)和f(n-1)</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n - <span class="number">1</span>):</span><br><span class="line">    a, b = b, a + b</span><br><span class="line"><span class="keyword">return</span> b</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="斐波那契数">斐波那契数</h4>
+<ul>
+<li><p>解题思路：同上</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">or</span> (n == <span class="number">0</span>):</span><br><span class="line">            <span class="keyword">return</span> n</span><br><span class="line">        <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(n-<span class="number">1</span>):</span><br><span class="line">            <span class="built_in">sum</span> = a + b   </span><br><span class="line">            a = b</span><br><span class="line">            b = <span class="built_in">sum</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span> </span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
       <categories>
@@ -1313,25 +1396,6 @@ v(s)=\mathbb{E}[G_t|S_t=s]
       </categories>
       <tags>
         <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>算法笔记</title>
-    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
-<ul>
-<li>开个新坑，缓慢施工中...</li>
-<li>整理一些在做算法题中遇到的算法</li>
-</ul>
-<span id="more"></span>
-<h2 id="kmp算法">KMP算法</h2>
-<p>（学一次忘一次的典范）</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
 </search>
