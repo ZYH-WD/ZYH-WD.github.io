@@ -136,6 +136,36 @@
       </tags>
   </entry>
   <entry>
+    <title>Leetcode 面试经典150题</title>
+    <url>/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="leetcode-面试经典150题">Leetcode 面试经典150题</h1>
+<ul>
+<li>开一个新坑，收到港大笔试后发现有一些动态规划的知识在剑指Offer部分中没有提到，发现准备Leetcode的这个部分还挺划算的？和剑指Offer也会有一些重复的题，所以两个就一起做吧</li>
+</ul>
+<p>[TOC]</p>
+<h2 id="数组">数组</h2>
+<h3 id="合并两个有序数组">88. 合并两个有序数组</h3>
+<p><a href="https://leetcode.cn/problems/merge-sorted-array/description/?envType=study-plan-v2&amp;envId=top-interview-150">88. 合并两个有序数组 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：</p>
+<ul>
+<li><p>直接复制并排序（）</p></li>
+<li><p>正向双指针（学学优雅的Python该怎么写）：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], m: <span class="built_in">int</span>, nums2: <span class="type">List</span>[<span class="built_in">int</span>], n: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">sorted</span> = []</span><br><span class="line">        p1, p2 = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> p1 &lt; m <span class="keyword">or</span> p2 &lt; n:</span><br><span class="line">            <span class="keyword">if</span> p1 == m:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums2[p2])</span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> p2 == n:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums1[p1])</span><br><span class="line">                p1 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[p1] &lt; nums2[p2]:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums1[p1])</span><br><span class="line">                p1 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums2[p2])</span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">        nums1[:] = <span class="built_in">sorted</span></span><br></pre></td></tr></table></figure></li>
+<li><p>逆向双指针（最优解，防止了值被覆盖的问题）：这里的思路做题的时候是用到了的，但没有处理好当<span class="math inline">\(p1=-1\)</span>和<span class="math inline">\(p2=-1\)</span>的情况，所以做的时候用的正向双指针。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], m: <span class="built_in">int</span>, nums2: <span class="type">List</span>[<span class="built_in">int</span>], n: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        p1, p2 = m - <span class="number">1</span>, n - <span class="number">1</span></span><br><span class="line">        tail = m + n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> p1 &gt;= <span class="number">0</span> <span class="keyword">or</span> p2 &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> p1 == -<span class="number">1</span>:</span><br><span class="line">                nums1[tail] = nums2[p2]</span><br><span class="line">                p2 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> p2 == -<span class="number">1</span>:</span><br><span class="line">                nums1[tail] = nums1[p1]</span><br><span class="line">                p1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[p1] &gt; nums2[p2]:</span><br><span class="line">                nums1[tail] = nums1[p1]</span><br><span class="line">                p1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1[tail] = nums2[p2]</span><br><span class="line">                p2 -= <span class="number">1</span></span><br><span class="line">            tail -= <span class="number">1</span></span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GRE单词整理</title>
     <url>/2023/11/14/GRE%E5%8D%95%E8%AF%8D%E6%95%B4%E7%90%86/</url>
     <content><![CDATA[<h1 id="gre单词整理">GRE单词整理</h1>
@@ -949,25 +979,6 @@
       </tags>
   </entry>
   <entry>
-    <title>算法笔记</title>
-    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
-<ul>
-<li>开个新坑，缓慢施工中...</li>
-<li>整理一些在做算法题中遇到的算法</li>
-</ul>
-<span id="more"></span>
-<h2 id="kmp算法">KMP算法</h2>
-<p>（学一次忘一次的典范）</p>
-]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>剑指offer</title>
     <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
     <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
@@ -1396,6 +1407,25 @@ v(s)=\mathbb{E}[G_t|S_t=s]
       </categories>
       <tags>
         <tag>RL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>算法笔记</title>
+    <url>/2023/11/12/%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="算法笔记">算法笔记</h1>
+<ul>
+<li>开个新坑，缓慢施工中...</li>
+<li>整理一些在做算法题中遇到的算法</li>
+</ul>
+<span id="more"></span>
+<h2 id="kmp算法">KMP算法</h2>
+<p>（学一次忘一次的典范）</p>
+]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
       </tags>
   </entry>
 </search>
