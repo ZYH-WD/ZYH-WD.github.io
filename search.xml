@@ -955,6 +955,43 @@
 <ul>
 <li>开一个新坑，收到港大笔试后发现有一些动态规划的知识在剑指Offer部分中没有提到，发现准备Leetcode的这个部分还挺划算的？和剑指Offer也会有一些重复的题，所以两个就一起做吧</li>
 </ul>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Difficulty</th>
+<th>Categories</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>88</td>
+<td>Easy</td>
+<td>Array</td>
+<td>合并两个有序数组</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>Easy</td>
+<td>Array</td>
+<td>移除元素</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>Easy</td>
+<td>Array</td>
+<td>删除有序数组中的重复项</td>
+</tr>
+<tr class="even">
+<td>383</td>
+<td>Easy</td>
+<td>HashTable</td>
+<td>赎金信</td>
+</tr>
+</tbody>
+</table>
+<span id="more"></span>
 <h2 id="数组">数组</h2>
 <h3 id="合并两个有序数组">88. 合并两个有序数组</h3>
 <p><a href="https://leetcode.cn/problems/merge-sorted-array/description/?envType=study-plan-v2&amp;envId=top-interview-150">88. 合并两个有序数组 - 力扣（LeetCode）</a></p>
@@ -984,6 +1021,7 @@
 </ul>
 <h2 id="哈希表">哈希表</h2>
 <h3 id="赎金信">383. 赎金信</h3>
+<p><a href="https://leetcode.cn/problems/ransom-note/?envType=study-plan-v2&amp;envId=top-interview-150">383. 赎金信 - 力扣（LeetCode）</a></p>
 <ul>
 <li><p>解题思路：可以使用一个Map来存每个字母的出现次数来判断，也可以用一个26长度的数组代替哈希表</p></li>
 <li><p>代码（Java）：</p>

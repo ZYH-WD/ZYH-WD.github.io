@@ -221,7 +221,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-02 00:19:35" itemprop="dateModified" datetime="2023-12-02T00:19:35+08:00">2023-12-02</time>
+                <time title="修改时间：2023-12-02 00:23:48" itemprop="dateModified" datetime="2023-12-02T00:23:48+08:00">2023-12-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -248,41 +248,50 @@
 <ul>
 <li>开一个新坑，收到港大笔试后发现有一些动态规划的知识在剑指Offer部分中没有提到，发现准备Leetcode的这个部分还挺划算的？和剑指Offer也会有一些重复的题，所以两个就一起做吧</li>
 </ul>
-<h2 id="数组">数组</h2>
-<h3 id="合并两个有序数组">88. 合并两个有序数组</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/merge-sorted-array/description/?envType=study-plan-v2&amp;envId=top-interview-150">88. 合并两个有序数组 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：</p>
-<ul>
-<li><p>直接复制并排序（这个多少有些没必要了）</p></li>
-<li><p>正向双指针（学学优雅的Python该怎么写）：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], m: <span class="built_in">int</span>, nums2: <span class="type">List</span>[<span class="built_in">int</span>], n: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="built_in">sorted</span> = []</span><br><span class="line">        p1, p2 = <span class="number">0</span>, <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> p1 &lt; m <span class="keyword">or</span> p2 &lt; n:      <span class="comment"># 用or，这样只需要单独处理p1==m和p2==n了</span></span><br><span class="line">            <span class="keyword">if</span> p1 == m:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums2[p2])</span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> p2 == n:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums1[p1])</span><br><span class="line">                p1 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[p1] &lt; nums2[p2]:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums1[p1])</span><br><span class="line">                p1 += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">sorted</span>.append(nums2[p2])</span><br><span class="line">                p2 += <span class="number">1</span></span><br><span class="line">        nums1[:] = <span class="built_in">sorted</span>        <span class="comment"># 不用写for 直接替换值</span></span><br></pre></td></tr></table></figure></li>
-<li><p>逆向双指针（最优解，防止了值被覆盖的问题）：这里的思路做题的时候是用到了的，但没有处理好当<span class="math inline">\(p1=-1\)</span>和<span class="math inline">\(p2=-1\)</span>的情况，所以做的时候用的正向双指针。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">merge</span>(<span class="params">self, nums1: <span class="type">List</span>[<span class="built_in">int</span>], m: <span class="built_in">int</span>, nums2: <span class="type">List</span>[<span class="built_in">int</span>], n: <span class="built_in">int</span></span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums1 in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        p1, p2 = m - <span class="number">1</span>, n - <span class="number">1</span></span><br><span class="line">        tail = m + n - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> p1 &gt;= <span class="number">0</span> <span class="keyword">or</span> p2 &gt;= <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">if</span> p1 == -<span class="number">1</span>:</span><br><span class="line">                nums1[tail] = nums2[p2]</span><br><span class="line">                p2 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> p2 == -<span class="number">1</span>:</span><br><span class="line">                nums1[tail] = nums1[p1]</span><br><span class="line">                p1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">elif</span> nums1[p1] &gt; nums2[p2]:</span><br><span class="line">                nums1[tail] = nums1[p1]</span><br><span class="line">                p1 -= <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nums1[tail] = nums2[p2]</span><br><span class="line">                p2 -= <span class="number">1</span></span><br><span class="line">            tail -= <span class="number">1</span></span><br></pre></td></tr></table></figure></li>
-</ul></li>
-</ul>
-<h3 id="移除元素">27. 移除元素</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-element/description/?envType=study-plan-v2&amp;envId=top-interview-150">27. 移除元素 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：这道题属于自己想麻烦了，其实双指针就能解决且代码比较简单</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        l = <span class="built_in">len</span>(nums)</span><br><span class="line">        left = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> right <span class="keyword">in</span> <span class="built_in">range</span>(l):         <span class="comment"># right作为快指针，不限制left的原因是结果数组的长度一定≤原数组</span></span><br><span class="line">            <span class="keyword">if</span> nums[right] != val:     <span class="comment"># 如果快指针指向位置不用删除，就放在慢指针的位置</span></span><br><span class="line">                nums[left] = nums[right] <span class="comment"># 更新慢指针指向的值</span></span><br><span class="line">                left += <span class="number">1</span>              <span class="comment"># 慢指针后移</span></span><br><span class="line">        <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="删除有序数组中的重复项">26. 删除有序数组中的重复项</h3>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&amp;envId=top-interview-150">26. 删除有序数组中的重复项 - 力扣（LeetCode）</a></p>
-<ul>
-<li><p>解题思路：同双指针思路，但这里有个小技巧，快慢指针都是从索引1开始的，倒查是否重复，如果重复则只移动快指针，如果不重复则将快指针的值赋值给慢指针位置，且快慢指针均向后移动</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 官方题解</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeDuplicates</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> nums:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        </span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        fast = slow = <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> fast &lt; n:</span><br><span class="line">            <span class="keyword">if</span> nums[fast] != nums[fast - <span class="number">1</span>]:</span><br><span class="line">                nums[slow] = nums[fast]</span><br><span class="line">                slow += <span class="number">1</span></span><br><span class="line">            fast += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> slow</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 自己的</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeDuplicates</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        l = <span class="built_in">len</span>(nums)</span><br><span class="line">        right = left = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> right &lt; l:</span><br><span class="line">            first = nums[right]                                  <span class="comment"># 标记第一个出现的值</span></span><br><span class="line">            <span class="keyword">while</span> (right &lt; l) <span class="keyword">and</span> (first == nums[right]) :       <span class="comment"># 寻找第一个不重复的值</span></span><br><span class="line">                right += <span class="number">1</span>                                       </span><br><span class="line">            nums[left] = first                                   <span class="comment"># 更新这个检测重复的值</span></span><br><span class="line">            left += <span class="number">1</span>                                            <span class="comment"># 找到了一个不重复的新值后慢指针后移</span></span><br><span class="line">        <span class="keyword">return</span> left                         </span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="哈希表">哈希表</h2>
-<h3 id="赎金信">383. 赎金信</h3>
-<ul>
-<li><p>解题思路：可以使用一个Map来存每个字母的出现次数来判断，也可以用一个26长度的数组代替哈希表</p></li>
-<li><p>代码（Java）：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; rmap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; magazine.length(); i++)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> magazine.charAt(i);</span><br><span class="line">            <span class="comment">// 获取与指定键关联的值，如果该键不存在，则返回一个默认值0</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> rmap.getOrDefault(c, <span class="number">0</span>) + <span class="number">1</span>;     </span><br><span class="line">            rmap.put(c, num);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ransomNote.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (rmap.containsKey(ransomNote.charAt(i)))&#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> rmap.get(ransomNote.charAt(i)) - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (num &lt; <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                rmap.put(ransomNote.charAt(i), num);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Difficulty</th>
+<th>Categories</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>88</td>
+<td>Easy</td>
+<td>Array</td>
+<td>合并两个有序数组</td>
+</tr>
+<tr class="even">
+<td>27</td>
+<td>Easy</td>
+<td>Array</td>
+<td>移除元素</td>
+</tr>
+<tr class="odd">
+<td>26</td>
+<td>Easy</td>
+<td>Array</td>
+<td>删除有序数组中的重复项</td>
+</tr>
+<tr class="even">
+<td>383</td>
+<td>Easy</td>
+<td>HashTable</td>
+<td>赎金信</td>
+</tr>
+</tbody>
+</table>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1783,7 +1792,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.3k字</span>
+  <span class="post-count">博客全站共7.4k字</span>
 </div>
         
 <div class="busuanzi-count">
