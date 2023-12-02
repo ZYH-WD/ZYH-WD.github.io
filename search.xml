@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>01-Github+Hexo搭建个人博客</title>
+    <url>/2023/11/05/01-Github+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>欢迎来到我的博客，我将在这里记录我的学习和生活。这是我的第一篇博客，我将贴出使用Github+Hexo的博客搭建教程和常见跳坑解决方案。</p>
+<h1 id="githubhexo">Github+Hexo</h1>
+<h2 id="搭建教程转载">搭建教程（转载）</h2>
+<p>博客参考知乎搭建，使用Github+Hexo，由于时间略久，部分操作已不适用，但这仍然是一篇非常详细且有效的教程，从零开始3-4小时就可以搭建起一个基础的个人博客网站。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细） - 知乎 (zhihu.com)</a></p>
+<h2 id="搭建过程中可能遇到的坑">搭建过程中可能遇到的坑</h2>
+<h3 id="本地仓库提交远程仓库">本地仓库提交远程仓库</h3>
+<ul>
+<li>自2020年10月1日起,所有在 <strong>GitHub</strong> 上创建的新的源代码仓库就已默认被命名为<strong>main</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 教程命令:</span><br><span class="line">git push origin master </span><br><span class="line"># 修改为:</span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Github不再使用密码方式验证身份，现在使用<strong>个人token</strong>（Support for password authentication was remove on August 123, 2021. Please use a personal access token instead.）</li>
+</ul>
+<p><a href="https://blog.csdn.net/chengwenyang/article/details/120060010">【精选】github的token使用方法_github token_chengwenyang的博客-CSDN博客</a></p>
+<p>选择账号登录方式，将token作为密码才能正常登录</p>
+<h3 id="hexo的安装和部署">Hexo的安装和部署</h3>
+<ul>
+<li>安装时需要将以管理员身份打开cmd/git bash</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>部署Hexo到Github时出现："Couldn't connect to server"</p>
+<ul>
+<li><p>第一种解决方案</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></li>
+<li><p>第二种解决方案（同样适用于hexo d出现的连接错误问题）</p>
+<p>需要修改_config配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 原教程：</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/fengye97/fengye97.github.io.git  #你的仓库地址</span><br><span class="line">  branch: master</span><br><span class="line"># 修改后：</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:fengye97/fengye97.github.io.git  #记得换成自己的Github名字</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GRE-30DAY备考记录</title>
     <url>/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
@@ -91,48 +133,6 @@
       </categories>
       <tags>
         <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>01-Github+Hexo搭建个人博客</title>
-    <url>/2023/11/05/01-Github+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>欢迎来到我的博客，我将在这里记录我的学习和生活。这是我的第一篇博客，我将贴出使用Github+Hexo的博客搭建教程和常见跳坑解决方案。</p>
-<h1 id="githubhexo">Github+Hexo</h1>
-<h2 id="搭建教程转载">搭建教程（转载）</h2>
-<p>博客参考知乎搭建，使用Github+Hexo，由于时间略久，部分操作已不适用，但这仍然是一篇非常详细且有效的教程，从零开始3-4小时就可以搭建起一个基础的个人博客网站。</p>
-<p><a href="https://zhuanlan.zhihu.com/p/102592286">从零开始搭建个人博客（超详细） - 知乎 (zhihu.com)</a></p>
-<h2 id="搭建过程中可能遇到的坑">搭建过程中可能遇到的坑</h2>
-<h3 id="本地仓库提交远程仓库">本地仓库提交远程仓库</h3>
-<ul>
-<li>自2020年10月1日起,所有在 <strong>GitHub</strong> 上创建的新的源代码仓库就已默认被命名为<strong>main</strong></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 教程命令:</span><br><span class="line">git push origin master </span><br><span class="line"># 修改为:</span><br><span class="line">git push origin main</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Github不再使用密码方式验证身份，现在使用<strong>个人token</strong>（Support for password authentication was remove on August 123, 2021. Please use a personal access token instead.）</li>
-</ul>
-<p><a href="https://blog.csdn.net/chengwenyang/article/details/120060010">【精选】github的token使用方法_github token_chengwenyang的博客-CSDN博客</a></p>
-<p>选择账号登录方式，将token作为密码才能正常登录</p>
-<h3 id="hexo的安装和部署">Hexo的安装和部署</h3>
-<ul>
-<li>安装时需要将以管理员身份打开cmd/git bash</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>部署Hexo到Github时出现："Couldn't connect to server"</p>
-<ul>
-<li><p>第一种解决方案</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure></li>
-<li><p>第二种解决方案（同样适用于hexo d出现的连接错误问题）</p>
-<p>需要修改_config配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 原教程：</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/fengye97/fengye97.github.io.git  #你的仓库地址</span><br><span class="line">  branch: master</span><br><span class="line"># 修改后：</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:fengye97/fengye97.github.io.git  #记得换成自己的Github名字</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
-</ul></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1067,213 +1067,6 @@
       </tags>
   </entry>
   <entry>
-    <title>强化学习基础-马尔可夫决策过程</title>
-    <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
-    <content><![CDATA[<h2 id="reinforcement-learning">Reinforcement Learning</h2>
-<ul>
-<li>课程来源：【王树森】深度强化学习（RL）</li>
-</ul>
-<span id="more"></span>
-<h2 id="a-little-bit-math">A little bit math</h2>
-<h3 id="random-variable">Random Variable</h3>
-<ul>
-<li>Random variable:
-<ul>
-<li>Uppercase letter <span class="math inline">\(X\)</span> for random variable</li>
-<li>Lowercase letter <span class="math inline">\(x\)</span> for an observed value</li>
-<li>For example, I flipped a coin 4 times and observed:
-<ul>
-<li><span class="math inline">\(x_1=0\)</span></li>
-<li><span class="math inline">\(x_2=0\)</span></li>
-<li><span class="math inline">\(x_3=1\)</span></li>
-<li><span class="math inline">\(x_4=0\)</span></li>
-</ul></li>
-</ul></li>
-</ul>
-<h3 id="probability-density-functionpdf">Probability Density Function（PDF）</h3>
-<ul>
-<li>随机变量在某个确定的取值点附近的可能性</li>
-<li>Example: Gaussian distribution、Discrete distribution</li>
-</ul>
-<h3 id="expectation">Expectation</h3>
-<ul>
-<li><p>Random variable <span class="math inline">\(X\)</span> is in the domain <span class="math inline">\(\mathcal{X}\)</span></p></li>
-<li><p>For continuous distribution, the expectation of <span class="math inline">\(f(X)\)</span> is: <span class="math display">\[
-\mathbb{E}[f(X)]=\int_{\mathcal{X}} p(x)\cdot f(x) \,dx
-\]</span></p></li>
-<li><p>For discrete distribution, the expectation of <span class="math inline">\(f(X)\)</span> is: <span class="math display">\[
-\mathbb{E}[f(X)]=\sum_{x \in \mathcal{X}} p(x)\cdot f(x)
-\]</span></p></li>
-<li></li>
-</ul>
-<h3 id="random-sampling">Random Sampling</h3>
-<h2 id="terminologies">Terminologies</h2>
-<ul>
-<li><p>State and Action</p>
-<ul>
-<li>对于一个马里奥游戏，游戏的某一帧界面就是State，Action就对应着马里奥的左、右、跳，Action a ∈ {left, right, up}</li>
-</ul></li>
-<li><p>policy <span class="math inline">\(\pi\)</span> （将<span class="math inline">\(\pi\)</span>看作一个概率密度函数）</p>
-<ul>
-<li><p>Policy function <span class="math inline">\(\pi:(s,a) \rightarrow[0,1]:\)</span></p>
-<p><span class="math inline">\(\pi(a|s)=\mathbb{P}(A=a|S=s)\)</span></p></li>
-<li><p>Upon observing state <span class="math inline">\(S = s\)</span>， the agent's action <span class="math inline">\(A\)</span> can be random.</p>
-<ul>
-<li><span class="math inline">\(\pi(left\ |\ s)=0.2\)</span></li>
-<li><span class="math inline">\(\pi(right\ |\ s)=0.1\)</span></li>
-<li><span class="math inline">\(\pi(up\ |\ s)=0.7\)</span></li>
-</ul></li>
-</ul></li>
-<li><p>reward <span class="math inline">\(R\)</span></p>
-<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image3.png" alt="image3" style="zoom:50%;"></p>
-<ul>
-<li>涉及马尔可夫链知识，状态转移是随机的，而这种随机来自环境，<span class="math inline">\(p\)</span>是状态转移函数，在马里奥游戏中，状态转移函数只有游戏知道，玩家是未知的。所以我们可以简单理解为强化学习过程有两个随机抽样
-<ul>
-<li>Actions have randomness：Given state <span class="math inline">\(s\)</span>, the action can be random</li>
-<li>Given state <span class="math inline">\(S=s\)</span> and action <span class="math inline">\(A=a\)</span>, the environment randomly generates a new state <span class="math inline">\(S&#39;\)</span></li>
-</ul></li>
-</ul></li>
-<li><p>agent enviornment interaction</p>
-<figure>
-<img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image4.png" alt="image4"><figcaption aria-hidden="true">image4</figcaption>
-</figure>
-<ul>
-<li>注：<span class="math inline">\((a) \rightarrow (b)\)</span></li>
-</ul></li>
-</ul>
-<h3 id="回顾">回顾</h3>
-<ul>
-<li>强化学习算法区别于其他机器学习算法：
-<ul>
-<li>没有监督数据，只有奖励信号</li>
-<li>奖励信号不一定实时，可能存在延迟</li>
-<li>时间是一个重要因素</li>
-<li>智能体当前的动作影响后续接收到的数据</li>
-</ul></li>
-<li>目标：选择一定的动作序列以最大化未来的总体奖励
-<ul>
-<li>智能体的行为可能是一个很长的动作序列</li>
-<li>大多数时候奖励是延迟的</li>
-<li>宁愿牺牲即时（短期）奖励以获取更多的长期奖励</li>
-</ul></li>
-</ul>
-<p><strong>所有问题的目标都可以被描述成最大化期望的累计奖励</strong></p>
-<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image-1.png"></p>
-<p>智能体在每个时间步<span class="math inline">\(t\)</span>：</p>
-<ul>
-<li>接收观测(observation) <span class="math inline">\(O_t\)</span></li>
-<li>接受标量奖励信号 <span class="math inline">\(R_t\)</span></li>
-<li>执行动作(action) <span class="math inline">\(A_t\)</span></li>
-</ul>
-<p>环境：</p>
-<ul>
-<li>接收动作 <span class="math inline">\(A_t\)</span>;</li>
-<li>产生观测 <span class="math inline">\(O_{t+1}\)</span>;</li>
-<li>产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span>;</li>
-<li>历史(History)是观测、行动和奖励的序列
-<ul>
-<li><span class="math display">\[H_t=O_1,R_1,A_1,O_2,R_2,A_2,...,O_{t-1},R_{t-1}\]</span></li>
-</ul></li>
-<li>状态(State)是一种用于确定接下来会发生的事情（行动、观察、奖励）的信息
-<ul>
-<li>状态是关于历史的函数 <span class="math inline">\(S_t=f(H_t)\)</span></li>
-</ul></li>
-<li>环境的可观测性：
-<ul>
-<li>完全可观测：智能体可以直接观察到全部环境状态</li>
-<li>部分可观测：智能体只能部分的观测到环境</li>
-</ul></li>
-<li>智能体的组成：
-<ul>
-<li>策略（Policy）：智能体的行为函数。输入为状态，输出为行动决策</li>
-<li>价值函数（Value function）：评估每个状态或行动有多好</li>
-<li>模型 （Model）：智能体对环境的表示，是智能体眼里的环境</li>
-</ul></li>
-</ul>
-<h2 id="马尔可夫决策过程markov-decision-processes-mdp">马尔可夫决策过程（Markov decision processes, MDP）</h2>
-<h3 id="马尔可夫性质">2.1 马尔可夫性质</h3>
-<ul>
-<li>定义：状态 <span class="math inline">\(S_t\)</span> 具有马尔可夫性，当且仅当 <span class="math display">\[\mathbb{P}[S_{t+1}|S_t]=\mathbb{P}[S_{t+1}|S_1,...,S_t]\]</span>
-<ul>
-<li>"未来只与现在有关，与过去无关"</li>
-</ul></li>
-<li>给定当前时刻的状态，将来与历史无关</li>
-<li>状态是对过去的充分统计</li>
-</ul>
-<h3 id="状态转移矩阵">2.2 状态转移矩阵</h3>
-<ul>
-<li><p>对于马尔可夫状态 <span class="math inline">\(s\)</span> 与其后继状态 <span class="math inline">\(s&#39;\)</span>，它们的状态转移概率定义为：</p>
-<p><span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span> （当前状态是<span class="math inline">\(s\)</span>的情况下，下一个状态是<span class="math inline">\(s&#39;\)</span>的概率）</p></li>
-<li><p>状态转移矩阵P定义了马尔可夫状态s到其所有后继状态s'的转移概率</p>
-<p><span class="math display">\[p=from
-  \begin{bmatrix}
-  p_{11} &amp; ... &amp; p_{1n} \\
-  : &amp;  &amp; : \\
-  p_{n1} &amp; ... &amp; p_{nn}
-  \end{bmatrix}\]</span></p>
-<p>上式中<span class="math inline">\(p_{1n}\)</span>可以理解为<span class="math inline">\(s_1\)</span>到<span class="math inline">\(s_n\)</span>的概率</p></li>
-<li><p>矩阵的每一行总和为1</p></li>
-</ul>
-<h3 id="马尔可夫过程">2.3 马尔可夫过程</h3>
-<ul>
-<li>马尔可夫过程是一种无记忆的随机过程。</li>
-<li>马尔可夫过程可以分为三类:
-<ul>
-<li>时间、状态都离散的马尔可夫过程（<strong>马尔科夫链</strong>）</li>
-<li>时间连续、状态离散的马尔可夫过程（<strong>连续时间的马尔科夫链</strong>）</li>
-<li>时间、状态都连续的马尔可夫过程</li>
-</ul></li>
-</ul>
-<p>学生的马尔可夫链</p>
-<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image.png"></p>
-<p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
-<ul>
-<li>C1 C2 C3 Pass Sleep</li>
-<li>C1 FB FB C1 C2 Sleep</li>
-<li>C1 C2 C3 Pub C2 C3 Pass Sleep</li>
-</ul>
-<h2 id="马尔可夫奖励过程">马尔可夫奖励过程</h2>
-<ul>
-<li>马尔可夫奖励过程是具有价值的马尔可夫链</li>
-</ul>
-<p>定义：马尔可夫奖励过程（Markov Reward Process，MRP）由元组<span class="math inline">\((\mathcal{S},\mathcal{P},\mathcal{R},\gamma)\)</span></p>
-<ul>
-<li><span class="math inline">\(\mathcal{S}\)</span>是有限状态的集合</li>
-<li><span class="math inline">\(\mathcal{P}\)</span>是状态转移矩阵，<span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span></li>
-<li><span class="math inline">\(\mathcal{R_s}\)</span>是奖励函数，<span class="math inline">\(\mathcal{R_s}=\mathbb{E}[R_{t+1}|S_t=s]\)</span></li>
-<li><span class="math inline">\(\gamma\)</span>是折扣因子，<span class="math inline">\(\gamma∈[0,1]\)</span></li>
-</ul>
-<h3 id="回报return">3.2 回报（Return）</h3>
-<p>定义：在一个马尔可夫奖励过程中，从<span class="math inline">\(t\)</span>时刻的状态<span class="math inline">\(S_t\)</span>开始，直至终止状态时，所有奖励的衰减之和<span class="math inline">\(G_t\)</span>称为回报（Return）。</p>
-<p><span class="math display">\[G_t=R_{t+1}+\gamma R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
-<p>上式中引入折扣率或衰减率<span class="math inline">\(\gamma\)</span>的作用：</p>
-<ul>
-<li>避免有环的马尔可夫过程计算收益时出现无限循环</li>
-<li>从金融投资回报的角度讲，即时奖励比延时奖励更吸引人</li>
-<li>动物/人类行为中都表现出对即时奖励的偏好</li>
-<li>可以表达未来的不确定性</li>
-<li><span class="math inline">\(\gamma∈[0,1],\gamma=0\)</span>只看眼前受益</li>
-</ul>
-<figure>
-<img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image2.png" alt="image2"><figcaption aria-hidden="true">image2</figcaption>
-</figure>
-<h3 id="价值函数value-function">3.3 价值函数（Value Function）</h3>
-<ul>
-<li>价值函数<span class="math inline">\(v(s)\)</span>给出状态s的长期价值</li>
-<li>价值函数输入为某个状态，输出为这个状态的价值</li>
-</ul>
-<p>定义：在马尔可夫奖励过程中，一个状态的期望回报被称为这个状态的价值函数 <span class="math display">\[
-v(s)=\mathbb{E}[G_t|S_t=s]
-\]</span></p>
-]]></content>
-      <categories>
-        <category>RL</category>
-      </categories>
-      <tags>
-        <tag>RL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>剑指offer</title>
     <url>/2023/11/06/%E5%89%91%E6%8C%87offer/</url>
     <content><![CDATA[<h1 id="leetcode">LeetCode</h1>
@@ -1565,6 +1358,225 @@ v(s)=\mathbb{E}[G_t|S_t=s]
       <tags>
         <tag>算法</tag>
         <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>强化学习基础-马尔可夫决策过程</title>
+    <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="reinforcement-learning">Reinforcement Learning</h2>
+<ul>
+<li>课程来源：【王树森】深度强化学习（RL）</li>
+</ul>
+<span id="more"></span>
+<h2 id="a-little-bit-math">A little bit math</h2>
+<h3 id="random-variable">Random Variable</h3>
+<ul>
+<li>Random variable:
+<ul>
+<li>Uppercase letter <span class="math inline">\(X\)</span> for random variable</li>
+<li>Lowercase letter <span class="math inline">\(x\)</span> for an observed value</li>
+<li>For example, I flipped a coin 4 times and observed:
+<ul>
+<li><span class="math inline">\(x_1=0\)</span></li>
+<li><span class="math inline">\(x_2=0\)</span></li>
+<li><span class="math inline">\(x_3=1\)</span></li>
+<li><span class="math inline">\(x_4=0\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="probability-density-functionpdf">Probability Density Function（PDF）</h3>
+<ul>
+<li>随机变量在某个确定的取值点附近的可能性</li>
+<li>Example: Gaussian distribution、Discrete distribution</li>
+</ul>
+<h3 id="expectation">Expectation</h3>
+<ul>
+<li><p>Random variable <span class="math inline">\(X\)</span> is in the domain <span class="math inline">\(\mathcal{X}\)</span></p></li>
+<li><p>For continuous distribution, the expectation of <span class="math inline">\(f(X)\)</span> is: <span class="math display">\[
+\mathbb{E}[f(X)]=\int_{\mathcal{X}} p(x)\cdot f(x) \,dx
+\]</span></p></li>
+<li><p>For discrete distribution, the expectation of <span class="math inline">\(f(X)\)</span> is: <span class="math display">\[
+\mathbb{E}[f(X)]=\sum_{x \in \mathcal{X}} p(x)\cdot f(x)
+\]</span></p></li>
+<li></li>
+</ul>
+<h3 id="random-sampling">Random Sampling</h3>
+<h2 id="terminologies">Terminologies</h2>
+<ul>
+<li><p>State and Action</p>
+<ul>
+<li>对于一个马里奥游戏，游戏的某一帧界面就是State，Action就对应着马里奥的左、右、跳，Action a ∈ {left, right, up}</li>
+</ul></li>
+<li><p>policy <span class="math inline">\(\pi\)</span> （将<span class="math inline">\(\pi\)</span>看作一个概率密度函数）</p>
+<ul>
+<li><p>Policy function <span class="math inline">\(\pi:(s,a) \rightarrow[0,1]:\)</span></p>
+<p><span class="math inline">\(\pi(a|s)=\mathbb{P}(A=a|S=s)\)</span></p></li>
+<li><p>Upon observing state <span class="math inline">\(S = s\)</span>， the agent's action <span class="math inline">\(A\)</span> can be random.</p>
+<ul>
+<li><span class="math inline">\(\pi(left\ |\ s)=0.2\)</span></li>
+<li><span class="math inline">\(\pi(right\ |\ s)=0.1\)</span></li>
+<li><span class="math inline">\(\pi(up\ |\ s)=0.7\)</span></li>
+</ul></li>
+</ul></li>
+<li><p>reward <span class="math inline">\(R\)</span></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image3.png" alt="image3" style="zoom:50%;"></p>
+<ul>
+<li>涉及马尔可夫链知识，状态转移是随机的，而这种随机来自环境，<span class="math inline">\(p\)</span>是状态转移函数，在马里奥游戏中，状态转移函数只有游戏知道，玩家是未知的。所以我们可以简单理解为强化学习过程有两个随机抽样
+<ul>
+<li>Actions have randomness：Given state <span class="math inline">\(s\)</span>, the action can be random（根据policy函数<span class="math inline">\(\pi\)</span>来随机抽样得到的）</li>
+<li>Given state <span class="math inline">\(S=s\)</span> and action <span class="math inline">\(A=a\)</span>, the environment randomly generates a new state <span class="math inline">\(S&#39;\)</span>（根据状态转移函数<span class="math inline">\(p\)</span>来随机抽样）</li>
+</ul></li>
+</ul></li>
+<li><p>agent enviornment interaction</p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image4.png"></p>
+<ul>
+<li>注：<span class="math inline">\((a) \rightarrow (b)\)</span></li>
+</ul></li>
+<li><p>Play the game using AI</p>
+<ul>
+<li>Observe a frame (state <span class="math inline">\(s_1\)</span>)</li>
+<li>Make action <span class="math inline">\(a_1\)</span>(left, right, or up)</li>
+<li>Observe a new frame (state <span class="math inline">\(s_2\)</span>) and reward <span class="math inline">\(r_1\)</span></li>
+<li>Make action <span class="math inline">\(a_2\)</span></li>
+<li>...</li>
+<li>(state, action, reward) trajectory: <span class="math inline">\(s_1,a_1,r_1,s_2,a_2,r_2,...,s_T,a_T,r_T\)</span></li>
+</ul></li>
+<li><p>Return (cumulative future reward)</p>
+<ul>
+<li>Definition: <span class="math inline">\(U_t = R_t+R_{t+1}+R_{t+2}+R_{t+3}+...\)</span></li>
+<li></li>
+</ul></li>
+</ul>
+<h3 id="回顾">回顾</h3>
+<ul>
+<li>强化学习算法区别于其他机器学习算法：
+<ul>
+<li>没有监督数据，只有奖励信号</li>
+<li>奖励信号不一定实时，可能存在延迟</li>
+<li>时间是一个重要因素</li>
+<li>智能体当前的动作影响后续接收到的数据</li>
+</ul></li>
+<li>目标：选择一定的动作序列以最大化未来的总体奖励
+<ul>
+<li>智能体的行为可能是一个很长的动作序列</li>
+<li>大多数时候奖励是延迟的</li>
+<li>宁愿牺牲即时（短期）奖励以获取更多的长期奖励</li>
+</ul></li>
+</ul>
+<p><strong>所有问题的目标都可以被描述成最大化期望的累计奖励</strong></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image-1.png"></p>
+<p>智能体在每个时间步<span class="math inline">\(t\)</span>：</p>
+<ul>
+<li>接收观测(observation) <span class="math inline">\(O_t\)</span></li>
+<li>接受标量奖励信号 <span class="math inline">\(R_t\)</span></li>
+<li>执行动作(action) <span class="math inline">\(A_t\)</span></li>
+</ul>
+<p>环境：</p>
+<ul>
+<li>接收动作 <span class="math inline">\(A_t\)</span>;</li>
+<li>产生观测 <span class="math inline">\(O_{t+1}\)</span>;</li>
+<li>产生标量奖励信号 <span class="math inline">\(R_{t+1}\)</span>;</li>
+<li>历史(History)是观测、行动和奖励的序列
+<ul>
+<li><span class="math display">\[H_t=O_1,R_1,A_1,O_2,R_2,A_2,...,O_{t-1},R_{t-1}\]</span></li>
+</ul></li>
+<li>状态(State)是一种用于确定接下来会发生的事情（行动、观察、奖励）的信息
+<ul>
+<li>状态是关于历史的函数 <span class="math inline">\(S_t=f(H_t)\)</span></li>
+</ul></li>
+<li>环境的可观测性：
+<ul>
+<li>完全可观测：智能体可以直接观察到全部环境状态</li>
+<li>部分可观测：智能体只能部分的观测到环境</li>
+</ul></li>
+<li>智能体的组成：
+<ul>
+<li>策略（Policy）：智能体的行为函数。输入为状态，输出为行动决策</li>
+<li>价值函数（Value function）：评估每个状态或行动有多好</li>
+<li>模型 （Model）：智能体对环境的表示，是智能体眼里的环境</li>
+</ul></li>
+</ul>
+<h2 id="马尔可夫决策过程markov-decision-processes-mdp">马尔可夫决策过程（Markov decision processes, MDP）</h2>
+<h3 id="马尔可夫性质">2.1 马尔可夫性质</h3>
+<ul>
+<li>定义：状态 <span class="math inline">\(S_t\)</span> 具有马尔可夫性，当且仅当 <span class="math display">\[\mathbb{P}[S_{t+1}|S_t]=\mathbb{P}[S_{t+1}|S_1,...,S_t]\]</span>
+<ul>
+<li>"未来只与现在有关，与过去无关"</li>
+</ul></li>
+<li>给定当前时刻的状态，将来与历史无关</li>
+<li>状态是对过去的充分统计</li>
+</ul>
+<h3 id="状态转移矩阵">2.2 状态转移矩阵</h3>
+<ul>
+<li><p>对于马尔可夫状态 <span class="math inline">\(s\)</span> 与其后继状态 <span class="math inline">\(s&#39;\)</span>，它们的状态转移概率定义为：</p>
+<p><span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span> （当前状态是<span class="math inline">\(s\)</span>的情况下，下一个状态是<span class="math inline">\(s&#39;\)</span>的概率）</p></li>
+<li><p>状态转移矩阵P定义了马尔可夫状态s到其所有后继状态s'的转移概率</p>
+<p><span class="math display">\[p=from
+  \begin{bmatrix}
+  p_{11} &amp; ... &amp; p_{1n} \\
+  : &amp;  &amp; : \\
+  p_{n1} &amp; ... &amp; p_{nn}
+  \end{bmatrix}\]</span></p>
+<p>上式中<span class="math inline">\(p_{1n}\)</span>可以理解为<span class="math inline">\(s_1\)</span>到<span class="math inline">\(s_n\)</span>的概率</p></li>
+<li><p>矩阵的每一行总和为1</p></li>
+</ul>
+<h3 id="马尔可夫过程">2.3 马尔可夫过程</h3>
+<ul>
+<li>马尔可夫过程是一种无记忆的随机过程。</li>
+<li>马尔可夫过程可以分为三类:
+<ul>
+<li>时间、状态都离散的马尔可夫过程（<strong>马尔科夫链</strong>）</li>
+<li>时间连续、状态离散的马尔可夫过程（<strong>连续时间的马尔科夫链</strong>）</li>
+<li>时间、状态都连续的马尔可夫过程</li>
+</ul></li>
+</ul>
+<p>学生的马尔可夫链</p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image.png"></p>
+<p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
+<ul>
+<li>C1 C2 C3 Pass Sleep</li>
+<li>C1 FB FB C1 C2 Sleep</li>
+<li>C1 C2 C3 Pub C2 C3 Pass Sleep</li>
+</ul>
+<h2 id="马尔可夫奖励过程">马尔可夫奖励过程</h2>
+<ul>
+<li>马尔可夫奖励过程是具有价值的马尔可夫链</li>
+</ul>
+<p>定义：马尔可夫奖励过程（Markov Reward Process，MRP）由元组<span class="math inline">\((\mathcal{S},\mathcal{P},\mathcal{R},\gamma)\)</span></p>
+<ul>
+<li><span class="math inline">\(\mathcal{S}\)</span>是有限状态的集合</li>
+<li><span class="math inline">\(\mathcal{P}\)</span>是状态转移矩阵，<span class="math inline">\(P_{ss&#39;}=\mathbb{P}[S_{t+1}=s&#39;|S_t=s]\)</span></li>
+<li><span class="math inline">\(\mathcal{R_s}\)</span>是奖励函数，<span class="math inline">\(\mathcal{R_s}=\mathbb{E}[R_{t+1}|S_t=s]\)</span></li>
+<li><span class="math inline">\(\gamma\)</span>是折扣因子，<span class="math inline">\(\gamma∈[0,1]\)</span></li>
+</ul>
+<h3 id="回报return">3.2 回报（Return）</h3>
+<p>定义：在一个马尔可夫奖励过程中，从<span class="math inline">\(t\)</span>时刻的状态<span class="math inline">\(S_t\)</span>开始，直至终止状态时，所有奖励的衰减之和<span class="math inline">\(G_t\)</span>称为回报（Return）。</p>
+<p><span class="math display">\[G_t=R_{t+1}+\gamma R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
+<p>上式中引入折扣率或衰减率<span class="math inline">\(\gamma\)</span>的作用：</p>
+<ul>
+<li>避免有环的马尔可夫过程计算收益时出现无限循环</li>
+<li>从金融投资回报的角度讲，即时奖励比延时奖励更吸引人</li>
+<li>动物/人类行为中都表现出对即时奖励的偏好</li>
+<li>可以表达未来的不确定性</li>
+<li><span class="math inline">\(\gamma∈[0,1],\gamma=0\)</span>只看眼前受益</li>
+</ul>
+<figure>
+<img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image2.png" alt="image2"><figcaption aria-hidden="true">image2</figcaption>
+</figure>
+<h3 id="价值函数value-function">3.3 价值函数（Value Function）</h3>
+<ul>
+<li>价值函数<span class="math inline">\(v(s)\)</span>给出状态s的长期价值</li>
+<li>价值函数输入为某个状态，输出为这个状态的价值</li>
+</ul>
+<p>定义：在马尔可夫奖励过程中，一个状态的期望回报被称为这个状态的价值函数 <span class="math display">\[
+v(s)=\mathbb{E}[G_t|S_t=s]
+\]</span></p>
+]]></content>
+      <categories>
+        <category>RL</category>
+      </categories>
+      <tags>
+        <tag>RL</tag>
       </tags>
   </entry>
   <entry>
