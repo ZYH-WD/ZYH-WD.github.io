@@ -989,6 +989,12 @@
 <td>HashTable</td>
 <td>赎金信</td>
 </tr>
+<tr class="odd">
+<td>138</td>
+<td>Medium</td>
+<td>List</td>
+<td>随机链表的复制</td>
+</tr>
 </tbody>
 </table>
 <span id="more"></span>
@@ -1027,6 +1033,30 @@
 <li><p>代码（Java）：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canConstruct</span><span class="params">(String ransomNote, String magazine)</span> &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; rmap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; magazine.length(); i++)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">c</span> <span class="operator">=</span> magazine.charAt(i);</span><br><span class="line">            <span class="comment">// 获取与指定键关联的值，如果该键不存在，则返回一个默认值0</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> rmap.getOrDefault(c, <span class="number">0</span>) + <span class="number">1</span>;     </span><br><span class="line">            rmap.put(c, num);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ransomNote.length(); i++)&#123;</span><br><span class="line">            <span class="keyword">if</span> (rmap.containsKey(ransomNote.charAt(i)))&#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> rmap.get(ransomNote.charAt(i)) - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (num &lt; <span class="number">0</span>)</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                rmap.put(ransomNote.charAt(i), num);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="链表">链表</h2>
+<h3 id="随机链表的复制">138. 随机链表的复制</h3>
+<p><a href="https://leetcode.cn/problems/copy-list-with-random-pointer/description/?envType=study-plan-v2&amp;envId=top-interview-150">138. 随机链表的复制 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>解题思路：（这道着实有些难，代码也是官方题解）</p>
+<ul>
+<li><p>方案一：回溯<span class="math inline">\(+\)</span>哈希表，题解：用哈希表记录每一个节点对应新节点的创建情况。遍历该链表的过程中，我们检查「当前节点的后继节点」和「当前节点的随机指针指向的节点」的创建情况。如果这两个节点中的任何一个节点的新节点没有被创建，我们都立刻递归地进行创建。当我们拷贝完成，回溯到当前层时，我们即可完成当前节点的指针赋值。注意一个节点可能被多个其他节点指向，因此我们可能递归地多次尝试拷贝某个节点，为了防止重复拷贝，我们需要首先检查当前节点是否被拷贝过，如果已经拷贝过，我们可以直接从哈希表中取出拷贝后的节点的指针并返回即可。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    Map&lt;Node, Node&gt; cachedNode = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Node, Node&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Node <span class="title function_">copyRandomList</span><span class="params">(Node head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!cachedNode.containsKey(head)) &#123;</span><br><span class="line">            <span class="type">Node</span> <span class="variable">headNew</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Node</span>(head.val);</span><br><span class="line">            cachedNode.put(head, headNew);</span><br><span class="line">            headNew.next = copyRandomList(head.next);</span><br><span class="line">            headNew.random = copyRandomList(head.random);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> cachedNode.get(head);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>方案二：迭代<span class="math inline">\(+\)</span>节点拆分，将每个节点拆分成两个相连的节点，例如<span class="math inline">\(A \rightarrow B \rightarrow C\)</span>，我们可以将其拆分为<span class="math inline">\(A \rightarrow A&#39;\rightarrow B\rightarrow B&#39;\rightarrow C\rightarrow C&#39;\)</span>。对于任意一个原节点<span class="math inline">\(S\)</span>，其拷贝节点<span class="math inline">\(S&#39;\)</span>即为后继节点；由此，该方案可以概括为三次迭代。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> Node <span class="title function_">copyRandomList</span><span class="params">(Node head)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">Node</span> <span class="variable">node</span> <span class="operator">=</span> head; node != <span class="literal">null</span>; node = node.next.next) &#123;</span><br><span class="line">            <span class="type">Node</span> <span class="variable">nodeNew</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Node</span>(node.val);</span><br><span class="line">            nodeNew.next = node.next;</span><br><span class="line">            node.next = nodeNew;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">Node</span> <span class="variable">node</span> <span class="operator">=</span> head; node != <span class="literal">null</span>; node = node.next.next) &#123;</span><br><span class="line">            <span class="type">Node</span> <span class="variable">nodeNew</span> <span class="operator">=</span> node.next;</span><br><span class="line">            nodeNew.random = (node.random != <span class="literal">null</span>) ? node.random.next : <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">Node</span> <span class="variable">headNew</span> <span class="operator">=</span> head.next;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">Node</span> <span class="variable">node</span> <span class="operator">=</span> head; node != <span class="literal">null</span>; node = node.next) &#123;</span><br><span class="line">            <span class="type">Node</span> <span class="variable">nodeNew</span> <span class="operator">=</span> node.next;</span><br><span class="line">            node.next = node.next.next;</span><br><span class="line">            nodeNew.next = (nodeNew.next != <span class="literal">null</span>) ? nodeNew.next.next : <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> headNew;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>原链表：</p>
+<p><img src="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/138_1.png" alt="138_1" style="zoom: 33%;"></p></li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><p>第一次迭代，拆分节点（复制）</p>
+<p><img src="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/138_2.png" alt="138_2" style="zoom:33%;"></p></li>
+<li><p>第二次迭代，根据原节点random的位置，确定新节点random的位置，例：通过 <span class="math inline">\(A \rightarrow C\)</span>，链接到<span class="math inline">\(A&#39; \rightarrow C&#39;\)</span></p>
+<p><img src="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/138_3.png" alt="138_3" style="zoom:33%;"></p></li>
+<li><p>第三次迭代，将生成新的节点连接成链表</p>
+<p><img src="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/138_4.png" alt="138_4" style="zoom:33%;"></p></li>
+</ol></li>
+</ul>
 ]]></content>
       <categories>
         <category>算法</category>
@@ -1035,6 +1065,12 @@
         <tag>算法</tag>
         <tag>leetcode</tag>
       </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/12/02/Untitled/</url>
+    <content><![CDATA[
+]]></content>
   </entry>
   <entry>
     <title>剑指offer</title>
