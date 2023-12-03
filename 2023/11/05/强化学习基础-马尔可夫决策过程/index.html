@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image.png">
 <meta property="og:image" content="http://example.com/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image2.png">
 <meta property="article:published_time" content="2023-11-05T15:24:34.000Z">
-<meta property="article:modified_time" content="2023-12-02T16:08:35.557Z">
+<meta property="article:modified_time" content="2023-12-03T15:44:57.627Z">
 <meta property="article:author" content="ZYH">
 <meta property="article:tag" content="RL">
 <meta name="twitter:card" content="summary">
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-12-03 00:08:35" itemprop="dateModified" datetime="2023-12-03T00:08:35+08:00">2023-12-03</time>
+                <time title="修改时间：2023-12-03 23:44:57" itemprop="dateModified" datetime="2023-12-03T23:44:57+08:00">2023-12-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -265,8 +265,9 @@
 <li>课程来源：【王树森】深度强化学习（RL）</li>
 </ul>
 <span id="more"></span>
-<h2 id="a-little-bit-math">A little bit math</h2>
-<h3 id="random-variable">Random Variable</h3>
+<h2 id="basic-concepts-of-deep-reinforcement-learning">Basic Concepts of Deep Reinforcement Learning</h2>
+<h3 id="a-little-bit-math">A little bit math</h3>
+<h4 id="random-variable">Random Variable</h4>
 <ul>
 <li>Random variable:
 <ul>
@@ -281,12 +282,12 @@
 </ul></li>
 </ul></li>
 </ul>
-<h3 id="probability-density-functionpdf">Probability Density Function（PDF）</h3>
+<h4 id="probability-density-functionpdf">Probability Density Function（PDF）</h4>
 <ul>
 <li>随机变量在某个确定的取值点附近的可能性</li>
 <li>Example: Gaussian distribution、Discrete distribution</li>
 </ul>
-<h3 id="expectation">Expectation</h3>
+<h4 id="expectation">Expectation</h4>
 <ul>
 <li><p>Random variable <span class="math inline">\(X\)</span> is in the domain <span class="math inline">\(\mathcal{X}\)</span></p></li>
 <li><p>For continuous distribution, the expectation of <span class="math inline">\(f(X)\)</span> is: <span class="math display">\[
@@ -297,8 +298,8 @@
 \]</span></p></li>
 <li></li>
 </ul>
-<h3 id="random-sampling">Random Sampling</h3>
-<h2 id="terminologies">Terminologies</h2>
+<h4 id="random-sampling">Random Sampling</h4>
+<h4 id="terminologies">Terminologies</h4>
 <ul>
 <li><p>State and Action</p>
 <ul>
@@ -351,23 +352,40 @@
 </ul></li>
 </ul></li>
 </ul></li>
-<li><p>Value Function</p>
+<li><p>Action-Value Function</p>
 <ul>
 <li><p>Definition: Action-value function for policy <span class="math inline">\(\pi\)</span></p>
-<p><span class="math inline">\(Q_\pi(s_t,a_t)=\mathbb{E}[U_t|S_t=s_t, A_t=a_t]\)</span> (对<span class="math inline">\(U_t\)</span>求期望)</p></li>
+<p><span class="math inline">\(Q_\pi(s_t,a_t)=\mathbb{E}[U_t|S_t=s_t, A_t=a_t]\)</span> (对<span class="math inline">\(U_t\)</span>求条件期望，<span class="math inline">\(U_t\)</span>是随机变量，等于未来所有奖励的加权求和</p></li>
+<li><p>For policy <span class="math inline">\(\pi\)</span>，<span class="math inline">\(Q_\pi(s,a)\)</span> evaluates how good it is for an agent to pick action <span class="math inline">\(a\)</span> while being in state <span class="math inline">\(s\)</span></p></li>
 </ul></li>
-<li><p>State-Value Function</p>
+<li><p>State-Value Function （告诉我们当前局势好/不好）</p>
 <ul>
 <li><span class="math inline">\(V_\pi(s_t)=\mathbb{E}_A[Q_\pi(s_t,A)]\)</span>
 <ul>
 <li><span class="math inline">\(\mathbb{E}_A\)</span>表示对A，即动作求期望，这样就消除了A的随机性（我认为），续写公式我们可以得到：
 <ul>
 <li><span class="math inline">\(\mathbb{E}_A[Q_\pi(s_t,A)]=\sum_a\pi(a|s_t)\cdot Q_\pi(s_t,a)\)</span>. (Actions are discrete，离散动作，eg. 马里奥的左、右、跳三个动作)</li>
-<li><span class="math inline">\(\mathbb{E}_A[Q_\pi(s_t,A)]=\sum_a\pi(a|s_t)\cdot Q_\pi(s_t,a)\)</span></li>
+<li><span class="math inline">\(\mathbb{E}_A[Q_\pi(s_t,A)]=\int\pi(a|s_t) \cdot Q_\pi(s_t,a)da\)</span>，(动作是连续的，eg. 方向盘0-90°）</li>
 </ul></li>
 </ul></li>
+<li>For fixed policy <span class="math inline">\(\pi\)</span>，<span class="math inline">\(V_\pi(s)\)</span> evaluates how good the situation is in state s</li>
+<li><span class="math inline">\(\mathbb{E}_S[V_\pi(S)]\)</span> evaluates how good the policy <span class="math inline">\(\pi\)</span> is.</li>
 </ul></li>
 </ul>
+<h3 id="how-does-ai-control-the-agent">How does AI control the agent</h3>
+<p>Reinforcement learning can choose to learn two functions:</p>
+<ol type="1">
+<li>policy <span class="math inline">\(\pi\)</span>
+<ul>
+<li>Upon observe the state <span class="math inline">\(s_t\)</span></li>
+<li>random sampling: <span class="math inline">\(a_t\)</span>~<span class="math inline">\(\pi(\cdot |s_t)\)</span></li>
+</ul></li>
+<li>find the optimal action-value function <span class="math inline">\(Q^*(s,a)=\max\limits_{\pi}Q_\pi(s_t,a_t)\)</span> ，相当于将<span class="math inline">\(\pi\)</span>去掉了（找到了一个最大的<span class="math inline">\(Q_\pi\)</span>）
+<ul>
+<li>Upon observe the state <span class="math inline">\(s_t\)</span></li>
+<li>choose the action that maximizes the value: <span class="math inline">\(a_t=argmax_aQ^*(s_t,a)\)</span></li>
+</ul></li>
+</ol>
 <h3 id="回顾">回顾</h3>
 <ul>
 <li>强化学习算法区别于其他机器学习算法：
@@ -575,7 +593,7 @@ v(s)=\mathbb{E}[G_t|S_t=s]
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#reinforcement-learning"><span class="nav-number">1.</span> <span class="nav-text">Reinforcement Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-little-bit-math"><span class="nav-number">2.</span> <span class="nav-text">A little bit math</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#random-variable"><span class="nav-number">2.1.</span> <span class="nav-text">Random Variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#probability-density-functionpdf"><span class="nav-number">2.2.</span> <span class="nav-text">Probability Density Function（PDF）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#expectation"><span class="nav-number">2.3.</span> <span class="nav-text">Expectation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#random-sampling"><span class="nav-number">2.4.</span> <span class="nav-text">Random Sampling</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#terminologies"><span class="nav-number">3.</span> <span class="nav-text">Terminologies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E9%A1%BE"><span class="nav-number">3.1.</span> <span class="nav-text">回顾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8Bmarkov-decision-processes-mdp"><span class="nav-number">4.</span> <span class="nav-text">马尔可夫决策过程（Markov decision processes, MDP）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%80%A7%E8%B4%A8"><span class="nav-number">4.1.</span> <span class="nav-text">2.1 马尔可夫性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5"><span class="nav-number">4.2.</span> <span class="nav-text">2.2 状态转移矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E8%BF%87%E7%A8%8B"><span class="nav-number">4.3.</span> <span class="nav-text">2.3 马尔可夫过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B"><span class="nav-number">5.</span> <span class="nav-text">马尔可夫奖励过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%8A%A5return"><span class="nav-number">5.1.</span> <span class="nav-text">3.2 回报（Return）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0value-function"><span class="nav-number">5.2.</span> <span class="nav-text">3.3 价值函数（Value Function）</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#reinforcement-learning"><span class="nav-number">1.</span> <span class="nav-text">Reinforcement Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#basic-concepts-of-deep-reinforcement-learning"><span class="nav-number">2.</span> <span class="nav-text">Basic Concepts of Deep Reinforcement Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-little-bit-math"><span class="nav-number">2.1.</span> <span class="nav-text">A little bit math</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#random-variable"><span class="nav-number">2.1.1.</span> <span class="nav-text">Random Variable</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#probability-density-functionpdf"><span class="nav-number">2.1.2.</span> <span class="nav-text">Probability Density Function（PDF）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#expectation"><span class="nav-number">2.1.3.</span> <span class="nav-text">Expectation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#random-sampling"><span class="nav-number">2.1.4.</span> <span class="nav-text">Random Sampling</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#terminologies"><span class="nav-number">2.1.5.</span> <span class="nav-text">Terminologies</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#how-does-ai-control-the-agent"><span class="nav-number">2.2.</span> <span class="nav-text">How does AI control the agent</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E9%A1%BE"><span class="nav-number">2.3.</span> <span class="nav-text">回顾</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8Bmarkov-decision-processes-mdp"><span class="nav-number">3.</span> <span class="nav-text">马尔可夫决策过程（Markov decision processes, MDP）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%80%A7%E8%B4%A8"><span class="nav-number">3.1.</span> <span class="nav-text">2.1 马尔可夫性质</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81%E8%BD%AC%E7%A7%BB%E7%9F%A9%E9%98%B5"><span class="nav-number">3.2.</span> <span class="nav-text">2.2 状态转移矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E8%BF%87%E7%A8%8B"><span class="nav-number">3.3.</span> <span class="nav-text">2.3 马尔可夫过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%A5%96%E5%8A%B1%E8%BF%87%E7%A8%8B"><span class="nav-number">4.</span> <span class="nav-text">马尔可夫奖励过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%8A%A5return"><span class="nav-number">4.1.</span> <span class="nav-text">3.2 回报（Return）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%B7%E5%80%BC%E5%87%BD%E6%95%B0value-function"><span class="nav-number">4.2.</span> <span class="nav-text">3.3 价值函数（Value Function）</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -687,7 +705,7 @@ v(s)=\mathbb{E}[G_t|S_t=s]
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.9k字</span>
+  <span class="post-count">博客全站共9.1k字</span>
 </div>
         
 <div class="busuanzi-count">
