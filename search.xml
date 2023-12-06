@@ -1371,7 +1371,7 @@
       </tags>
   </entry>
   <entry>
-    <title>强化学习基础-马尔可夫决策过程</title>
+    <title>深度强化学习入门</title>
     <url>/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/</url>
     <content><![CDATA[<h2 id="reinforcement-learning">Reinforcement Learning</h2>
 <ul>
@@ -1412,7 +1412,7 @@
 \mathbb{E}[f(X)]=\sum_{x \in \mathcal{X}} p(x)\cdot f(x)
 \]</span></p>
 <h4 id="random-sampling">Random Sampling</h4>
-<h4 id="terminologies">Terminologies</h4>
+<h2 id="terminologies">Terminologies</h2>
 <ul>
 <li><p>State and Action</p>
 <ul>
@@ -1499,6 +1499,62 @@
 <li>choose the action that maximizes the value: <span class="math inline">\(a_t=argmax_aQ^*(s_t,a)\)</span></li>
 </ul></li>
 </ol>
+<h2 id="value-based-rl">Value-Based RL</h2>
+<h3 id="deep-q-networkdqn">Deep Q-Network(DQN)</h3>
+<p><span class="math inline">\(Q^*\)</span> is an indication for how good it is for an agent to pick action <span class="math inline">\(a\)</span> while being in state <span class="math inline">\(s\)</span></p>
+<p>But we don't know <span class="math inline">\(Q^*(s,a)\)</span></p>
+<ul>
+<li>So we have solution: Deep Q Network(DQN)</li>
+<li>Use neural network <span class="math inline">\(Q(s,a;w)\)</span>
+<ul>
+<li>where w is parameter of network</li>
+</ul></li>
+</ul>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image5.png" style="zoom:33%;"></p>
+<ul>
+<li><p>An exapmple:</p>
+<ul>
+<li>target: y,</li>
+<li>make a prediction</li>
+<li>loss: <span class="math inline">\(L=\frac{1}{2}(q-y)^2\)</span></li>
+<li>Gradient: <span class="math inline">\(\frac{\partial L}{\partial w}=\frac{\partial q}{\partial w} \cdot \frac{\partial L}{\partial q} = (q-y) \cdot \frac{\partial Q(w)}{\partial w}\)</span></li>
+<li>Gradient descent: <span class="math inline">\(w_{t+1}=w_t-\alpha \cdot \frac{\partial L}{\partial w}|_{w=w_t}\)</span></li>
+</ul></li>
+<li><p>(Temporal Difference) TD learning</p>
+<ul>
+<li>刚才的例子必须要在模型完整运行一次后才能更新参数，但TD不需要</li>
+<li>增加了 Model's estimate: <span class="math inline">\(Q(w)\)</span></li>
+<li>从target变更为 TD target</li>
+<li>Loss变成了: <span class="math inline">\(L = \frac{1}{2}(Q(w)-y)^2\)</span></li>
+<li>Gradient: <span class="math inline">\(\frac{\partial L}{\partial w}=(Q(w)-y) \cdot \frac{\partial Q(w)}{\partial w}\)</span></li>
+<li>Gradient descent: <span class="math inline">\(w_{t+1}=w_t-\alpha \cdot \frac{\partial L}{\partial w} |_{w=w_t}\)</span></li>
+<li>TD learning的目的就是让TD error变为0（最理想的状况）</li>
+</ul></li>
+<li><p>How to apply TD learning to DQN?</p>
+<ul>
+<li>Identity: <span class="math inline">\(U_t=R_t+\gamma \cdot U_{t+1}\)</span></li>
+<li>DQN's output, <span class="math inline">\(Q(s_t, a_t; w)\)</span>, is estimate of <span class="math inline">\(\mathbb{E}[U_t]\)</span></li>
+<li>DQN's output, <span class="math inline">\(Q(s_{t+1}, a_{t+1}; w)\)</span>, is estimate of <span class="math inline">\(\mathbb{E}[U_{t+1}]\)</span></li>
+<li>Thus, <span class="math inline">\(Q(s_t,a_t;w) \approx r_t + \gamma \cdot Q(s_{t+1},a_{t+1};w)\)</span>
+<ul>
+<li>where <span class="math inline">\(Q(s_t,a_t;w)\)</span> is prediction</li>
+<li>where <span class="math inline">\(r_t + \gamma \cdot Q(s_{t+1},a_{t+1};w)\)</span> is TD target</li>
+</ul></li>
+</ul></li>
+<li><p>Train DQN using TD learning</p>
+<ul>
+<li><p>Prediction: <span class="math inline">\(Q(s_t,a_t;w_t)\)</span></p></li>
+<li><p>TD target: <span class="math display">\[
+\begin{align}
+y_t &amp;= r_t + \gamma \cdot Q(s_{t+1},a_{t+1};w_t) \\
+    &amp;= r_t + \gamma \cdot \max\limits_{a}Q(s_{t+1},a;w_t)
+\end{align}
+\]</span></p></li>
+<li><p>Loss: <span class="math inline">\(L_t = \frac{1}{2}(Q(s_t,a_t;w)-y_t)^2\)</span></p></li>
+</ul></li>
+<li><p>所以总结一下TD Learning的流程：</p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image6.png" style="zoom: 50%;"></p></li>
+</ul>
 <h3 id="回顾">回顾</h3>
 <ul>
 <li>强化学习算法区别于其他机器学习算法：
