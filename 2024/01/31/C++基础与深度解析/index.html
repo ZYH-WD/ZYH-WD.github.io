@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg">
 <meta property="article:published_time" content="2024-01-31T03:47:25.000Z">
-<meta property="article:modified_time" content="2024-02-20T13:53:28.179Z">
+<meta property="article:modified_time" content="2024-03-21T03:32:09.398Z">
 <meta property="article:author" content="ZYH">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-02-20 21:53:28'
+  postUpdate: '2024-03-21 11:32:09'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -154,359 +154,236 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="ZHANG Yehang's Blog" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="ZHANG Yehang's Blog"><span class="site-name">ZHANG Yehang's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C++基础与深度解析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-31T03:47:25.000Z" title="发表于 2024-01-31 11:47:25">2024-01-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-02-20T13:53:28.179Z" title="更新于 2024-02-20 21:53:28">2024-02-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C++基础与深度解析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>C++基础与深度解析</h1>
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="ZHANG Yehang's Blog"><span class="site-name">ZHANG Yehang's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C++基础与深度解析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-01-31T03:47:25.000Z" title="发表于 2024-01-31 11:47:25">2024-01-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-21T03:32:09.398Z" title="更新于 2024-03-21 11:32:09">2024-03-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C++基础与深度解析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="c基础与深度解析">C++基础与深度解析</h1>
 <ul>
 <li>前言：记录深蓝学院C++基础与深度解析课程笔记，不保证100%完整，笔记大部分内容是在原PPT基础上的整理和补充，我将尽量将课程中的代码案例也加入进来，后期我可能会在github上同步课程的作业代码。我将从2.5日开始学习该课程，预计4.5之前完成学习，中间可能由于春节/实习等因素间断，因此本篇将不定期更新直至课程学习结束（课程时长74小时）。</li>
 </ul>
-<h2 id="C-基础">C++基础</h2>
-<h3 id="什么是C">什么是C++</h3>
+<h2 id="c基础">C++基础</h2>
+<h3 id="什么是c">什么是C++</h3>
 <ul>
-<li>
-<p>C语言的扩展</p>
+<li><p>C语言的扩展</p>
 <ul>
-<li>
-<p>与底层硬件紧密结合（eg. 大端存储和小端存储，可以使用如下代码在检查存储方式，存储方式由底层硬件决定，Java则不同，这种不同的设计方案使得C++更关注性能，Java更关注易用性）</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这段代码可以判断数据是大端存储还是小端存储</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">show_mem_rep</span><span class="params">(<span class="type">char</span> *start, <span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot; %.2x&quot;</span>, start[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0x01234567</span>;</span><br><span class="line">    show_mem_rep((<span class="type">char</span> *)&amp;i, <span class="keyword">sizeof</span>(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>对象生命周期的精确控制（提升性能，由程序员自己控制）</p>
-</li>
-<li>
-<p>Zero-overhead Abstraction</p>
+<li><p>与底层硬件紧密结合（eg.
+大端存储和小端存储，可以使用如下代码在检查存储方式，存储方式由底层硬件决定，Java则不同，这种不同的设计方案使得C++更关注性能，Java更关注易用性）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这段代码可以判断数据是大端存储还是小端存储</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;studio.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">show_mem_rep</span><span class="params">(<span class="type">char</span> *start, <span class="type">int</span> n)</span>&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot; %.2x&quot;</span>, start[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">0x01234567</span>;</span><br><span class="line">    show_mem_rep((<span class="type">char</span> *)&amp;i, <span class="keyword">sizeof</span>(i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>对象生命周期的精确控制（提升性能，由程序员自己控制）</p></li>
+<li><p>Zero-overhead Abstraction</p>
 <ul>
 <li>不需要为没有使用的语言特性付出成本
 <ul>
 <li>虚函数（C++中如果不写虚函数，就不需要付出成本；C#相反，类中几乎所有的函数都是虚函数）</li>
-</ul>
-</li>
+</ul></li>
 <li>使用了一些语言特性不等于付出运行期成本</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>引入大量特性，便于工程实践</p>
+</ul></li>
+</ul></li>
+<li><p>引入大量特性，便于工程实践</p>
 <ul>
 <li>三种编程范式：面向过程、面向对象、泛型</li>
 <li>函数重载、异常处理，引用</li>
-</ul>
-</li>
-<li>
-<p>C++标准的工业界实现</p>
+</ul></li>
+<li><p>C++标准的工业界实现</p>
 <ul>
-<li>MSVC(Windows) / GCC(Linux) / Clang(Linux)…</li>
+<li>MSVC(Windows) / GCC(Linux) / Clang(Linux)...</li>
 <li>每个编译器可能并不完全遵照标准</li>
 <li>不同的实现存在差异</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="C-开发环境与相关工具">C++开发环境与相关工具</h3>
+<h3 id="c开发环境与相关工具">C++开发环境与相关工具</h3>
 <ul>
-<li>Visual C++ / GCC (G++) / Clang(Clang++)…</li>
+<li>Visual C++ / GCC (G++) / Clang(Clang++)...</li>
 <li>集成开发环境：Visual Studio / CodeLite / Code::blcoks / Eclipse</li>
 <li>工具
 <ul>
 <li>/usr/bin/time</li>
-<li>valgrind</li>
+<li>valgrind<br>
+</li>
 <li>cpp reference：查C++标准</li>
 <li>Compiler explorer：在线编译，生成汇编，并且可以选择编译器</li>
 <li>C++ insights：代码”翻译“，方便理解</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-<h3 id="C-的编译-链接模型">C++的编译 / 链接模型</h3>
+<h3 id="c的编译-链接模型">C++的编译 / 链接模型</h3>
 <ul>
 <li>分块处理</li>
 </ul>
-<img src="/.com//1.png" style="zoom:50%;">
+<p><img src="/.com//1.png" style="zoom:50%;"></p>
 <ul>
-<li>
-<p>好处</p>
+<li><p>好处</p>
 <ul>
 <li>编译耗资源但一次处理输入较少</li>
 <li>链接输入较多但处理速度较快</li>
 <li>便于程序修改升级</li>
-</ul>
-</li>
-<li>
-<p>由”分块处理“衍生出的概念</p>
+</ul></li>
+<li><p>由”分块处理“衍生出的概念</p>
 <ul>
 <li>定义 / 声明</li>
 <li>头文件 / 源文件</li>
-<li>翻译单元：C++20的新特性(translation unit)，一个翻译单元由一个源文件和该源文件所直接或间接包括的头文件的内容组成</li>
+<li>翻译单元：C++20的新特性(translation
+unit)，一个翻译单元由一个源文件和该源文件所直接或间接包括的头文件的内容组成</li>
 <li>一处定义原则</li>
-</ul>
-</li>
-<li>
-<p>预处理</p>
+</ul></li>
+<li><p>预处理</p>
 <ul>
-<li>
-<p>将源文件转换为翻译单元的过程</p>
-</li>
-<li>
-<p>防止头文件被循环展开（在header1.h里引用h2.h，又在header2.h中引用h1.h）</p>
+<li><p>将源文件转换为翻译单元的过程</p></li>
+<li><p>防止头文件被循环展开（在header1.h里引用h2.h，又在header2.h中引用h1.h）</p>
 <ul>
-<li>
-<p>#ifdef解决方案</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//header2.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> HEADER_2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HEADER_2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;header1.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun2</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta"># <span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//header1.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> HEADER_1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HEADER_1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;header2.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta"># <span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>#pragma  once 解决方案</p>
+<li><p>#ifdef解决方案</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//header2.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> HEADER_2</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HEADER_2</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;header1.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun2</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta"># <span class="keyword">endif</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//header1.h</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifndef</span> HEADER_1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> HEADER_1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;header2.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta"># <span class="keyword">endif</span></span></span><br></pre></td></tr></table></figure></li>
+<li><p>#pragma once 解决方案</p>
 <ul>
 <li>idndef可能导致宏定义重名</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>编译</p>
+</ul></li>
+</ul></li>
+<li><p>编译</p>
 <ul>
 <li>将翻译单元转换为汇编语言表示</li>
-<li>编译优化（debug &amp;  release）</li>
+<li>编译优化（debug &amp; release）</li>
 <li>增量编译 &amp; 全部编译（eg. 编译器中的rebuild project）</li>
-</ul>
-</li>
-<li>
-<p>链接</p>
+</ul></li>
+<li><p>链接</p>
 <ul>
 <li>合并多个目标文件，关联声明与定义</li>
 <li>连接（linkage）种类：内部连接（定义只在翻译单元内部可见）、外部连接（不同翻译单元）、无连接（在函数内定义一个变量）</li>
 <li>链接常见错误：找不到定义</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="C-初探">C++初探</h2>
+<h2 id="c初探">C++初探</h2>
 <ul>
-<li>
-<p>函数：返回类型、函数名、形参列表、函数体</p>
-</li>
-<li>
-<p>系统IO</p>
+<li><p>函数：返回类型、函数名、形参列表、函数体</p></li>
+<li><p>系统IO</p>
 <ul>
-<li>
-<pre><code class="language-c++">#include&lt;iostream&gt;            
-#include &quot;myheader.h&quot;         // 会优先在所在文件夹中搜索该头文件
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ iostream：标准库提供的IO接口</span><br><span class="line"></span><br><span class="line">  + 输入流：cin；输出流：cout/cerr/clog</span><br><span class="line"></span><br><span class="line">  + 输出流的区别：1. 输出目标；2. 是否立即刷新缓冲区</span><br><span class="line"></span><br><span class="line">  + 缓冲区与缓冲区刷新：std::flush；std::endl</span><br><span class="line"></span><br><span class="line">    ```c++</span><br><span class="line">    // 使用flush实现一个控制台的进度刷新效果</span><br><span class="line">    #include&quot;head.h&quot;</span><br><span class="line">    </span><br><span class="line">    int main() &#123;</span><br><span class="line">        // 如果不使用std::flush，可能会在某些系统和编译器上看到所有输出被缓存，直到操作完成后一次性显示</span><br><span class="line">        const int total_steps = 10;</span><br><span class="line">        for (int i = 0; i &lt;= total_steps; ++i) &#123;</span><br><span class="line">            std::cout &lt;&lt; &quot;\rProgress: &quot; &lt;&lt; (i * 100 / total_steps) &lt;&lt; &quot;%&quot;</span><br><span class="line">                &lt;&lt; std::flush;</span><br><span class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(500));</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; std::endl;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-</li>
-<li>
-<p>名字空间：用于防止名称冲突</p>
+<li><p>```c++ #include<iostream><br>
+#include "myheader.h" // 会优先在所在文件夹中搜索该头文件
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">+ iostream：标准库提供的IO接口</span><br><span class="line"></span><br><span class="line">  + 输入流：cin；输出流：cout/cerr/clog</span><br><span class="line"></span><br><span class="line">  + 输出流的区别：1. 输出目标；2. 是否立即刷新缓冲区</span><br><span class="line"></span><br><span class="line">  + 缓冲区与缓冲区刷新：std::flush；std::endl</span><br><span class="line"></span><br><span class="line">    ```c++</span><br><span class="line">    // 使用flush实现一个控制台的进度刷新效果</span><br><span class="line">    #include&quot;head.h&quot;</span><br><span class="line">    </span><br><span class="line">    int main() &#123;</span><br><span class="line">        // 如果不使用std::flush，可能会在某些系统和编译器上看到所有输出被缓存，直到操作完成后一次性显示</span><br><span class="line">        const int total_steps = 10;</span><br><span class="line">        for (int i = 0; i &lt;= total_steps; ++i) &#123;</span><br><span class="line">            std::cout &lt;&lt; &quot;\rProgress: &quot; &lt;&lt; (i * 100 / total_steps) &lt;&lt; &quot;%&quot;</span><br><span class="line">                &lt;&lt; std::flush;</span><br><span class="line">            std::this_thread::sleep_for(std::chrono::milliseconds(500));</span><br><span class="line">        &#125;</span><br><span class="line">        std::cout &lt;&lt; std::endl;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></iostream></p></li>
+<li><p>名字空间：用于防止名称冲突</p>
 <ul>
-<li>
-<p>std 命名空间</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> NameSpace1&#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> NameSpace2&#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NameSpace1;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">fun</span>();   		     <span class="comment">//这一定会报错</span></span><br><span class="line">    NameSpace::<span class="built_in">fun1</span>();   <span class="comment">//没问题</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>访问名字空间中元素的3种方式：域解析符 :: ；using语句；名字空间别名</p>
-</li>
-<li>
-<p>名字空间与名称改编（name mangling）</p>
-</li>
-</ul>
-</li>
-<li>
-<p>C/C++系统IO比较</p>
+<li><p>std 命名空间</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> NameSpace1&#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> NameSpace2&#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> NameSpace1;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">fun</span>();   		     <span class="comment">//这一定会报错</span></span><br><span class="line">    NameSpace::<span class="built_in">fun1</span>();   <span class="comment">//没问题</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>访问名字空间中元素的3种方式：域解析符 ::
+；using语句；名字空间别名</p></li>
+<li><p>名字空间与名称改编（name mangling）</p></li>
+</ul></li>
+<li><p>C/C++系统IO比较</p>
 <ul>
 <li>printf：使用直观，但容易出错</li>
 <li>cout：不容易出错，但书写冗长</li>
 <li>C++20格式化库：新的解决方案</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;I have &quot;</span> &lt;&lt; x &lt;&lt; <span class="string">&quot; pens\n&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I have %d pens\n&quot;</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li>
-<p>结构体与自定义数据类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 结构体可以通过点操作符访问内部元素</span></span><br><span class="line"><span class="comment">// 作为函数的输入参数或返回类型</span></span><br><span class="line"><span class="comment">// 可以引入成员函数，更好地表示函数与数据的相关性</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">IncX</span><span class="params">()</span></span>&#123;</span><br><span class="line">        x = x + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;I have &quot;</span> &lt;&lt; x &lt;&lt; <span class="string">&quot; pens\n&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;I have %d pens\n&quot;</span>, x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>结构体与自定义数据类型</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 结构体可以通过点操作符访问内部元素</span></span><br><span class="line"><span class="comment">// 作为函数的输入参数或返回类型</span></span><br><span class="line"><span class="comment">// 可以引入成员函数，更好地表示函数与数据的相关性</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    <span class="type">int</span> y;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">IncX</span><span class="params">()</span></span>&#123;</span><br><span class="line">        x = x + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="对象与基本类型">对象与基本类型</h2>
 <h3 id="初始化和赋值语句">初始化和赋值语句</h3>
 <ul>
 <li>值：字面值、对象（变量或常量）所表示的值</li>
-<li>标识符：变量、常量、引用…</li>
+<li>标识符：变量、常量、引用...</li>
 <li>初始化基本操作：
 <ul>
 <li>在内存中开辟空间，保存相应的数值</li>
 <li>在编译器种构造符号表，将标识符与相关内存空间关联起来</li>
-</ul>
-</li>
+</ul></li>
 <li>值与对象都有类型</li>
 <li>初始化/赋值可能涉及到类型转换</li>
 </ul>
 <h3 id="类型详述">类型详述</h3>
 <ul>
-<li>
-<p>类型是一个编译期概念，可执行文件中不存在类型的概念</p>
-</li>
-<li>
-<p>C++是强类型语言</p>
-</li>
-<li>
-<p>类型描述了：</p>
+<li><p>类型是一个编译期概念，可执行文件中不存在类型的概念</p></li>
+<li><p>C++是强类型语言</p></li>
+<li><p>类型描述了：</p>
 <ul>
-<li>
-<p>存储所需要的尺寸(sizeof)</p>
-</li>
-<li>
-<p>取值空间(std::numeric_limits，超过范围可能溢出)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;limits&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; std::numeric_limits&lt;<span class="type">int</span>&gt;::<span class="built_in">min</span>( ) &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; std::numeric_limits&lt;<span class="type">int</span>&gt;::<span class="built_in">max</span>( ) &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>对齐信息(alignof)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Str</span>&#123;</span><br><span class="line">    <span class="type">char</span> b;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">alignof</span>(Str) &lt;&lt; std::endl;             <span class="comment">//8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>可以执行的操作</p>
-</li>
-</ul>
-</li>
-<li>
-<p>类型可以划分为基本类型和复杂类型</p>
+<li><p>存储所需要的尺寸(sizeof)</p></li>
+<li><p>取值空间(std::numeric_limits，超过范围可能溢出)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;limits&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; std::numeric_limits&lt;<span class="type">int</span>&gt;::<span class="built_in">min</span>( ) &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">    std::cout &lt;&lt; std::numeric_limits&lt;<span class="type">int</span>&gt;::<span class="built_in">max</span>( ) &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>对齐信息(alignof)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;limits&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Str</span>&#123;</span><br><span class="line">    <span class="type">char</span> b;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;</span><br><span class="line">    std::cout &lt;&lt; <span class="built_in">alignof</span>(Str) &lt;&lt; std::endl;             <span class="comment">//8</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>可以执行的操作</p></li>
+</ul></li>
+<li><p>类型可以划分为基本类型和复杂类型</p>
 <ul>
-<li>
-<p>内建类型：C++语言中所支持的类型</p>
+<li>内建类型：C++语言中所支持的类型
 <ul>
-<li>
-<p>数值类型（每个类型占多少字节的问题，不同硬件环境里使用sizeof结果也可能不一样）</p>
+<li>数值类型（每个类型占多少字节的问题，不同硬件环境里使用sizeof结果也可能不一样）
 <ul>
-<li>
-<p>字符类型（char, wchar_t, char16_t, char32_t）</p>
-</li>
-<li>
-<p>整数类型</p>
+<li>字符类型（char, wchar_t, char16_t, char32_t）</li>
+<li>整数类型
 <ul>
 <li>带符号整数类型：short, int, long, long long</li>
 <li>无符号整数类型：unsigned + 带符号整数类型（例：unsigned short）</li>
-</ul>
-</li>
-<li>
-<p>浮点类型</p>
+</ul></li>
+<li>浮点类型
 <ul>
 <li>float, double, long double</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>void</p>
-</li>
-</ul>
-</li>
-<li>
-<p>复杂类型：由基本类型组合、变种所产生的类型，可能是标准库引入，或自定义类型</p>
-</li>
-</ul>
-</li>
-<li>
-<p>C++11引入了固定尺寸的整数类型，如int32_t（32bit，带符号整数）</p>
-</li>
-<li>
-<p>各种类型可以搜索cppreference</p>
-</li>
-<li>
-<p>字面值：在程序中直接表示为一个具体数值或字符串的值</p>
+</ul></li>
+</ul></li>
+<li>void</li>
+</ul></li>
+<li>复杂类型：由基本类型组合、变种所产生的类型，可能是标准库引入，或自定义类型</li>
+</ul></li>
+<li><p>C++11引入了固定尺寸的整数类型，如int32_t（32bit，带符号整数）</p></li>
+<li><p>各种类型可以搜索cppreference</p></li>
+<li><p>字面值：在程序中直接表示为一个具体数值或字符串的值</p>
 <ul>
 <li>整数字面值：</li>
 <li>浮点数：</li>
-<li>字符字面值：‘c’, ‘\n’ - char 型</li>
-<li>字符串字面值：“Hello” - char[6] 型</li>
+<li>字符字面值：'c', '' - char 型</li>
+<li>字符串字面值："Hello" - char[6] 型</li>
 <li>布尔字面值：true, false - bool 型</li>
 <li>指针字面值：nullptr - nullptr_t 型</li>
-</ul>
-</li>
-<li>
-<p>可以为字面值引入前缀或后缀以改变其类型</p>
+</ul></li>
+<li><p>可以为字面值引入前缀或后缀以改变其类型</p>
 <ul>
-<li>1.3 (double) – 1.3f (float)</li>
-<li>2 (int) – 2ULL (unsigned long long)</li>
-</ul>
-</li>
-<li>
-<p>可以引入自定义后缀来修改字面值类型</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="keyword">operator</span> <span class="string">&quot;&quot;</span> _ddd(<span class="type">long</span> <span class="type">double</span> x) &#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">int</span>)x * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 自定义运算符</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">3.14</span>_ddd;</span><br><span class="line">    std::cout &lt;&lt; x &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>变量</p>
+<li>1.3 (double) -- 1.3f (float)</li>
+<li>2 (int) -- 2ULL (unsigned long long)</li>
+</ul></li>
+<li><p>可以引入自定义后缀来修改字面值类型</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="keyword">operator</span> <span class="string">&quot;&quot;</span> _ddd(<span class="type">long</span> <span class="type">double</span> x) &#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">int</span>)x * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 自定义运算符</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">3.14</span>_ddd;</span><br><span class="line">    std::cout &lt;&lt; x &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure></li>
+<li><p>变量</p>
 <ul>
-<li>
-<p>变量的类型在其首次声明（定义）时指定</p>
+<li><p>变量的类型在其首次声明（定义）时指定</p>
 <ul>
 <li>int x：定义一个变量x，其类型为int</li>
 <li>变量声明与定义的区别：extern前缀</li>
-</ul>
-</li>
-<li>
-<p>变量的初始化与赋值</p>
+</ul></li>
+<li><p>变量的初始化与赋值</p>
 <ul>
-<li>
-<p>初始化：在构造变量之初为其赋予的初始值</p>
+<li><p>初始化：在构造变量之初为其赋予的初始值</p>
 <ul>
-<li>
-<p>缺省初始化</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x;       <span class="comment">// 如果声明在函数内等（局部变量），那么缺省初始化会是一个随机值，若是全局会是0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>直接/拷贝初始化</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">      <span class="type">int</span> x = <span class="number">10</span>;         <span class="comment">// 直接初始化</span></span><br><span class="line">      <span class="function"><span class="type">int</span> <span class="title">y</span><span class="params">(<span class="number">10</span>)</span></span>;           <span class="comment">// 拷贝初始化</span></span><br><span class="line">      <span class="type">int</span> z&#123;<span class="number">10</span>&#125;;           <span class="comment">//拷贝初始化</span></span><br><span class="line"></span><br><span class="line">    + 其它初始化</span><br><span class="line"></span><br><span class="line">  + 赋值：修改变量所保存的数值</span><br><span class="line"></span><br><span class="line">+ （隐式）类型转换</span><br><span class="line"></span><br><span class="line">  + 为变量赋值时可能涉及到类型转换</span><br><span class="line"></span><br><span class="line">    + <span class="type">bool</span>与整数之间的类型转换</span><br><span class="line"></span><br><span class="line">      ```c++</span><br><span class="line">      <span class="type">bool</span> x = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>浮点数与整数之间的类型转换</p>
-</li>
-</ul>
-</li>
-<li>
-<p>隐式类型转换不只发生在赋值时</p>
+<li><p>缺省初始化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x;       <span class="comment">// 如果声明在函数内等（局部变量），那么缺省初始化会是一个随机值，若是全局会是0</span></span><br></pre></td></tr></table></figure></li>
+<li><p>直接/拷贝初始化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">      <span class="type">int</span> x = <span class="number">10</span>;         <span class="comment">// 直接初始化</span></span><br><span class="line">      <span class="function"><span class="type">int</span> <span class="title">y</span><span class="params">(<span class="number">10</span>)</span></span>;           <span class="comment">// 拷贝初始化</span></span><br><span class="line">      <span class="type">int</span> z&#123;<span class="number">10</span>&#125;;           <span class="comment">//拷贝初始化</span></span><br><span class="line"></span><br><span class="line">    + 其它初始化</span><br><span class="line"></span><br><span class="line">  + 赋值：修改变量所保存的数值</span><br><span class="line"></span><br><span class="line">+ （隐式）类型转换</span><br><span class="line"></span><br><span class="line">  + 为变量赋值时可能涉及到类型转换</span><br><span class="line"></span><br><span class="line">    + <span class="type">bool</span>与整数之间的类型转换</span><br><span class="line"></span><br><span class="line">      ```c++</span><br><span class="line">      <span class="type">bool</span> x = <span class="number">1</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>浮点数与整数之间的类型转换</p></li>
+</ul></li>
+<li><p>隐式类型转换不只发生在赋值时</p>
 <ul>
-<li>
-<p>if判断</p>
-</li>
-<li>
-<p>数值比较</p>
+<li><p>if判断</p></li>
+<li><p>数值比较</p>
 <ul>
-<li>
-<p>无符号数据与带符号数据之间的比较</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">-1</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> y = <span class="number">3</span>;</span><br><span class="line">std::cout &lt;&lt; (x &lt; y) &lt;&lt; std::endl;             <span class="comment">// 输出0，无符号数y和x比较大小时，x会进行类型转换，即转换为unsigned，然后这个数就会非常的大</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>std::cmp_XXX（C++ 20）：新特性的解决方案，避免上述情况</p>
-</li>
+<li><p>无符号数据与带符号数据之间的比较</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">-1</span>;</span><br><span class="line"><span class="type">unsigned</span> <span class="type">int</span> y = <span class="number">3</span>;</span><br><span class="line">std::cout &lt;&lt; (x &lt; y) &lt;&lt; std::endl;             <span class="comment">// 输出0，无符号数y和x比较大小时，x会进行类型转换，即转换为unsigned，然后这个数就会非常的大</span></span><br></pre></td></tr></table></figure></li>
+<li><p>std::cmp_XXX（C++ 20）：新特性的解决方案，避免上述情况</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="复合类型：从指针到引用">复合类型：从指针到引用</h3>
+<h3 id="复合类型从指针到引用">复合类型：从指针到引用</h3>
 <ul>
-<li>
-<p>指针：一种间接类型</p>
-<img src="/.com//2.png" alt="2" style="zoom: 67%;">
-</li>
-<li>
-<p>特点：</p>
+<li><p>指针：一种间接类型</p>
+<p><img src="/.com//2.png" alt="2" style="zoom: 67%;"></p></li>
+<li><p>特点：</p>
 <ul>
-<li>
-<p>可以“指向”不同的对象</p>
-</li>
-<li>
-<p>具有相同的尺寸</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">42</span>;</span><br><span class="line"><span class="type">char</span> y = <span class="number">33</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(x) &lt;&lt; std::endl;           <span class="comment">// output：4</span></span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(y) &lt;&lt; std::endl;           <span class="comment">// outout：1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p1 = &amp;x;</span><br><span class="line"><span class="type">char</span>* p2 = &amp;y;</span><br><span class="line"></span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(p1) &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(p2) &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; &amp;x &lt;&lt; std::endl;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li>
-<p>相关操作</p>
+<li><p>可以“指向”不同的对象</p></li>
+<li><p>具有相同的尺寸</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">42</span>;</span><br><span class="line"><span class="type">char</span> y = <span class="number">33</span>;</span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(x) &lt;&lt; std::endl;           <span class="comment">// output：4</span></span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(y) &lt;&lt; std::endl;           <span class="comment">// outout：1</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p1 = &amp;x;</span><br><span class="line"><span class="type">char</span>* p2 = &amp;y;</span><br><span class="line"></span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(p1) &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; <span class="built_in">sizeof</span>(p2) &lt;&lt; std::endl;</span><br><span class="line">std::cout &lt;&lt; &amp;x &lt;&lt; std::endl;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><p>相关操作</p>
 <ul>
 <li>&amp;：取地址操作符</li>
 <li>*：解引用操作符</li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">ZYH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/">http://example.com/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">ZHANG Yehang's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C++</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.png" target="_blank"><img class="post-qr-code-img" src="/images/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.png" target="_blank"><img class="post-qr-code-img" src="/images/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/" title="AI论文阅读及汇总"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AI论文阅读及汇总</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/" title="OD机试准备"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">OD机试准备</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ZYH</div><div class="author-info__description">Incoming MSc student @CUHK-Shenzhen | BEng in Computer Science @CUG</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ZYH-WD"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ZYH-WD" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.zhihu.com/people/wu-yu-de-wu-yan" target="_blank" title="Zhihu"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:ZhangYeHang2002@outlook.com" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/281157747?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">I am in the process of refining the functions of the blog. Feel free to share!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">C++基础与深度解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">C++基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFC"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">C++开发环境与相关工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C-%E7%9A%84%E7%BC%96%E8%AF%91-%E9%93%BE%E6%8E%A5%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">C++的编译 &#x2F; 链接模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-%E5%88%9D%E6%8E%A2"><span class="toc-number">1.2.</span> <span class="toc-text">C++初探</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">对象与基本类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">初始化和赋值语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%BF%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">类型详述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%EF%BC%9A%E4%BB%8E%E6%8C%87%E9%92%88%E5%88%B0%E5%BC%95%E7%94%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">复合类型：从指针到引用</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/" title="AI论文阅读及汇总">AI论文阅读及汇总</a><time datetime="2024-03-21T02:54:09.000Z" title="发表于 2024-03-21 10:54:09">2024-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" title="C++基础与深度解析"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="C++基础与深度解析"/></a><div class="content"><a class="title" href="/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" title="C++基础与深度解析">C++基础与深度解析</a><time datetime="2024-01-31T03:47:25.000Z" title="发表于 2024-01-31 11:47:25">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/" title="OD机试准备">OD机试准备</a><time datetime="2024-01-12T05:44:10.000Z" title="发表于 2024-01-12 13:44:10">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="JavaSE基础入门"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/javase.jpg" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="JavaSE基础入门"/></a><div class="content"><a class="title" href="/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="JavaSE基础入门">JavaSE基础入门</a><time datetime="2024-01-11T10:51:41.000Z" title="发表于 2024-01-11 18:51:41">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/" title="Leetcode 面试经典150题"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/leetcode.png" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="Leetcode 面试经典150题"/></a><div class="content"><a class="title" href="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/" title="Leetcode 面试经典150题">Leetcode 面试经典150题</a><time datetime="2023-11-30T14:28:10.000Z" title="发表于 2023-11-30 22:28:10">2023-11-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By ZYH</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">ZYH</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/">http://example.com/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">ZHANG Yehang's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C++</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat.png" target="_blank"><img class="post-qr-code-img" src="/images/wechat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/images/alipay.png" target="_blank"><img class="post-qr-code-img" src="/images/alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/" title="AI论文阅读及汇总"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">AI论文阅读及汇总</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/" title="OD机试准备"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">OD机试准备</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">ZYH</div><div class="author-info__description">Incoming MSc student @CUHK-Shenzhen | BEng in Computer Science @CUG</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ZYH-WD"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/ZYH-WD" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://www.zhihu.com/people/wu-yu-de-wu-yan" target="_blank" title="Zhihu"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:ZhangYeHang2002@outlook.com" target="_blank" title="E-mail"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/281157747?spm_id_from=333.1007.0.0" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">I am in the process of refining the functions of the blog. Feel free to share!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#c%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">C++基础与深度解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#c%E5%9F%BA%E7%A1%80"><span class="toc-number">1.1.</span> <span class="toc-text">C++基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFc"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是C++</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">C++开发环境与相关工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c%E7%9A%84%E7%BC%96%E8%AF%91-%E9%93%BE%E6%8E%A5%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.1.3.</span> <span class="toc-text">C++的编译 &#x2F; 链接模型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#c%E5%88%9D%E6%8E%A2"><span class="toc-number">1.2.</span> <span class="toc-text">C++初探</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.</span> <span class="toc-text">对象与基本类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%92%8C%E8%B5%8B%E5%80%BC%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">初始化和赋值语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%BF%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">类型详述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E4%BB%8E%E6%8C%87%E9%92%88%E5%88%B0%E5%BC%95%E7%94%A8"><span class="toc-number">1.3.3.</span> <span class="toc-text">复合类型：从指针到引用</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/" title="AI论文阅读及汇总">AI论文阅读及汇总</a><time datetime="2024-03-21T02:54:09.000Z" title="发表于 2024-03-21 10:54:09">2024-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" title="C++基础与深度解析"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/C++.jpg" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="C++基础与深度解析"/></a><div class="content"><a class="title" href="/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/" title="C++基础与深度解析">C++基础与深度解析</a><time datetime="2024-01-31T03:47:25.000Z" title="发表于 2024-01-31 11:47:25">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/" title="OD机试准备">OD机试准备</a><time datetime="2024-01-12T05:44:10.000Z" title="发表于 2024-01-12 13:44:10">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="JavaSE基础入门"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/javase.jpg" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="JavaSE基础入门"/></a><div class="content"><a class="title" href="/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/" title="JavaSE基础入门">JavaSE基础入门</a><time datetime="2024-01-11T10:51:41.000Z" title="发表于 2024-01-11 18:51:41">2024-01-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/" title="Leetcode 面试经典150题"><img src="https://raw.githubusercontent.com/ZYH-WD/picgo_images/main/leetcode.png" onerror="this.onerror=null;this.src='/img/preview.jpg'" alt="Leetcode 面试经典150题"/></a><div class="content"><a class="title" href="/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/" title="Leetcode 面试经典150题">Leetcode 面试经典150题</a><time datetime="2023-11-30T14:28:10.000Z" title="发表于 2023-11-30 22:28:10">2023-11-30</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By ZYH</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
