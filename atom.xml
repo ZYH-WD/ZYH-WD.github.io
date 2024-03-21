@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-02-20T13:53:28.179Z</updated>
+  <updated>2024-03-21T03:16:32.865Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI论文阅读及汇总</title>
+    <link href="http://example.com/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/"/>
+    <id>http://example.com/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/</id>
+    <published>2024-03-21T02:54:09.000Z</published>
+    <updated>2024-03-21T03:16:32.865Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。# AI Paper ## CV ### Object Detection #### Yolo</li><li>Yolov1<ul><li>Note: https://zhangyh2002.run/pdf/papers/cv/yolo/yolov1.pdf</li><li>Essay intensive reading reference (If available):https://zhuanlan.zhihu.com/p/70387154</li></ul></li><li>Yolov2<ul><li>Note: https://zhangyh2002.run/pdf/papers/cv/yolo/yolov2.pdf</li><li>Essay intensive reading reference (If available):https://zhuanlan.zhihu.com/p/74540100 ## NLP（expected）</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。
+# AI Paper ## CV ### Objec</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>C++基础与深度解析</title>
