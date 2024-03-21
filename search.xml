@@ -2810,21 +2810,29 @@ M347 1759 V0 H263 V1759 v0 v1759 h84z"/></svg></span></span></span><span class="
     <title>AI论文阅读及汇总</title>
     <url>/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/</url>
     <content><![CDATA[<ul>
-<li>本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。
-# AI Paper ## CV ### Object Detection #### Yolo</li>
+<li>本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。</li>
+</ul>
+<h1 id="ai-paper">AI Paper</h1>
+<h2 id="cv">CV</h2>
+<h3 id="object-detection">Object Detection</h3>
+<h4 id="yolo">Yolo</h4>
+<ul>
 <li>Yolov1
 <ul>
-<li>Note: https://zhangyh2002.run/pdf/papers/cv/yolo/yolov1.pdf</li>
+<li>Note:<a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov1.pdf">You Only
+Look Once: Unified, Real-Time Object Detection</a></li>
 <li>Essay intensive reading reference (If available):
 https://zhuanlan.zhihu.com/p/70387154</li>
 </ul></li>
 <li>Yolov2
 <ul>
-<li>Note: https://zhangyh2002.run/pdf/papers/cv/yolo/yolov2.pdf</li>
+<li>Note: <a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov2.pdf">YOLO9000:
+Better, Faster, Stronger</a></li>
 <li>Essay intensive reading reference (If available):
-https://zhuanlan.zhihu.com/p/74540100 ## NLP（expected）</li>
+https://zhuanlan.zhihu.com/p/74540100</li>
 </ul></li>
 </ul>
+<h2 id="nlpexpected">NLP（expected）</h2>
 ]]></content>
   </entry>
 </search>
