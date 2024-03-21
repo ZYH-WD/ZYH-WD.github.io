@@ -220,7 +220,7 @@ random.</p>
 </ul></li>
 </ul></li>
 <li><p>reward <span class="math inline">\(R\)</span></p>
-<p><img src="/.com//image3.png" alt="image3" style="zoom:50%;"></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image3.png" alt="image3" style="zoom:50%;"></p>
 <ul>
 <li>涉及马尔可夫链知识，状态转移是随机的，而这种随机来自环境，<span class="math inline">\(p\)</span>是状态转移函数，在马里奥游戏中，状态转移函数只有游戏知道，玩家是未知的。所以我们可以简单理解为强化学习过程有两个随机抽样
 <ul>
@@ -232,7 +232,7 @@ generates a new state <span class="math inline">\(S&#39;\)</span>（根据状态
 </ul></li>
 </ul></li>
 <li><p>agent enviornment interaction</p>
-<p><img src="/.com//image4.png"></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image4.png"></p>
 <ul>
 <li>注：<span class="math inline">\((a) \rightarrow (b)\)</span></li>
 </ul></li>
@@ -323,7 +323,7 @@ good it is for an agent to pick action <span class="math inline">\(a\)</span> wh
 <li>where w is parameter of network</li>
 </ul></li>
 </ul>
-<p><img src="/.com//image5.png" style="zoom:33%;"></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image5.png" style="zoom:33%;"></p>
 <ul>
 <li><p>An exapmple:</p>
 <ul>
@@ -379,7 +379,7 @@ y_t &amp;= r_t + \gamma \cdot Q(s_{t+1},a_{t+1};w_t) \\
 \frac{1}{2}(Q(s_t,a_t;w)-y_t)^2\)</span></p></li>
 </ul></li>
 <li><p>所以总结一下TD Learning的流程：</p>
-<p><img src="/.com//image6.png" style="zoom: 50%;"></p></li>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image6.png" style="zoom: 50%;"></p></li>
 </ul>
 <h2 id="policy-based-learning">Policy-Based Learning</h2>
 <ul>
@@ -392,7 +392,7 @@ y_t &amp;= r_t + \gamma \cdot Q(s_{t+1},a_{t+1};w_t) \\
 of the nerual net.</li>
 </ul></li>
 <li><p>Simple Example</p>
-<p><img src="/.com//image7.png" style="zoom:50%;"></p></li>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image7.png" style="zoom:50%;"></p></li>
 <li><p>State-Value Function</p>
 <p><span class="math inline">\(V_\pi(s_t) =
 \mathbb{E}_A[Q_\pi(s_t,A)]=\sum_a\pi(a|s_t)\cdot
@@ -414,17 +414,17 @@ Q_\pi(s_t,a)\)</span></p></li>
 \theta + \beta \cdot \frac{\partial V(s;\theta)}{\partial
 \theta}\)</span></p></li>
 <li><p>推导过程：</p>
-<p><img src="/.com//image8.png" alt="image8" style="zoom: 33%;"></p></li>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image8.png" alt="image8" style="zoom: 33%;"></p></li>
 <li><p>最后一步推导就很容易理解了，<span class="math inline">\(\pi(a|s;\theta)\)</span>是一个概率密度函数，相当于求期望，则：</p>
 <p><span class="math inline">\(\frac{\partial V(s;\theta)}{\partial
 \theta} = \mathbb{E}_A[\frac{\partial log \pi(A|s;\theta)}{\partial
 \theta} \cdot Q_\pi(s,A)]\)</span></p></li>
 <li><p>在实际计算中，由于A是一个连续变量，因此求期望必须积分，但<span class="math inline">\(\pi\)</span>是一个复杂的神经网络，无法求积分。因此使用蒙特卡洛近似（离散动作同样适用）：</p>
-<p><img src="/.com//image9.png" alt="image9" style="zoom: 50%;"></p></li>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image9.png" alt="image9" style="zoom: 50%;"></p></li>
 </ul></li>
 </ul></li>
 <li><p>总结一下：Update policy network using policy gradient</p>
-<p><img src="/.com//image10.png" alt="image10" style="zoom:50%;"></p></li>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image10.png" alt="image10" style="zoom:50%;"></p></li>
 </ul>
 <h3 id="回顾">回顾</h3>
 <ul>
@@ -443,7 +443,7 @@ Q_\pi(s_t,a)\)</span></p></li>
 </ul></li>
 </ul>
 <p><strong>所有问题的目标都可以被描述成最大化期望的累计奖励</strong></p>
-<p><img src="/.com//image-1.png"></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image-1.png"></p>
 <p>智能体在每个时间步<span class="math inline">\(t\)</span>：</p>
 <ul>
 <li>接收观测(observation) <span class="math inline">\(O_t\)</span></li>
@@ -514,7 +514,7 @@ decision processes, MDP）</h2>
 </ul></li>
 </ul>
 <p>学生的马尔可夫链</p>
-<p><img src="/.com//image.png"></p>
+<p><img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image.png"></p>
 <p>从初始状态<span class="math inline">\(S_1=C_1\)</span>开始，我们可以从马尔可夫链中采样一些子序列，每个子序列又成为幕(Episodes)</p>
 <ul>
 <li>C1 C2 C3 Pass Sleep</li>
@@ -545,7 +545,7 @@ R_{t+2}+...=\sum\limits_{k=0}\limits^{\infty}\gamma^kR_{t+k+1}\]</span></p>
 <li><span class="math inline">\(\gamma∈[0,1],\gamma=0\)</span>只看眼前受益</li>
 </ul>
 <figure>
-<img src="/.com//image2.png" alt="image2">
+<img src="/2023/11/05/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E5%86%B3%E7%AD%96%E8%BF%87%E7%A8%8B/image2.png" alt="image2">
 <figcaption aria-hidden="true">image2</figcaption>
 </figure>
 <h3 id="价值函数value-function">3.3 价值函数（Value Function）</h3>
