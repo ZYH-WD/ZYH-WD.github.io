@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AI论文阅读及汇总</title>
-    <url>/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<ul>
-<li>本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。</li>
-</ul>
-<h1 id="ai-paper">AI Paper</h1>
-<h2 id="cv">CV</h2>
-<h3 id="object-detection">Object Detection</h3>
-<h4 id="yolo">Yolo</h4>
-<ul>
-<li>Yolov1
-<ul>
-<li>Note: <a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov1.pdf">You Only
-Look Once: Unified, Real-Time Object Detection</a></li>
-<li>Essay intensive reading reference (If available):
-https://zhuanlan.zhihu.com/p/70387154</li>
-</ul></li>
-<li>Yolov2
-<ul>
-<li>Note: <a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov2.pdf">YOLO9000:
-Better, Faster, Stronger</a></li>
-<li>Essay intensive reading reference (If available):
-https://zhuanlan.zhihu.com/p/74540100</li>
-</ul></li>
-</ul>
-<h2 id="nlpexpected">NLP（expected）</h2>
-]]></content>
-  </entry>
-  <entry>
     <title>01-Github+Hexo搭建个人博客</title>
     <url>/2023/11/05/01-Github+Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>欢迎来到我的博客，我将在这里记录我的学习和生活。这是我的第一篇博客，我将贴出使用Github+Hexo的博客搭建教程和常见跳坑解决方案。</p>
@@ -298,6 +269,10 @@ unit)，一个翻译单元由一个源文件和该源文件所直接或间接包
 <h3 id="复合类型从指针到引用">复合类型：从指针到引用</h3>
 <ul>
 <li><p>指针：一种间接类型</p>
+<ul>
+<li><p>定义：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span>* p = &amp;val;</span><br><span class="line"><span class="type">int</span>* p = <span class="literal">nullptr</span>;</span><br></pre></td></tr></table></figure></li>
+</ul>
 <figure>
 <img src="/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/2.png" alt="image2">
 <figcaption aria-hidden="true">image2</figcaption>
@@ -310,14 +285,58 @@ unit)，一个翻译单元由一个源文件和该源文件所直接或间接包
 </ul></li>
 <li><p>相关操作</p>
 <ul>
-<li>&amp;：取地址操作符</li>
-<li>*：解引用操作符</li>
+<li><p>&amp;：取地址操作符</p></li>
+<li><p>*：解引用操作符</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(<span class="type">int</span>)</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;1\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(<span class="type">int</span>*)</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;2\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span>* p = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="built_in">fun</span>(p)   <span class="comment">// 输出2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>nullptr</p>
+<ul>
+<li>一个特殊的对象（类型为nullptr_t），表示空指针</li>
+<li>类似与C中的NULL，但更加安全</li>
+</ul></li>
+<li><p>指针与bool的隐式转换：非空指针可以转换为true；空指针可以转换为false</p></li>
+<li><p>指针的主要操作：解引用；增加、减少；判断两个指针是否相等</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">42</span>;</span><br><span class="line"><span class="type">int</span>* p = &amp;x;</span><br><span class="line"><span class="comment">// p + 1指向下一个int类型变量的地址，因此指针p的值会加4（int类型的大小为4个字节，32位）</span></span><br><span class="line">p = p + <span class="number">1</span>;       </span><br><span class="line">p = p - <span class="number">1</span>;</span><br><span class="line"><span class="comment">// 判</span></span><br><span class="line"><span class="type">int</span>* q = &amp;x;</span><br><span class="line">std::cout &lt;&lt; (p == q) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;  <span class="comment">//输出1</span></span><br><span class="line"><span class="comment">// 比较大小（只在数组中有用）</span></span><br><span class="line"><span class="type">int</span> y;</span><br><span class="line"><span class="type">int</span> *r = &amp;y;</span><br><span class="line">std::cout &lt;&lt; (r &gt; q) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;   <span class="comment">// 根据声明的顺序（比如当前的变量在栈里分配，那么q &gt; r，输出0，如果在堆里就不一定了，所以一般在数组内使用）</span></span><br></pre></td></tr></table></figure></li>
+<li><p>void* 指针</p>
+<ul>
+<li>没有记录对象的尺寸信息，可以保存任意地址</li>
+<li>支持判等操作</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(<span class="type">void</span>* param)</span></span>&#123;</span><br><span class="line">    std::cout &lt;&lt; (param + <span class="number">1</span>) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>; <span class="comment">//会报错！</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//void*可以与任意类型的指针互相转换，指针尺寸一致</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span>* r;</span><br><span class="line">    <span class="type">char</span>* k;</span><br><span class="line">    std::cout &lt;&lt; (r == q) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="built_in">fun</span>(r);</span><br><span class="line">    <span class="built_in">fun</span>(k);</span><br><span class="line">    <span class="comment">// 但如果</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">42</span>;</span><br><span class="line">    <span class="type">int</span>* p = &amp;x;</span><br><span class="line">    <span class="built_in">fun</span>(p);</span><br><span class="line">    <span class="comment">// 引用的案例</span></span><br><span class="line">    <span class="type">int</span> y = <span class="number">3</span>;</span><br><span class="line">    <span class="type">int</span>&amp; red = x;</span><br><span class="line">    </span><br><span class="line">    std::cout &lt;&lt; ref &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    ref = ref + <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
 ]]></content>
       <tags>
         <tag>C++</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>AI论文阅读及汇总</title>
+    <url>/2024/03/21/AI%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E5%8F%8A%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<ul>
+<li>本文将对最近补基础读的一些AI论文做一些记录，不求深度，只求广度，笔记也会比较粗略，里面甚至会有些生词注释。此外，我还在Github中创建了一个资料仓库，作为这篇博客的补充(也可能之后直接在该博客里存)。</li>
+</ul>
+<h1 id="ai-paper">AI Paper</h1>
+<h2 id="cv">CV</h2>
+<h3 id="object-detection">Object Detection</h3>
+<h4 id="yolo">Yolo</h4>
+<ul>
+<li>Yolov1
+<ul>
+<li>Note: <a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov1.pdf">You Only
+Look Once: Unified, Real-Time Object Detection</a></li>
+<li>Essay intensive reading reference (If available):
+https://zhuanlan.zhihu.com/p/70387154</li>
+</ul></li>
+<li>Yolov2
+<ul>
+<li>Note: <a href="https://zhangyh2002.run/pdf/papers/cv/yolo/yolov2.pdf">YOLO9000:
+Better, Faster, Stronger</a></li>
+<li>Essay intensive reading reference (If available):
+https://zhuanlan.zhihu.com/p/74540100</li>
+</ul></li>
+</ul>
+<h2 id="nlpexpected">NLP（expected）</h2>
+]]></content>
   </entry>
   <entry>
     <title>GRE-30DAY备考记录</title>
@@ -1304,6 +1323,58 @@ char三种数据在运算的时候，都会提升为int，然后进行运算</li
       </tags>
   </entry>
   <entry>
+    <title>OD机试准备</title>
+    <url>/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/</url>
+    <content><![CDATA[<ul>
+<li>不怕丢人，梭哈华为OD了，笔试题一周准备时间，有题库，刷题用python，先整个工作经验再说</li>
+</ul>
+<h1 id="机试准备">机试准备</h1>
+<p>牛客提供的华为机试题目共103道，平均下来每天要做15道左右，按知识点刷题，简单题快速过</p>
+<h2 id="必会题目">必会题目</h2>
+<h3 id="字符串分割">字符串分割</h3>
+<ul>
+<li><p>描述：</p>
+<ul>
+<li>输入一个字符串，请按长度为8拆分每个输入字符串并进行输出；</li>
+<li>长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。</li>
+</ul></li>
+<li><p>思路：用切片的思路，遍历字符串</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        a = <span class="built_in">input</span>()</span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(a) &gt;= <span class="number">8</span>:</span><br><span class="line">            <span class="built_in">print</span>(a[:<span class="number">8</span>])</span><br><span class="line">            a = a[<span class="number">8</span>:]</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(a) &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(a + <span class="string">&#x27;0&#x27;</span>*(<span class="number">8</span>-<span class="built_in">len</span>(a)))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span>   </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="数字颠倒">数字颠倒</h3>
+<ul>
+<li><p>描述：顾名思义</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">number = <span class="built_in">input</span>()</span><br><span class="line"><span class="built_in">print</span>(number[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="表达式求值">表达式求值</h3>
+<ul>
+<li><p>描述：给定一个字符串描述的算术表达式，计算出结果值。输入字符串长度不超过
+100 ，合法的字符包括 ”+, -, *, /, (, )” ， ”0-9” 。</p></li>
+<li><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="leetcode">Leetcode</h2>
+<h3 id="无重复字符的最长子串滑动窗口">无重复字符的最长子串（滑动窗口）</h3>
+<ul>
+<li><p>描述：给定一个字符串 <code>s</code>
+，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
+<ul>
+<li><div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 输入：s = &quot;abcabcbb&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 输出：3</span></span></code></pre></div></li>
+</ul></li>
+<li><p>解题思路：</p>
+<p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/solutions/3982/hua-dong-chuang-kou-by-powcai/">3.
+无重复字符的最长子串 - 力扣（LeetCode）</a></p></li>
+<li></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Leetcode 面试经典150题</title>
     <url>/2023/11/30/Leetcode-%E9%9D%A2%E8%AF%95%E7%BB%8F%E5%85%B8150%E9%A2%98/</url>
     <content><![CDATA[<h1 id="leetcode-面试经典150题">Leetcode 面试经典150题</h1>
@@ -1617,58 +1688,6 @@ LSTM for dynamic gesture prediction</p>
       <tags>
         <tag>算法</tag>
         <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>OD机试准备</title>
-    <url>/2024/01/12/OD%E6%9C%BA%E8%AF%95%E5%87%86%E5%A4%87/</url>
-    <content><![CDATA[<ul>
-<li>不怕丢人，梭哈华为OD了，笔试题一周准备时间，有题库，刷题用python，先整个工作经验再说</li>
-</ul>
-<h1 id="机试准备">机试准备</h1>
-<p>牛客提供的华为机试题目共103道，平均下来每天要做15道左右，按知识点刷题，简单题快速过</p>
-<h2 id="必会题目">必会题目</h2>
-<h3 id="字符串分割">字符串分割</h3>
-<ul>
-<li><p>描述：</p>
-<ul>
-<li>输入一个字符串，请按长度为8拆分每个输入字符串并进行输出；</li>
-<li>长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。</li>
-</ul></li>
-<li><p>思路：用切片的思路，遍历字符串</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        a = <span class="built_in">input</span>()</span><br><span class="line">        <span class="keyword">while</span> <span class="built_in">len</span>(a) &gt;= <span class="number">8</span>:</span><br><span class="line">            <span class="built_in">print</span>(a[:<span class="number">8</span>])</span><br><span class="line">            a = a[<span class="number">8</span>:]</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(a) &gt; <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(a + <span class="string">&#x27;0&#x27;</span>*(<span class="number">8</span>-<span class="built_in">len</span>(a)))</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">break</span>   </span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="数字颠倒">数字颠倒</h3>
-<ul>
-<li><p>描述：顾名思义</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">number = <span class="built_in">input</span>()</span><br><span class="line"><span class="built_in">print</span>(number[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="表达式求值">表达式求值</h3>
-<ul>
-<li><p>描述：给定一个字符串描述的算术表达式，计算出结果值。输入字符串长度不超过
-100 ，合法的字符包括 ”+, -, *, /, (, )” ， ”0-9” 。</p></li>
-<li><p>代码：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="leetcode">Leetcode</h2>
-<h3 id="无重复字符的最长子串滑动窗口">无重复字符的最长子串（滑动窗口）</h3>
-<ul>
-<li><p>描述：给定一个字符串 <code>s</code>
-，请你找出其中不含有重复字符的 <strong>最长子串</strong> 的长度。</p>
-<ul>
-<li><div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 输入：s = &quot;abcabcbb&quot;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># 输出：3</span></span></code></pre></div></li>
-</ul></li>
-<li><p>解题思路：</p>
-<p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/solutions/3982/hua-dong-chuang-kou-by-powcai/">3.
-无重复字符的最长子串 - 力扣（LeetCode）</a></p></li>
-<li></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
