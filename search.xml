@@ -77,6 +77,75 @@ https://zhuanlan.zhihu.com/p/74540100</li>
 ]]></content>
   </entry>
   <entry>
+    <title>GRE-30DAY备考记录</title>
+    <url>/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
+<p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
+<p>基本流程参考自”五十度GRE“</p>
+<p>（为什么是30天记录，因为还剩30天考试）</p>
+<span id="more"></span>
+<ul>
+<li><p>DAY1</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked>背词：S1/2</label></p></li>
+<li><p><label><input type="checkbox" checked>方法论：阅读方法论1</label></p></li>
+<li><p><label><input type="checkbox" checked>录播：阅读录播1</label></p></li>
+</ul></li>
+<li><p>DAY2</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S3/4</label></li>
+<li><label><input type="checkbox" checked>方法论：填空方法论1</label></li>
+<li><label><input type="checkbox">填空录播1</label></li>
+</ul></li>
+<li><p>DAY3</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S5/6</label></li>
+<li><label><input type="checkbox">阅读方法论2</label></li>
+<li><label><input type="checkbox">阅读录播2</label></li>
+</ul></li>
+<li><p>DAY4</p>
+<ul class="task-list">
+<li><label><input type="checkbox">复习：S1-S6</label></li>
+<li><label><input type="checkbox">填空方法论2</label></li>
+<li><label><input type="checkbox" checked>填空录播2</label></li>
+</ul></li>
+<li><p>DAY5</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S7、S8、S9</label></li>
+<li><label><input type="checkbox">作文方法论1</label></li>
+<li><label><input type="checkbox">作文录播1（上）</label></li>
+</ul></li>
+<li><p>DAY6</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S10/S11/S12/S13</label></li>
+<li><label><input type="checkbox">作文方法论2</label></li>
+<li><label><input type="checkbox">作文录播1（下）</label></li>
+</ul></li>
+<li><p>DAY7</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S14/S15/S16/S17</label></li>
+<li><label><input type="checkbox" checked>数学方法论（算术、代数）</label></li>
+</ul></li>
+<li><p>DAY8</p>
+<ul class="task-list">
+<li><label><input type="checkbox">复习：S7-S17</label></li>
+</ul></li>
+<li><p>DAY9</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S18/19/20/21</label></li>
+<li><label><input type="checkbox">阅读方法论3</label></li>
+<li><label><input type="checkbox">阅读录播3</label></li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GRE</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++基础与深度解析</title>
     <url>/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<h1 id="c基础与深度解析">C++基础与深度解析</h1>
@@ -376,81 +445,31 @@ unit)，一个翻译单元由一个源文件和该源文件所直接或间接包
 <ul>
 <li>方便理解的一些例子</li>
 </ul>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x = <span class="number">3</span>;       <span class="comment">// 定义了一个常量</span></span><br><span class="line">    <span class="type">int</span>* ptr = &amp;x;         <span class="comment">// 会报错，这意味着定义了一个int类型的指针，而不是const int</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> x = <span class="number">3</span>;       <span class="comment">// 定义了一个常量</span></span><br><span class="line">    <span class="type">int</span>* ptr = &amp;x;         <span class="comment">// 会报错，这意味着定义了一个int类型的指针，而不是const int</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">// 常量指针可以指向变量</span></span><br><span class="line">    <span class="type">int</span> x= <span class="number">3</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span>* p = &amp;x;  <span class="comment">// 这一步发生了隐式转换，int* 转换为了const int* ，反过来（例如上面的例子，就不能转换，会报错）</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>常量引用（可以绑定变量）</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">3</span>;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span>&amp; ref = x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可用作函数形参</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Str</span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如果需要传指针Str* param，存在空指针等风险</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">fun</span><span class="params">(<span class="type">const</span> Str&amp; param)</span></span>&#123;</span><br><span class="line">    <span class="comment">// 用const防止不小心对param进行修改</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Str x;</span><br><span class="line">    <span class="built_in">fun</span>(x);   <span class="comment">//结构体很大就不适合拷贝</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可读不可写</li>
+<li>可以绑定字面值</li>
+</ul></li>
+<li><p>常量表达式(constexpr)，从C++11开始</p>
+<ul>
+<li>使用constexpr声明</li>
+<li>声明的是编译期变量</li>
+<li>编译器可以利用其进行优化</li>
+<li>常量表达式指针：constexpr位于*左侧，但表示指针是常量表达式</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    std::cin &gt;&gt; x;</span><br><span class="line">    <span class="type">const</span> <span class="type">int</span> y1 = x;   <span class="comment">// 声明成表达式会报错</span></span><br><span class="line">    <span class="keyword">constexpr</span> <span class="type">int</span> y2 = <span class="number">3</span>;  <span class="comment">//y2的类型还是const int，constexpr只是一种限定，不属于类型说明</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (y1 == <span class="number">3</span>)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (y2 == <span class="number">3</span>)&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">constexpr</span> <span class="type">const</span> <span class="type">int</span>* ptr = <span class="literal">nullptr</span>;</span><br><span class="line">    <span class="comment">// ptr的类型是const int* </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul></li>
 </ul>
 ]]></content>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GRE-30DAY备考记录</title>
-    <url>/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
-<p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
-<p>基本流程参考自”五十度GRE“</p>
-<p>（为什么是30天记录，因为还剩30天考试）</p>
-<span id="more"></span>
-<ul>
-<li><p>DAY1</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" checked>背词：S1/2</label></p></li>
-<li><p><label><input type="checkbox" checked>方法论：阅读方法论1</label></p></li>
-<li><p><label><input type="checkbox" checked>录播：阅读录播1</label></p></li>
-</ul></li>
-<li><p>DAY2</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S3/4</label></li>
-<li><label><input type="checkbox" checked>方法论：填空方法论1</label></li>
-<li><label><input type="checkbox">填空录播1</label></li>
-</ul></li>
-<li><p>DAY3</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S5/6</label></li>
-<li><label><input type="checkbox">阅读方法论2</label></li>
-<li><label><input type="checkbox">阅读录播2</label></li>
-</ul></li>
-<li><p>DAY4</p>
-<ul class="task-list">
-<li><label><input type="checkbox">复习：S1-S6</label></li>
-<li><label><input type="checkbox">填空方法论2</label></li>
-<li><label><input type="checkbox" checked>填空录播2</label></li>
-</ul></li>
-<li><p>DAY5</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S7、S8、S9</label></li>
-<li><label><input type="checkbox">作文方法论1</label></li>
-<li><label><input type="checkbox">作文录播1（上）</label></li>
-</ul></li>
-<li><p>DAY6</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S10/S11/S12/S13</label></li>
-<li><label><input type="checkbox">作文方法论2</label></li>
-<li><label><input type="checkbox">作文录播1（下）</label></li>
-</ul></li>
-<li><p>DAY7</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S14/S15/S16/S17</label></li>
-<li><label><input type="checkbox" checked>数学方法论（算术、代数）</label></li>
-</ul></li>
-<li><p>DAY8</p>
-<ul class="task-list">
-<li><label><input type="checkbox">复习：S7-S17</label></li>
-</ul></li>
-<li><p>DAY9</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S18/19/20/21</label></li>
-<li><label><input type="checkbox">阅读方法论3</label></li>
-<li><label><input type="checkbox">阅读录播3</label></li>
-</ul></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GRE</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
       </tags>
   </entry>
   <entry>
