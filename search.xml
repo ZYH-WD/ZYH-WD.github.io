@@ -77,6 +77,75 @@ https://zhuanlan.zhihu.com/p/74540100</li>
 ]]></content>
   </entry>
   <entry>
+    <title>GRE-30DAY备考记录</title>
+    <url>/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
+<p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
+<p>基本流程参考自”五十度GRE“</p>
+<p>（为什么是30天记录，因为还剩30天考试）</p>
+<span id="more"></span>
+<ul>
+<li><p>DAY1</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked>背词：S1/2</label></p></li>
+<li><p><label><input type="checkbox" checked>方法论：阅读方法论1</label></p></li>
+<li><p><label><input type="checkbox" checked>录播：阅读录播1</label></p></li>
+</ul></li>
+<li><p>DAY2</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S3/4</label></li>
+<li><label><input type="checkbox" checked>方法论：填空方法论1</label></li>
+<li><label><input type="checkbox">填空录播1</label></li>
+</ul></li>
+<li><p>DAY3</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S5/6</label></li>
+<li><label><input type="checkbox">阅读方法论2</label></li>
+<li><label><input type="checkbox">阅读录播2</label></li>
+</ul></li>
+<li><p>DAY4</p>
+<ul class="task-list">
+<li><label><input type="checkbox">复习：S1-S6</label></li>
+<li><label><input type="checkbox">填空方法论2</label></li>
+<li><label><input type="checkbox" checked>填空录播2</label></li>
+</ul></li>
+<li><p>DAY5</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S7、S8、S9</label></li>
+<li><label><input type="checkbox">作文方法论1</label></li>
+<li><label><input type="checkbox">作文录播1（上）</label></li>
+</ul></li>
+<li><p>DAY6</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S10/S11/S12/S13</label></li>
+<li><label><input type="checkbox">作文方法论2</label></li>
+<li><label><input type="checkbox">作文录播1（下）</label></li>
+</ul></li>
+<li><p>DAY7</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S14/S15/S16/S17</label></li>
+<li><label><input type="checkbox" checked>数学方法论（算术、代数）</label></li>
+</ul></li>
+<li><p>DAY8</p>
+<ul class="task-list">
+<li><label><input type="checkbox">复习：S7-S17</label></li>
+</ul></li>
+<li><p>DAY9</p>
+<ul class="task-list">
+<li><label><input type="checkbox">背词：S18/19/20/21</label></li>
+<li><label><input type="checkbox">阅读方法论3</label></li>
+<li><label><input type="checkbox">阅读录播3</label></li>
+</ul></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GRE</category>
+      </categories>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++基础与深度解析</title>
     <url>/2024/01/31/C++%E5%9F%BA%E7%A1%80%E4%B8%8E%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<h1 id="c基础与深度解析">C++基础与深度解析</h1>
@@ -401,161 +470,6 @@ unit)，一个翻译单元由一个源文件和该源文件所直接或间接包
 ]]></content>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GRE-30DAY备考记录</title>
-    <url>/2023/11/07/GRE-30DAY%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="gre备考">GRE备考</h1>
-<p>BG：雅思6.5划水选手（R：7.5；L：7.0；W：6.0；S：5.5）</p>
-<p>基本流程参考自”五十度GRE“</p>
-<p>（为什么是30天记录，因为还剩30天考试）</p>
-<span id="more"></span>
-<ul>
-<li><p>DAY1</p>
-<ul class="task-list">
-<li><p><label><input type="checkbox" checked>背词：S1/2</label></p></li>
-<li><p><label><input type="checkbox" checked>方法论：阅读方法论1</label></p></li>
-<li><p><label><input type="checkbox" checked>录播：阅读录播1</label></p></li>
-</ul></li>
-<li><p>DAY2</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S3/4</label></li>
-<li><label><input type="checkbox" checked>方法论：填空方法论1</label></li>
-<li><label><input type="checkbox">填空录播1</label></li>
-</ul></li>
-<li><p>DAY3</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S5/6</label></li>
-<li><label><input type="checkbox">阅读方法论2</label></li>
-<li><label><input type="checkbox">阅读录播2</label></li>
-</ul></li>
-<li><p>DAY4</p>
-<ul class="task-list">
-<li><label><input type="checkbox">复习：S1-S6</label></li>
-<li><label><input type="checkbox">填空方法论2</label></li>
-<li><label><input type="checkbox" checked>填空录播2</label></li>
-</ul></li>
-<li><p>DAY5</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S7、S8、S9</label></li>
-<li><label><input type="checkbox">作文方法论1</label></li>
-<li><label><input type="checkbox">作文录播1（上）</label></li>
-</ul></li>
-<li><p>DAY6</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S10/S11/S12/S13</label></li>
-<li><label><input type="checkbox">作文方法论2</label></li>
-<li><label><input type="checkbox">作文录播1（下）</label></li>
-</ul></li>
-<li><p>DAY7</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S14/S15/S16/S17</label></li>
-<li><label><input type="checkbox" checked>数学方法论（算术、代数）</label></li>
-</ul></li>
-<li><p>DAY8</p>
-<ul class="task-list">
-<li><label><input type="checkbox">复习：S7-S17</label></li>
-</ul></li>
-<li><p>DAY9</p>
-<ul class="task-list">
-<li><label><input type="checkbox">背词：S18/19/20/21</label></li>
-<li><label><input type="checkbox">阅读方法论3</label></li>
-<li><label><input type="checkbox">阅读录播3</label></li>
-</ul></li>
-</ul>
-]]></content>
-      <categories>
-        <category>GRE</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaSE基础入门</title>
-    <url>/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="javase基础入门">JavaSE基础入门</h1>
-<h2 id="概述">概述</h2>
-<h3 id="java背景介绍">Java背景介绍</h3>
-<ul>
-<li>Java
-SE：Java语言的标准版，用于桌面应用的开发，是其他两个版本的基础，学习Java
-SE是为今后从事的Java EE开发打基础</li>
-<li>Java ME： Java语言的小型版，用于嵌入式消费类电子设备</li>
-<li>Java EE：Java语言的企业版，用于Web方向的网站开发</li>
-</ul>
-<h3 id="java跨平台工作原理">Java跨平台工作原理</h3>
-<ul>
-<li>平台指的是操作系统，Java程序可以在任意操作系统上运行</li>
-<li>在需要运行Java应用程序的操作系统上，安装一个与操作系统对应的Java虚拟机(JVM,
-Java Virtual Machine)即可。</li>
-</ul>
-<h3 id="jre和jdk">JRE和JDK</h3>
-<ul>
-<li>JRE：Java Runtime
-Environment，指Java运行环境，包含JVM虚拟机及Java核心类库
-<ul>
-<li>类：Java文件在代码中的集合体现</li>
-<li>类库：存放多个Java文件的仓库</li>
-</ul></li>
-<li>JDK：Java Development
-Kit是Java语言的软件开发工具包，内部包含了JRE，和代码的编译工具和运行工具等等</li>
-</ul>
-<ol type="1">
-<li>编写代码：A.java</li>
-<li>编译代码：编译工具对A.java进行编译，生成A.class，该文件可以被JVM直接识别并执行</li>
-<li>运行代码：将A.class运行在JVM虚拟机当中</li>
-</ol>
-<h2 id="idea">IDEA</h2>
-<h3 id="概述-下载与安装">概述 &amp; 下载与安装</h3>
-<h3 id="idea中层级结构介绍">IDEA中层级结构介绍</h3>
-<ul>
-<li>project（项目、工程）：创建多个module</li>
-<li>module（模块）：可以创建多个package</li>
-<li>package（包）：可以创建多个class</li>
-<li>class（类）</li>
-</ul>
-<h3 id="idea中的第一个代码">IDEA中的第一个代码</h3>
-<ol type="1">
-<li>创建Project项目</li>
-<li>创建Module模块</li>
-<li>创建class类</li>
-<li>在类中写代码</li>
-<li>编译运行</li>
-</ol>
-<ul>
-<li>所有的代码都在module下的src里</li>
-<li><a href="https://zhuanlan.zhihu.com/p/663993508">赶紧收藏！史上最全IDEA快捷键大全
-- 知乎 (zhihu.com)</a></li>
-</ul>
-<h3 id="基本操作">基本操作</h3>
-<ul>
-<li><p>关闭项目：File-Close Project</p></li>
-<li><p>修改项目：File-Project Structure</p></li>
-<li><p>TODO：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// <span class="doctag">TODO:</span> 缺少一个主方法需要补齐（例），然后IDEA中就会出现标签索引</span></span><br></pre></td></tr></table></figure></li>
-<li><p>不同进制的一些表示</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="number">0b100</span>);   <span class="comment">// 二进制，开头为0b</span></span><br><span class="line">System.out.println(<span class="number">074</span>);     <span class="comment">// 8进制，开头为0</span></span><br><span class="line">System.out.print(<span class="number">0x3c</span>);      <span class="comment">// 16进制，开头为0x</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="java语法的一些tips">Java语法的一些tips</h2>
-<ul>
-<li><p>在src中可以增加package，命名一般为公司的名字（倒着写）</p></li>
-<li><p>隐式转换</p>
-<ul>
-<li>byte short
-char三种数据在运算的时候，都会提升为int，然后进行运算</li>
-</ul></li>
-<li><p>强制转化</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">12.9</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> (<span class="type">int</span>) a;</span><br></pre></td></tr></table></figure></li>
-<li><p>Java中：（&amp;）与，|（或），!（非），^（异或）</p></li>
-</ul>
-]]></content>
-      <categories>
-        <category>JAVA</category>
-      </categories>
-      <tags>
-        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -1388,46 +1302,89 @@ classification"发表至IEEE国际会议。此外，我对深度学习，尤其�
       </tags>
   </entry>
   <entry>
-    <title>Leetcode热题100</title>
-    <url>/2024/03/28/Leetcode%E7%83%AD%E9%A2%98100/</url>
-    <content><![CDATA[<h1 id="leetcode热题100">Leetcode热题100</h1>
-<h2 id="哈希">哈希</h2>
-<h3 id="两数之和">两数之和</h3>
-<p><a href="https://leetcode.cn/problems/two-sum/description/?envType=study-plan-v2&amp;envId=top-100-liked">1.
-两数之和 - 力扣（LeetCode）</a></p>
+    <title>JavaSE基础入门</title>
+    <url>/2024/01/11/JavaSE%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h1 id="javase基础入门">JavaSE基础入门</h1>
+<h2 id="概述">概述</h2>
+<h3 id="java背景介绍">Java背景介绍</h3>
 <ul>
-<li>这道题的关键在于去搜索target -
-x，对于每一个x，都查询哈希表中是否存在target -
-x，然后将x插入到哈希表中，即保证不会让x和自己匹配</li>
+<li>Java
+SE：Java语言的标准版，用于桌面应用的开发，是其他两个版本的基础，学习Java
+SE是为今后从事的Java EE开发打基础</li>
+<li>Java ME： Java语言的小型版，用于嵌入式消费类电子设备</li>
+<li>Java EE：Java语言的企业版，用于Web方向的网站开发</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">w<span class="string">&#x27;s&#x27;</span>w<span class="string">&#x27;s&#x27;</span>qclass Solution:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        <span class="comment"># 参考答案</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> false</span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> [buff_dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                buff_dict[target-nums[i]] = i  <span class="comment"># 如果表中不存在target - x，那么将x插入到哈希表中</span></span><br></pre></td></tr></table></figure>
-<h3 id="字母异位词分组">字母异位词分组</h3>
-<p><a href="https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&amp;envId=top-100-liked">49.
-字母异位词分组 - 力扣（LeetCode）</a></p>
+<h3 id="java跨平台工作原理">Java跨平台工作原理</h3>
 <ul>
-<li><p><strong>示例 :</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">输入: strs = [<span class="string">&quot;eat&quot;</span>, <span class="string">&quot;tea&quot;</span>, <span class="string">&quot;tan&quot;</span>, <span class="string">&quot;ate&quot;</span>, <span class="string">&quot;nat&quot;</span>, <span class="string">&quot;bat&quot;</span>]</span><br><span class="line">输出: [[<span class="string">&quot;bat&quot;</span>],[<span class="string">&quot;nat&quot;</span>,<span class="string">&quot;tan&quot;</span>],[<span class="string">&quot;ate&quot;</span>,<span class="string">&quot;eat&quot;</span>,<span class="string">&quot;tea&quot;</span>]]</span><br></pre></td></tr></table></figure></li>
+<li>平台指的是操作系统，Java程序可以在任意操作系统上运行</li>
+<li>在需要运行Java应用程序的操作系统上，安装一个与操作系统对应的Java虚拟机(JVM,
+Java Virtual Machine)即可。</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># My code</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">groupAnagrams</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(strs) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        _<span class="built_in">dict</span> = <span class="built_in">dict</span>()</span><br><span class="line">        res = []</span><br><span class="line">        <span class="comment"># 遍历strs:</span></span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> strs:</span><br><span class="line">            <span class="comment"># 按字母顺序排序，排序后结果作为字典的键</span></span><br><span class="line">            temp = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">sorted</span>(word))  </span><br><span class="line">            <span class="keyword">if</span> temp <span class="keyword">in</span> _<span class="built_in">dict</span>:</span><br><span class="line">                _<span class="built_in">dict</span>[temp].append(word)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                _<span class="built_in">dict</span>[temp] = [word]</span><br><span class="line">        <span class="comment"># 整理结果</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> _<span class="built_in">dict</span>.values():</span><br><span class="line">            res.append(i)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-<h3 id="最长连续序列">最长连续序列</h3>
-<p><a href="https://leetcode.cn/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&amp;envId=top-100-liked">128.
-最长连续序列 - 力扣（LeetCode）</a></p>
+<h3 id="jre和jdk">JRE和JDK</h3>
 <ul>
-<li>这道题一开始做的思路就是错的，没有考虑到子序列长度的问题，后面想到了用while循环去计算单个子序列，懵住了</li>
+<li>JRE：Java Runtime
+Environment，指Java运行环境，包含JVM虚拟机及Java核心类库
+<ul>
+<li>类：Java文件在代码中的集合体现</li>
+<li>类库：存放多个Java文件的仓库</li>
+</ul></li>
+<li>JDK：Java Development
+Kit是Java语言的软件开发工具包，内部包含了JRE，和代码的编译工具和运行工具等等</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">longestConsecutive</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        longest_streak = <span class="number">0</span></span><br><span class="line">        num_set = <span class="built_in">set</span>(nums)            <span class="comment"># 去重</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> num_set:</span><br><span class="line">            <span class="keyword">if</span> num - <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                current_num = num</span><br><span class="line">                current_streak = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span> current_num + <span class="number">1</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                    current_num += <span class="number">1</span></span><br><span class="line">                    current_streak += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                longest_streak = <span class="built_in">max</span>(longest_streak, current_streak)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> longest_streak</span><br></pre></td></tr></table></figure>
-<h2 id="双指针">双指针</h2>
-<h3 id="移动零">移动零</h3>
-<p><a href="https://leetcode.cn/problems/move-zeroes/description/?envType=study-plan-v2&amp;envId=top-100-liked">283.
-移动零 - 力扣（LeetCode）</a></p>
+<ol type="1">
+<li>编写代码：A.java</li>
+<li>编译代码：编译工具对A.java进行编译，生成A.class，该文件可以被JVM直接识别并执行</li>
+<li>运行代码：将A.class运行在JVM虚拟机当中</li>
+</ol>
+<h2 id="idea">IDEA</h2>
+<h3 id="概述-下载与安装">概述 &amp; 下载与安装</h3>
+<h3 id="idea中层级结构介绍">IDEA中层级结构介绍</h3>
 <ul>
-<li><p>两个方法，分别用两次遍历和一次遍历，两次遍历思路比较简单，遇到非0数就赋值给start指针，遇到0就后移end指针，最后将start到end的位置赋0</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入: nums = [0,1,0,3,12]</span></span><br><span class="line"><span class="comment"># 输出: [1,3,12,0,0]</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        start = end = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> end &lt; <span class="built_in">len</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[end] != <span class="number">0</span>:</span><br><span class="line">                nums[start] = nums[end]</span><br><span class="line">                start += <span class="number">1</span></span><br><span class="line">            end += <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start, end):</span><br><span class="line">            nums[i] = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br></pre></td></tr></table></figure></li>
+<li>project（项目、工程）：创建多个module</li>
+<li>module（模块）：可以创建多个package</li>
+<li>package（包）：可以创建多个class</li>
+<li>class（类）</li>
+</ul>
+<h3 id="idea中的第一个代码">IDEA中的第一个代码</h3>
+<ol type="1">
+<li>创建Project项目</li>
+<li>创建Module模块</li>
+<li>创建class类</li>
+<li>在类中写代码</li>
+<li>编译运行</li>
+</ol>
+<ul>
+<li>所有的代码都在module下的src里</li>
+<li><a href="https://zhuanlan.zhihu.com/p/663993508">赶紧收藏！史上最全IDEA快捷键大全
+- 知乎 (zhihu.com)</a></li>
+</ul>
+<h3 id="基本操作">基本操作</h3>
+<ul>
+<li><p>关闭项目：File-Close Project</p></li>
+<li><p>修改项目：File-Project Structure</p></li>
+<li><p>TODO：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// <span class="doctag">TODO:</span> 缺少一个主方法需要补齐（例），然后IDEA中就会出现标签索引</span></span><br></pre></td></tr></table></figure></li>
+<li><p>不同进制的一些表示</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println(<span class="number">0b100</span>);   <span class="comment">// 二进制，开头为0b</span></span><br><span class="line">System.out.println(<span class="number">074</span>);     <span class="comment">// 8进制，开头为0</span></span><br><span class="line">System.out.print(<span class="number">0x3c</span>);      <span class="comment">// 16进制，开头为0x</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="java语法的一些tips">Java语法的一些tips</h2>
+<ul>
+<li><p>在src中可以增加package，命名一般为公司的名字（倒着写）</p></li>
+<li><p>隐式转换</p>
+<ul>
+<li>byte short
+char三种数据在运算的时候，都会提升为int，然后进行运算</li>
+</ul></li>
+<li><p>强制转化</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">12.9</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span> (<span class="type">int</span>) a;</span><br></pre></td></tr></table></figure></li>
+<li><p>Java中：（&amp;）与，|（或），!（非），^（异或）</p></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
       <tags>
-        <tag>算法</tag>
-        <tag>leetcode</tag>
+        <tag>JAVA</tag>
       </tags>
   </entry>
   <entry>
@@ -1741,6 +1698,49 @@ LSTM for dynamic gesture prediction</p>
       <categories>
         <category>算法</category>
       </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Leetcode热题100</title>
+    <url>/2024/03/28/Leetcode%E7%83%AD%E9%A2%98100/</url>
+    <content><![CDATA[<h1 id="leetcode热题100">Leetcode热题100</h1>
+<h2 id="哈希">哈希</h2>
+<h3 id="两数之和">两数之和</h3>
+<p><a href="https://leetcode.cn/problems/two-sum/description/?envType=study-plan-v2&amp;envId=top-100-liked">1.
+两数之和 - 力扣（LeetCode）</a></p>
+<ul>
+<li>这道题的关键在于去搜索target -
+x，对于每一个x，都查询哈希表中是否存在target -
+x，然后将x插入到哈希表中，即保证不会让x和自己匹配</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">w<span class="string">&#x27;s&#x27;</span>w<span class="string">&#x27;s&#x27;</span>qclass Solution:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span><br><span class="line">        <span class="comment"># 参考答案</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt;= <span class="number">1</span>:</span><br><span class="line">            <span class="keyword">return</span> false</span><br><span class="line">        buff_dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> buff_dict:</span><br><span class="line">                <span class="keyword">return</span> [buff_dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                buff_dict[target-nums[i]] = i  <span class="comment"># 如果表中不存在target - x，那么将x插入到哈希表中</span></span><br></pre></td></tr></table></figure>
+<h3 id="字母异位词分组">字母异位词分组</h3>
+<p><a href="https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&amp;envId=top-100-liked">49.
+字母异位词分组 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p><strong>示例 :</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">输入: strs = [<span class="string">&quot;eat&quot;</span>, <span class="string">&quot;tea&quot;</span>, <span class="string">&quot;tan&quot;</span>, <span class="string">&quot;ate&quot;</span>, <span class="string">&quot;nat&quot;</span>, <span class="string">&quot;bat&quot;</span>]</span><br><span class="line">输出: [[<span class="string">&quot;bat&quot;</span>],[<span class="string">&quot;nat&quot;</span>,<span class="string">&quot;tan&quot;</span>],[<span class="string">&quot;ate&quot;</span>,<span class="string">&quot;eat&quot;</span>,<span class="string">&quot;tea&quot;</span>]]</span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># My code</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">groupAnagrams</span>(<span class="params">self, strs: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">str</span>]]:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(strs) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        _<span class="built_in">dict</span> = <span class="built_in">dict</span>()</span><br><span class="line">        res = []</span><br><span class="line">        <span class="comment"># 遍历strs:</span></span><br><span class="line">        <span class="keyword">for</span> word <span class="keyword">in</span> strs:</span><br><span class="line">            <span class="comment"># 按字母顺序排序，排序后结果作为字典的键</span></span><br><span class="line">            temp = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">sorted</span>(word))  </span><br><span class="line">            <span class="keyword">if</span> temp <span class="keyword">in</span> _<span class="built_in">dict</span>:</span><br><span class="line">                _<span class="built_in">dict</span>[temp].append(word)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                _<span class="built_in">dict</span>[temp] = [word]</span><br><span class="line">        <span class="comment"># 整理结果</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> _<span class="built_in">dict</span>.values():</span><br><span class="line">            res.append(i)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<h3 id="最长连续序列">最长连续序列</h3>
+<p><a href="https://leetcode.cn/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&amp;envId=top-100-liked">128.
+最长连续序列 - 力扣（LeetCode）</a></p>
+<ul>
+<li>这道题一开始做的思路就是错的，没有考虑到子序列长度的问题，后面想到了用while循环去计算单个子序列，懵住了</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">longestConsecutive</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        longest_streak = <span class="number">0</span></span><br><span class="line">        num_set = <span class="built_in">set</span>(nums)            <span class="comment"># 去重</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> num <span class="keyword">in</span> num_set:</span><br><span class="line">            <span class="keyword">if</span> num - <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                current_num = num</span><br><span class="line">                current_streak = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span> current_num + <span class="number">1</span> <span class="keyword">in</span> num_set:</span><br><span class="line">                    current_num += <span class="number">1</span></span><br><span class="line">                    current_streak += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">                longest_streak = <span class="built_in">max</span>(longest_streak, current_streak)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> longest_streak</span><br></pre></td></tr></table></figure>
+<h2 id="双指针">双指针</h2>
+<h3 id="移动零">移动零</h3>
+<p><a href="https://leetcode.cn/problems/move-zeroes/description/?envType=study-plan-v2&amp;envId=top-100-liked">283.
+移动零 - 力扣（LeetCode）</a></p>
+<ul>
+<li><p>两个方法，分别用两次遍历和一次遍历，两次遍历思路比较简单，遇到非0数就赋值给start指针，遇到0就后移end指针，最后将start到end的位置赋0</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 输入: nums = [0,1,0,3,12]</span></span><br><span class="line"><span class="comment"># 输出: [1,3,12,0,0]</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">moveZeroes</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        start = end = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> end &lt; <span class="built_in">len</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> nums[end] != <span class="number">0</span>:</span><br><span class="line">                nums[start] = nums[end]</span><br><span class="line">                start += <span class="number">1</span></span><br><span class="line">            end += <span class="number">1</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(start, end):</span><br><span class="line">            nums[i] = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> nums</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
       <tags>
         <tag>算法</tag>
         <tag>leetcode</tag>
